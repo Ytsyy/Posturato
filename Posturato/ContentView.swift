@@ -45,10 +45,33 @@ struct ContentView: View {
                 vm.removeItem()
             }
             
-            TabView(selection: $tabSelection) {
-                Text("Tab Content 1").tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 1")/*@END_MENU_TOKEN@*/ }.tag(1)
-                Text("Tab Content 2").tabItem { /*@START_MENU_TOKEN@*/Text("Tab Label 2")/*@END_MENU_TOKEN@*/ }.tag(2)
-            }
+            TabView {
+                    Text("Favourites Screen")
+                        .tabItem {
+                            Image(systemName: "calendar.fill")
+                            Text("Calendar")
+                    }
+                    Text("Friends Screen")
+                        .tabItem {
+                            Image(systemName: "person.fill")
+                            Text("Friends")
+                    }
+                    Text("Home")
+                        .tabItem {
+                            Image("Home")
+                            Text("Home")
+                    }
+                    Text("Nearby Screen")
+                        .tabItem {
+                            Image(systemName: "mappin.circle.fill")
+                            Text("Nearby")
+                        }
+                    Text("Nearby Screen")
+                        .tabItem {
+                            Image("Profile")
+                            Text("Profile")
+                        }
+                }
         }
     }
 }
