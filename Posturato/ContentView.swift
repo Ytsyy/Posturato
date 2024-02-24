@@ -13,38 +13,6 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Toggle("Toggle Switch", isOn: $vm.isTurndedOn)
-                .padding()
-            
-            HStack{
-                Button("Increment") {
-                    vm.increment()
-                }
-                Text("\(vm.counter)")
-                    .bold()
-                    .foregroundColor(.gray)
-                    .padding()
-            }
-            List(vm.itemList) { item in
-                HStack {
-                    Text(item.name)
-                    Spacer()
-                    Text(item.description)
-                }
-            }
-            .listStyle(.plain)
-            .background(.thinMaterial)
-            
-            Button("Add Item") {
-                vm.addItem()
-            }
-            .padding()
-            
-            ////
-            Button("Remove item") {
-                vm.removeItem()
-            }
-            
             TabView {
                     Text("Favourites Screen")
                         .tabItem {
