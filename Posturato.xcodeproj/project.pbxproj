@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		941261F22B8A314600361141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941261F12B8A314600361141 /* AppDelegate.swift */; };
+		941261F72B8A31E500361141 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941261F62B8A31E500361141 /* TabBarController.swift */; };
+		941261F92B8A31F500361141 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941261F82B8A31F500361141 /* HomeViewController.swift */; };
+		941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941261FA2B8A320400361141 /* SettingsViewController.swift */; };
+		941262002B8A324600361141 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941261FF2B8A324600361141 /* HomeViewModel.swift */; };
+		941262022B8A325600361141 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941262012B8A325600361141 /* SettingsViewModel.swift */; };
+		941262082B8A32D900361141 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941262072B8A32D900361141 /* AuthService.swift */; };
+		9412620A2B8A32E400361141 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941262092B8A32E400361141 /* APIClient.swift */; };
+		9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412620B2B8A32EE00361141 /* CoreDataManage.swift */; };
+		9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412620D2B8A331700361141 /* SceneDelegate.swift */; };
 		946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6062B79D71900EE3869 /* PosturatoApp.swift */; };
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
 		946BE60B2B79D71900EE3869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60A2B79D71900EE3869 /* Assets.xcassets */; };
@@ -16,6 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		941261F12B8A314600361141 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		941261F62B8A31E500361141 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		941261F82B8A31F500361141 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		941261FA2B8A320400361141 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		941261FF2B8A324600361141 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		941262012B8A325600361141 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		941262072B8A32D900361141 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		941262092B8A32E400361141 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		9412620B2B8A32EE00361141 /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
+		9412620D2B8A331700361141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		946BE6032B79D71900EE3869 /* Posturato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posturato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946BE6062B79D71900EE3869 /* PosturatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturatoApp.swift; sourceTree = "<group>"; };
 		946BE6082B79D71900EE3869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,6 +57,97 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		941261EC2B8A30DD00361141 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				941261FF2B8A324600361141 /* HomeViewModel.swift */,
+				941262012B8A325600361141 /* SettingsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		941261ED2B8A30F000361141 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				941262062B8A32CC00361141 /* OtherServices */,
+				941262052B8A32AB00361141 /* Database */,
+				941261F32B8A316C00361141 /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		941261EE2B8A310900361141 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		941261EF2B8A311200361141 /* Resourses */ = {
+			isa = PBXGroup;
+			children = (
+				946BE60A2B79D71900EE3869 /* Assets.xcassets */,
+			);
+			path = Resourses;
+			sourceTree = "<group>";
+		};
+		941261F02B8A312600361141 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				941261F12B8A314600361141 /* AppDelegate.swift */,
+				9412620D2B8A331700361141 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		941261F32B8A316C00361141 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				941262092B8A32E400361141 /* APIClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		941261F52B8A31C700361141 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				941261F62B8A31E500361141 /* TabBarController.swift */,
+				941261F82B8A31F500361141 /* HomeViewController.swift */,
+				941261FA2B8A320400361141 /* SettingsViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		941261FC2B8A321400361141 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		941261FD2B8A321E00361141 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		941262052B8A32AB00361141 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				9412620B2B8A32EE00361141 /* CoreDataManage.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		941262062B8A32CC00361141 /* OtherServices */ = {
+			isa = PBXGroup;
+			children = (
+				941262072B8A32D900361141 /* AuthService.swift */,
+			);
+			path = OtherServices;
+			sourceTree = "<group>";
+		};
 		946BE5FA2B79D71900EE3869 = {
 			isa = PBXGroup;
 			children = (
@@ -56,11 +167,15 @@
 		946BE6052B79D71900EE3869 /* Posturato */ = {
 			isa = PBXGroup;
 			children = (
-				94F1E9CA2B7B475900AE611C /* Model */,
+				941261F02B8A312600361141 /* Supporting Files */,
+				941261EF2B8A311200361141 /* Resourses */,
+				941261EE2B8A310900361141 /* Helpers */,
+				941261ED2B8A30F000361141 /* Services */,
+				941261EC2B8A30DD00361141 /* ViewModels */,
+				94F1E9CA2B7B475900AE611C /* Models */,
 				94F1E9C92B7B457A00AE611C /* Views */,
 				946BE6062B79D71900EE3869 /* PosturatoApp.swift */,
 				946BE6082B79D71900EE3869 /* ContentView.swift */,
-				946BE60A2B79D71900EE3869 /* Assets.xcassets */,
 				946BE60C2B79D71900EE3869 /* Posturato.entitlements */,
 				946BE60D2B79D71900EE3869 /* Preview Content */,
 				94F1E9C52B7A4F7E00AE611C /* ItemModel.swift */,
@@ -80,15 +195,18 @@
 		94F1E9C92B7B457A00AE611C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				941261FD2B8A321E00361141 /* CustomViews */,
+				941261FC2B8A321400361141 /* Cells */,
+				941261F52B8A31C700361141 /* ViewControllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		94F1E9CA2B7B475900AE611C /* Model */ = {
+		94F1E9CA2B7B475900AE611C /* Models */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,9 +280,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				94F1E9C62B7A4F7E00AE611C /* ItemModel.swift in Sources */,
+				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
+				941262002B8A324600361141 /* HomeViewModel.swift in Sources */,
 				946BE6092B79D71900EE3869 /* ContentView.swift in Sources */,
+				9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
+				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
+				941262082B8A32D900361141 /* AuthService.swift in Sources */,
+				941262022B8A325600361141 /* SettingsViewModel.swift in Sources */,
+				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
+				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,
 				94F1E9C82B7A508800AE611C /*  Content-ViewModel.swift in Sources */,
+				941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */,
+				9412620A2B8A32E400361141 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
