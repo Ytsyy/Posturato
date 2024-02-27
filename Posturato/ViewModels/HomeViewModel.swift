@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+import Foundation
+
+class HomeViewModel: ObservableObject {
+    @Published var counter = 0
+
+    func incrementCounter() {
+        counter += 1
+    }
+}

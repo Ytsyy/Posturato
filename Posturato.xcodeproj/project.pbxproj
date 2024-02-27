@@ -17,6 +17,9 @@
 		9412620A2B8A32E400361141 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941262092B8A32E400361141 /* APIClient.swift */; };
 		9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412620B2B8A32EE00361141 /* CoreDataManage.swift */; };
 		9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412620D2B8A331700361141 /* SceneDelegate.swift */; };
+		941893F22B8DED2900D0243A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F12B8DED2900D0243A /* TabBar.swift */; };
+		941893F42B8DF10200D0243A /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F32B8DF10200D0243A /* HomeScreen.swift */; };
+		941893F62B8DF18200D0243A /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F52B8DF18200D0243A /* HomeModel.swift */; };
 		946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6062B79D71900EE3869 /* PosturatoApp.swift */; };
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
 		946BE60B2B79D71900EE3869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60A2B79D71900EE3869 /* Assets.xcassets */; };
@@ -36,6 +39,9 @@
 		941262092B8A32E400361141 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		9412620B2B8A32EE00361141 /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
 		9412620D2B8A331700361141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		941893F12B8DED2900D0243A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		941893F32B8DF10200D0243A /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		941893F52B8DF18200D0243A /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 		946BE6032B79D71900EE3869 /* Posturato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posturato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946BE6062B79D71900EE3869 /* PosturatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturatoApp.swift; sourceTree = "<group>"; };
 		946BE6082B79D71900EE3869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -198,6 +204,8 @@
 				941261FD2B8A321E00361141 /* CustomViews */,
 				941261FC2B8A321400361141 /* Cells */,
 				941261F52B8A31C700361141 /* ViewControllers */,
+				941893F12B8DED2900D0243A /* TabBar.swift */,
+				941893F32B8DF10200D0243A /* HomeScreen.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +213,7 @@
 		94F1E9CA2B7B475900AE611C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				941893F52B8DF18200D0243A /* HomeModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -288,9 +297,12 @@
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
 				941262082B8A32D900361141 /* AuthService.swift in Sources */,
 				941262022B8A325600361141 /* SettingsViewModel.swift in Sources */,
+				941893F62B8DF18200D0243A /* HomeModel.swift in Sources */,
+				941893F22B8DED2900D0243A /* TabBar.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,
 				94F1E9C82B7A508800AE611C /*  Content-ViewModel.swift in Sources */,
+				941893F42B8DF10200D0243A /* HomeScreen.swift in Sources */,
 				941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */,
 				9412620A2B8A32E400361141 /* APIClient.swift in Sources */,
 			);
