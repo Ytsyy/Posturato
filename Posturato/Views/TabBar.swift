@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+
+
 struct MainTabView: View {
+    
     var body: some View {
         TabView {
             ProgressView()
@@ -17,7 +20,7 @@ struct MainTabView: View {
             
             HomeScreen()
                 .tabItem {
-                    Label("Home", systemImage: "house")
+                    Label("Home", image: "Home")
                 }
 
             TheoryView()

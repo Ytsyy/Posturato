@@ -12,7 +12,7 @@ struct HomeScreen: View {
 
     var body: some View {
         VStack {
-            Image("JustPhoto") // Убедитесь, что картинка добавлена в Assets
+            Image("JustPhoto")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 200, height: 200)
