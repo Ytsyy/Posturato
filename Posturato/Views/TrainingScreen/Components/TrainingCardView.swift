@@ -12,7 +12,7 @@ struct TrainingCardView: View {
 
     var body: some View {
         VStack {
-            Image(training.imageName) // Замените на реальное изображение из базы данных
+            Image(training.imageName) // Заменить на реальное изображение из базы данных
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 150, height: 100)
