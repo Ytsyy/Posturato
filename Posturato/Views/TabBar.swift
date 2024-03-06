@@ -18,9 +18,9 @@ struct MainTabView: View {
                     Label("Progress", systemImage: "calendar")
                 }
             
-            HomeScreen()
+            TrainingScreen()
                 .tabItem {
-                    Label("Home", image: "Home")
+                    Label("Traning", image: "Home")
                 }
 
             TheoryView()
