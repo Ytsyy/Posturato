@@ -14,6 +14,7 @@ struct Training: Identifiable {
     let type: TrainingType
 }
 
+
 enum TrainingType {
     case office, plank
 }

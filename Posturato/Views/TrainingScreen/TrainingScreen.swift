@@ -9,28 +9,48 @@ import SwiftUI
 
 struct TrainingScreen: View {
     @ObservedObject var viewModel = TrainingViewModel()
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Picker("Выбор тренировок", selection: .constant(0)) {
-                        Text("Все тренировки").tag(0)
-                        Text("Сохраненные").tag(1)
+                    Picker("Choice training", selection: .constant(0)) {
+                        Text("All training").tag(0)
+                        Text("Favourits").tag(1)
                     }
                     .pickerStyle(SegmentedPickerStyle())
                     .padding()
+                    
+                    
+                    NavigationLink(destination: TrainingDetailView(trainings: viewModel.trainings)) {
+                        HStack {
+                            Text("2 программ training")
+                                .font(.headline)
+                                .foregroundColor(.primary)
 
-                    ForEach(viewModel.trainings) { training in
-                        TrainingCardView(training: training)
+                            Spacer()
+
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.horizontal)
+                    }
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(viewModel.trainings) { training in
+                                NavigationLink(destination: Text("Подробности ")){
+                                    TrainingCardView(training: training)
+                                }
+                            }
+                        }
+                        .padding([.horizontal, .bottom])
                     }
                 }
             }
-            .customNavigationBar(title: "Тренировки", onMenuTap: {
-                            // Реализация действия при нажатии на кнопку меню
-                        })
+            .customNavigationBar(title: "Training", onMenuTap: {
+                // Реализация действия при нажатии на кнопку меню
+            })
         }
     }
-    
-    
 }

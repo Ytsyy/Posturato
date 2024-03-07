@@ -26,8 +26,7 @@
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
 		946BE60B2B79D71900EE3869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60A2B79D71900EE3869 /* Assets.xcassets */; };
 		946BE60F2B79D71900EE3869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60E2B79D71900EE3869 /* Preview Assets.xcassets */; };
-		94F1E9C62B7A4F7E00AE611C /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1E9C52B7A4F7E00AE611C /* ItemModel.swift */; };
-		94F1E9C82B7A508800AE611C /*  Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1E9C72B7A508800AE611C /*  Content-ViewModel.swift */; };
+		94E8F3482B9A1FBC00B418D2 /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E8F3472B9A1FBC00B418D2 /* TrainingDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,8 +51,7 @@
 		946BE60A2B79D71900EE3869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		946BE60C2B79D71900EE3869 /* Posturato.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Posturato.entitlements; sourceTree = "<group>"; };
 		946BE60E2B79D71900EE3869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		94F1E9C52B7A4F7E00AE611C /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
-		94F1E9C72B7A508800AE611C /*  Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " Content-ViewModel.swift"; sourceTree = "<group>"; };
+		94E8F3472B9A1FBC00B418D2 /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				9447CC2E2B971C8900AA35CA /* TrainingCardView.swift */,
+				94E8F3472B9A1FBC00B418D2 /* TrainingDetailView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -205,8 +204,6 @@
 				946BE6082B79D71900EE3869 /* ContentView.swift */,
 				946BE60C2B79D71900EE3869 /* Posturato.entitlements */,
 				946BE60D2B79D71900EE3869 /* Preview Content */,
-				94F1E9C52B7A4F7E00AE611C /* ItemModel.swift */,
-				94F1E9C72B7A508800AE611C /*  Content-ViewModel.swift */,
 			);
 			path = Posturato;
 			sourceTree = "<group>";
@@ -310,10 +307,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94F1E9C62B7A4F7E00AE611C /* ItemModel.swift in Sources */,
 				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
 				946BE6092B79D71900EE3869 /* ContentView.swift in Sources */,
+				94E8F3482B9A1FBC00B418D2 /* TrainingDetailView.swift in Sources */,
 				9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
@@ -324,7 +321,6 @@
 				941893F22B8DED2900D0243A /* TabBar.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,
-				94F1E9C82B7A508800AE611C /*  Content-ViewModel.swift in Sources */,
 				941893F42B8DF10200D0243A /* TrainingScreen.swift in Sources */,
 				941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */,
 				9412620A2B8A32E400361141 /* APIClient.swift in Sources */,

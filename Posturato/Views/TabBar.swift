@@ -9,7 +9,7 @@ import SwiftUI
 
 
 
-struct MainTabView: View {
+struct TabBar: View {
     
     var body: some View {
         TabView {
@@ -40,12 +40,6 @@ struct ProgressView: View {
 struct TheoryView: View {
     var body: some View {
         Text("Theory Screen")
-    }
-}
-
-struct MainTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainTabView()
     }
 }
 

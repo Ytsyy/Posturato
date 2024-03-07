@@ -11,7 +11,7 @@ import SwiftUI
 struct PosturatoApp: App {
     var body: some Scene {
         WindowGroup {
-            MainTabView() // Используйте ваш MainTabView как корневое представление
+            TabBar()
         }
     }
 }
