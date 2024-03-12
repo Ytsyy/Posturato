@@ -8,19 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var tabSelection = 1
+    @State private var tabSelection = 2
     
     var body: some View {
-        VStack {
-            TabView {
-                
-                }
-        }
+        TabBar(tabSelection: $tabSelection)
     }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
+    
+    struct ContentView_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
     }
 }

@@ -24,9 +24,10 @@ struct TrainingScreen: View {
                     
                     NavigationLink(destination: TrainingDetailView(trainings: viewModel.trainings)) {
                         HStack {
-                            Text("2 программ training")
+                            Text("Basic training")
                                 .font(.headline)
                                 .foregroundColor(.primary)
+                                .bold()
 
                             Spacer()
 
@@ -37,7 +38,7 @@ struct TrainingScreen: View {
                     }
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: 1) {
                             ForEach(viewModel.trainings) { training in
                                 NavigationLink(destination: Text("Подробности ")){
                                     TrainingCardView(training: training)
@@ -46,6 +47,34 @@ struct TrainingScreen: View {
                         }
                         .padding([.horizontal, .bottom])
                     }
+                    
+                    NavigationLink(destination: TrainingDetailView(trainings: viewModel.trainings)) {
+                        HStack {
+                            Text("Core training")
+                                .font(.headline)
+                                .foregroundColor(.primary)
+                                .bold()
+
+                            Spacer()
+
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.secondary)
+                        }
+                        .padding(.horizontal)
+                    }
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 1) {
+                            ForEach(viewModel.trainings) { training in
+                                NavigationLink(destination: Text("Подробности ")){
+                                    TrainingCardView(training: training)
+                                }
+                            }
+                        }
+                        .padding([.horizontal, .bottom])
+                    }
+                    
+                    
                 }
             }
             .customNavigationBar(title: "Training", onMenuTap: {
