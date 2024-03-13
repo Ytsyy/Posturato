@@ -84,13 +84,6 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		941261EE2B8A310900361141 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		941261EF2B8A311200361141 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,7 +188,6 @@
 			children = (
 				941261F02B8A312600361141 /* Supporting Files */,
 				941261EF2B8A311200361141 /* Resourses */,
-				941261EE2B8A310900361141 /* Helpers */,
 				941261ED2B8A30F000361141 /* Services */,
 				941261EC2B8A30DD00361141 /* ViewModels */,
 				94F1E9CA2B7B475900AE611C /* Models */,
