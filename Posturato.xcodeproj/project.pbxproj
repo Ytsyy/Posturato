@@ -198,6 +198,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		94D0CA9C2BA1D8B8007CC822 /* Exercise */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Exercise;
+			sourceTree = "<group>";
+		};
+		94D0CA9D2BA1D8C8007CC822 /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Progress;
+			sourceTree = "<group>";
+		};
 		94F1E9C92B7B457A00AE611C /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +227,8 @@
 		94F1E9CA2B7B475900AE611C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				94D0CA9D2BA1D8C8007CC822 /* Progress */,
+				94D0CA9C2BA1D8B8007CC822 /* Exercise */,
 				941893F52B8DF18200D0243A /* HomeModel.swift */,
 			);
 			path = Models;
