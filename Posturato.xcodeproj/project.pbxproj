@@ -24,6 +24,11 @@
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
 		946BE60B2B79D71900EE3869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60A2B79D71900EE3869 /* Assets.xcassets */; };
 		946BE60F2B79D71900EE3869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60E2B79D71900EE3869 /* Preview Assets.xcassets */; };
+		94D0CAA02BA1DB30007CC822 /* Coordinator .swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CA9F2BA1DB30007CC822 /* Coordinator .swift */; };
+		94D0CAA22BA1DB3C007CC822 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA12BA1DB3C007CC822 /* MainCoordinator.swift */; };
+		94D0CAA42BA1DB83007CC822 /* TrainingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */; };
+		94D0CAA62BA1DB96007CC822 /* ProgressCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */; };
+		94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */; };
 		94F1E9C62B7A4F7E00AE611C /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1E9C52B7A4F7E00AE611C /* ItemModel.swift */; };
 		94F1E9C82B7A508800AE611C /*  Content-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F1E9C72B7A508800AE611C /*  Content-ViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +53,11 @@
 		946BE60A2B79D71900EE3869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		946BE60C2B79D71900EE3869 /* Posturato.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Posturato.entitlements; sourceTree = "<group>"; };
 		946BE60E2B79D71900EE3869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		94D0CA9F2BA1DB30007CC822 /* Coordinator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator .swift"; sourceTree = "<group>"; };
+		94D0CAA12BA1DB3C007CC822 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCoordinator.swift; sourceTree = "<group>"; };
+		94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCoordinator.swift; sourceTree = "<group>"; };
+		94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryCoordinator.swift; sourceTree = "<group>"; };
 		94F1E9C52B7A4F7E00AE611C /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModel.swift; sourceTree = "<group>"; };
 		94F1E9C72B7A508800AE611C /*  Content-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " Content-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -173,6 +183,7 @@
 		946BE6052B79D71900EE3869 /* Posturato */ = {
 			isa = PBXGroup;
 			children = (
+				94D0CA9E2BA1DB0D007CC822 /* Coordinators */,
 				941261F02B8A312600361141 /* Supporting Files */,
 				941261EF2B8A311200361141 /* Resourses */,
 				941261EE2B8A310900361141 /* Helpers */,
@@ -210,6 +221,18 @@
 			children = (
 			);
 			path = Progress;
+			sourceTree = "<group>";
+		};
+		94D0CA9E2BA1DB0D007CC822 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				94D0CA9F2BA1DB30007CC822 /* Coordinator .swift */,
+				94D0CAA12BA1DB3C007CC822 /* MainCoordinator.swift */,
+				94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */,
+				94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */,
+				94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */,
+			);
+			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		94F1E9C92B7B457A00AE611C /* Views */ = {
@@ -304,12 +327,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D0CAA62BA1DB96007CC822 /* ProgressCoordinator.swift in Sources */,
 				94F1E9C62B7A4F7E00AE611C /* ItemModel.swift in Sources */,
 				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
+				94D0CAA42BA1DB83007CC822 /* TrainingCoordinator.swift in Sources */,
 				941262002B8A324600361141 /* HomeViewModel.swift in Sources */,
 				946BE6092B79D71900EE3869 /* ContentView.swift in Sources */,
 				9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */,
+				94D0CAA02BA1DB30007CC822 /* Coordinator .swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
+				94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */,
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
 				941262082B8A32D900361141 /* AuthService.swift in Sources */,
 				941262022B8A325600361141 /* SettingsViewModel.swift in Sources */,
@@ -317,6 +344,7 @@
 				941893F22B8DED2900D0243A /* TabBar.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,
+				94D0CAA22BA1DB3C007CC822 /* MainCoordinator.swift in Sources */,
 				94F1E9C82B7A508800AE611C /*  Content-ViewModel.swift in Sources */,
 				941893F42B8DF10200D0243A /* HomeScreen.swift in Sources */,
 				941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */,
