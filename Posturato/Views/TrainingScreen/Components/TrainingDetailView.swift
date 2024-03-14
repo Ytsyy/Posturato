@@ -13,7 +13,6 @@ struct TrainingDetailView: View {
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
-        // Можно добавить больше GridItem для большего числа колонок
     ]
     
     var body: some View {

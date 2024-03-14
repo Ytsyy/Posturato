@@ -9,17 +9,16 @@ import SwiftUI
 
 struct TrainingScreen: View {
     @ObservedObject var viewModel = TrainingViewModel()
+    @State private var showingSettings = false
+    
+    
     
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Picker("Choice training", selection: .constant(0)) {
-                        Text("All training").tag(0)
-                        Text("Favourits").tag(1)
-                    }
-                    .pickerStyle(SegmentedPickerStyle())
-                    .padding()
+                    StartTrainingCellView(title: "Your person training", day: "day 10", description: "description", imagePlaceholder: Image("PlankImage")) // Изменить на источник настоящих данных для инициализации
+                        .padding(.bottom, 20)
                     
                     
                     NavigationLink(destination: TrainingDetailView(trainings: viewModel.trainings)) {
@@ -78,8 +77,11 @@ struct TrainingScreen: View {
                 }
             }
             .customNavigationBar(title: "Training", onMenuTap: {
-                // Реализация действия при нажатии на кнопку меню
+                showingSettings = true
             })
+            .fullScreenCover(isPresented: $showingSettings) {
+                SettingsView()
+            }
         }
     }
 }
