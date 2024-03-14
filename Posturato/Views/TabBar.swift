@@ -9,27 +9,32 @@ import SwiftUI
 
 
 
-struct MainTabView: View {
+struct TabBar: View {
+    @Binding var tabSelection: Int // Используем Binding для синхронизации состояния
     
     var body: some View {
-        TabView {
+        TabView(selection: $tabSelection) { 
             ProgressView()
                 .tabItem {
                     Label("Progress", systemImage: "calendar")
                 }
+                .tag(1)
             
-            HomeScreen()
+            TrainingScreen()
                 .tabItem {
-                    Label("Home", image: "Home")
+                    Label("Training", image: "Home") 
                 }
+                .tag(2)
 
             TheoryView()
                 .tabItem {
                     Label("Theory", systemImage: "book")
                 }
+                .tag(3)
         }
     }
 }
+
 
 struct ProgressView: View {
     var body: some View {
@@ -40,12 +45,6 @@ struct ProgressView: View {
 struct TheoryView: View {
     var body: some View {
         Text("Theory Screen")
-    }
-}
-
-struct MainTabView_Previews: PreviewProvider {
-    static var previews: some View {
-        MainTabView()
     }
 }
 
