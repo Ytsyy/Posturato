@@ -14,16 +14,20 @@ struct SettingButton: View {
         Button(action: {
             // Действие при нажатии на кнопку
         }) {
-            Text(title)
-                .foregroundColor(.white)
-                .padding()
-                .frame(maxWidth: .infinity)
-                .background(Color.blue) // Цвет кнопки
-                .cornerRadius(10)
-                .shadow(radius: 2) // Тень
-                .padding(.horizontal, 20) // Отступы по бокам
+            HStack {
+                Text(title)
+                    .foregroundColor(.black)
+                    .padding(.leading, 20)
+                Spacer()
+            }
+            .frame(maxWidth: .infinity, minHeight: 34)
+            .padding(.vertical, 10)
+            .background(Color.white)
+            .cornerRadius(13)
+            .shadow(radius: 5) 
         }
         .buttonStyle(PlainButtonStyle())
+        .padding(.horizontal, 25)
     }
 }
 

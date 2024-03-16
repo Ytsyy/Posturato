@@ -13,8 +13,8 @@ struct SettingsView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                VStack(spacing: 20) {
-                    // Категория Аккаунт
+                VStack(spacing: 25) {
+
                     VStack(alignment: .leading, spacing: 10) {
                         Text("Аккаунт")
                             .font(.headline)
@@ -66,7 +66,6 @@ struct SettingsView: View {
                         presentationMode.wrappedValue.dismiss()
                     }) {
                         Image(systemName: "xmark")
-                            // Кастомизация кнопки закрытия, если нужно
                     }
                 }
             }

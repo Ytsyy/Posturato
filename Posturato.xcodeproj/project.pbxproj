@@ -205,7 +205,6 @@
 			children = (
 				94D0CA9E2BA1DB0D007CC822 /* Coordinators */,
 				941261F02B8A312600361141 /* Supporting Files */,
-				941261EF2B8A311200361141 /* Resourses */,
 				941261ED2B8A30F000361141 /* Services */,
 				941261EC2B8A30DD00361141 /* ViewModels */,
 				94F1E9CA2B7B475900AE611C /* Models */,
@@ -213,6 +212,7 @@
 				946BE6062B79D71900EE3869 /* PosturatoApp.swift */,
 				946BE6082B79D71900EE3869 /* ContentView.swift */,
 				946BE60C2B79D71900EE3869 /* Posturato.entitlements */,
+				941261EF2B8A311200361141 /* Resourses */,
 				946BE60D2B79D71900EE3869 /* Preview Content */,
 			);
 			path = Posturato;
