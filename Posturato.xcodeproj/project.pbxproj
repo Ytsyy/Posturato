@@ -20,8 +20,8 @@
 		941893F22B8DED2900D0243A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F12B8DED2900D0243A /* TabBar.swift */; };
 		941893F42B8DF10200D0243A /* TrainingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F32B8DF10200D0243A /* TrainingScreen.swift */; };
 		941893F62B8DF18200D0243A /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F52B8DF18200D0243A /* TrainingModel.swift */; };
-		9447CC2F2B971C8900AA35CA /* TrainingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447CC2E2B971C8900AA35CA /* TrainingCardView.swift */; };
 		9447CC322B971DD900AA35CA /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */; };
+		94508F652BA8606C0099BD44 /* TheoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94508F642BA8606C0099BD44 /* TheoryScreen.swift */; };
 		946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6062B79D71900EE3869 /* PosturatoApp.swift */; };
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
 		946BE60B2B79D71900EE3869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60A2B79D71900EE3869 /* Assets.xcassets */; };
@@ -31,10 +31,8 @@
 		94D0CAA42BA1DB83007CC822 /* TrainingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */; };
 		94D0CAA62BA1DB96007CC822 /* ProgressCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */; };
 		94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */; };
-		94D0CAAA2BA1DD4B007CC822 /* StartTrainingCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA92BA1DD4B007CC822 /* StartTrainingCellView.swift */; };
 		94D0CAAC2BA2EC3D007CC822 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */; };
 		94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */; };
-		94E8F3482B9A1FBC00B418D2 /* TrainingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E8F3472B9A1FBC00B418D2 /* TrainingDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,8 +49,8 @@
 		941893F12B8DED2900D0243A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		941893F32B8DF10200D0243A /* TrainingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScreen.swift; sourceTree = "<group>"; };
 		941893F52B8DF18200D0243A /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
-		9447CC2E2B971C8900AA35CA /* TrainingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCardView.swift; sourceTree = "<group>"; };
 		9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
+		94508F642BA8606C0099BD44 /* TheoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryScreen.swift; sourceTree = "<group>"; };
 		946BE6032B79D71900EE3869 /* Posturato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posturato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946BE6062B79D71900EE3869 /* PosturatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturatoApp.swift; sourceTree = "<group>"; };
 		946BE6082B79D71900EE3869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,10 +62,8 @@
 		94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCoordinator.swift; sourceTree = "<group>"; };
 		94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCoordinator.swift; sourceTree = "<group>"; };
 		94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryCoordinator.swift; sourceTree = "<group>"; };
-		94D0CAA92BA1DD4B007CC822 /* StartTrainingCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTrainingCellView.swift; sourceTree = "<group>"; };
 		94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingButton.swift; sourceTree = "<group>"; };
-		94E8F3472B9A1FBC00B418D2 /* TrainingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,13 +131,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		941261FC2B8A321400361141 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		941261FD2B8A321E00361141 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,11 +166,16 @@
 		9447CC302B971CC500AA35CA /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9447CC2E2B971C8900AA35CA /* TrainingCardView.swift */,
-				94E8F3472B9A1FBC00B418D2 /* TrainingDetailView.swift */,
-				94D0CAA92BA1DD4B007CC822 /* StartTrainingCellView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		94508F632BA860370099BD44 /* Theory */ = {
+			isa = PBXGroup;
+			children = (
+				94508F642BA8606C0099BD44 /* TheoryScreen.swift */,
+			);
+			path = Theory;
 			sourceTree = "<group>";
 		};
 		946BE5FA2B79D71900EE3869 = {
@@ -272,10 +266,10 @@
 		94F1E9C92B7B457A00AE611C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */,
 				9447CC2D2B971C5900AA35CA /* TrainingScreen */,
+				94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */,
+				94508F632BA860370099BD44 /* Theory */,
 				941261FD2B8A321E00361141 /* CustomViews */,
-				941261FC2B8A321400361141 /* Cells */,
 				941261F52B8A31C700361141 /* ViewControllers */,
 				941893F12B8DED2900D0243A /* TabBar.swift */,
 				9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */,
@@ -370,19 +364,17 @@
 				94D0CAA42BA1DB83007CC822 /* TrainingCoordinator.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
 				946BE6092B79D71900EE3869 /* ContentView.swift in Sources */,
-				94E8F3482B9A1FBC00B418D2 /* TrainingDetailView.swift in Sources */,
 				9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */,
 				94D0CAAC2BA2EC3D007CC822 /* SettingsView.swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
-				94D0CAAA2BA1DD4B007CC822 /* StartTrainingCellView.swift in Sources */,
 				94D0CAA02BA1DB30007CC822 /* Coordinator .swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
 				94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */,
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
 				941262082B8A32D900361141 /* AuthService.swift in Sources */,
 				941262022B8A325600361141 /* SettingsViewModel.swift in Sources */,
+				94508F652BA8606C0099BD44 /* TheoryScreen.swift in Sources */,
 				941893F62B8DF18200D0243A /* TrainingModel.swift in Sources */,
-				9447CC2F2B971C8900AA35CA /* TrainingCardView.swift in Sources */,
 				941893F22B8DED2900D0243A /* TabBar.swift in Sources */,
 				94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,

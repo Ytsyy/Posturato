@@ -26,7 +26,7 @@ struct TabBar: View {
                 }
                 .tag(2)
 
-            TheoryView()
+            TheoryScreen()
                 .tabItem {
                     Label("Theory", systemImage: "book")
                 }
@@ -42,9 +42,4 @@ struct ProgressView: View {
     }
 }
 
-struct TheoryView: View {
-    var body: some View {
-        Text("Theory Screen")
-    }
-}
 
