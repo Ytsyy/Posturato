@@ -33,6 +33,13 @@
 		94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */; };
 		94D0CAAC2BA2EC3D007CC822 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */; };
 		94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */; };
+		94D1375E2BADBB0600C0337C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1375D2BADBB0500C0337C /* Exercise.swift */; };
+		94D137602BADBC0500C0337C /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1375F2BADBC0500C0337C /* Workout.swift */; };
+		94D137622BADBC9600C0337C /* WorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D137612BADBC9600C0337C /* WorkoutViewModel.swift */; };
+		94D137642BADBD4900C0337C /* WorkoutDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D137632BADBD4900C0337C /* WorkoutDetailView.swift */; };
+		94D137662BADBD6100C0337C /* WorkoutSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D137652BADBD6100C0337C /* WorkoutSessionView.swift */; };
+		94D137682BADBD7300C0337C /* FinishWorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D137672BADBD7300C0337C /* FinishWorkoutView.swift */; };
+		94D1376A2BADBDB900C0337C /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D137692BADBDB900C0337C /* WorkoutCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +71,13 @@
 		94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryCoordinator.swift; sourceTree = "<group>"; };
 		94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingButton.swift; sourceTree = "<group>"; };
+		94D1375D2BADBB0500C0337C /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		94D1375F2BADBC0500C0337C /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		94D137612BADBC9600C0337C /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
+		94D137632BADBD4900C0337C /* WorkoutDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailView.swift; sourceTree = "<group>"; };
+		94D137652BADBD6100C0337C /* WorkoutSessionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionView.swift; sourceTree = "<group>"; };
+		94D137672BADBD7300C0337C /* FinishWorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishWorkoutView.swift; sourceTree = "<group>"; };
+		94D137692BADBDB900C0337C /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +195,7 @@
 		946BE5FA2B79D71900EE3869 = {
 			isa = PBXGroup;
 			children = (
+				94D137692BADBDB900C0337C /* WorkoutCell.swift */,
 				946BE6052B79D71900EE3869 /* Posturato */,
 				946BE6042B79D71900EE3869 /* Products */,
 			);
@@ -208,6 +223,12 @@
 				946BE60C2B79D71900EE3869 /* Posturato.entitlements */,
 				941261EF2B8A311200361141 /* Resourses */,
 				946BE60D2B79D71900EE3869 /* Preview Content */,
+				94D1375D2BADBB0500C0337C /* Exercise.swift */,
+				94D1375F2BADBC0500C0337C /* Workout.swift */,
+				94D137612BADBC9600C0337C /* WorkoutViewModel.swift */,
+				94D137632BADBD4900C0337C /* WorkoutDetailView.swift */,
+				94D137652BADBD6100C0337C /* WorkoutSessionView.swift */,
+				94D137672BADBD7300C0337C /* FinishWorkoutView.swift */,
 			);
 			path = Posturato;
 			sourceTree = "<group>";
@@ -358,10 +379,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
+				94D1376A2BADBDB900C0337C /* WorkoutCell.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
 				94D0CAA62BA1DB96007CC822 /* ProgressCoordinator.swift in Sources */,
 				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
 				94D0CAA42BA1DB83007CC822 /* TrainingCoordinator.swift in Sources */,
+				94D137622BADBC9600C0337C /* WorkoutViewModel.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
 				946BE6092B79D71900EE3869 /* ContentView.swift in Sources */,
 				9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */,
@@ -370,6 +393,7 @@
 				94D0CAA02BA1DB30007CC822 /* Coordinator .swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
 				94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */,
+				94D1375E2BADBB0600C0337C /* Exercise.swift in Sources */,
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
 				941262082B8A32D900361141 /* AuthService.swift in Sources */,
 				941262022B8A325600361141 /* SettingsViewModel.swift in Sources */,
@@ -379,12 +403,16 @@
 				94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,
+				94D137602BADBC0500C0337C /* Workout.swift in Sources */,
 				941893F42B8DF10200D0243A /* TrainingScreen.swift in Sources */,
 				94D0CAA22BA1DB3C007CC822 /* MainCoordinator.swift in Sources */,
+				94D137642BADBD4900C0337C /* WorkoutDetailView.swift in Sources */,
 				941893F42B8DF10200D0243A /* TrainingScreen.swift in Sources */,
 				941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */,
+				94D137662BADBD6100C0337C /* WorkoutSessionView.swift in Sources */,
 				9412620A2B8A32E400361141 /* APIClient.swift in Sources */,
 				9447CC322B971DD900AA35CA /* CustomNavigationBar.swift in Sources */,
+				94D137682BADBD7300C0337C /* FinishWorkoutView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
