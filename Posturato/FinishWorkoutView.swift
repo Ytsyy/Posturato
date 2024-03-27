@@ -11,17 +11,19 @@ import SwiftUI
 
 struct FinishWorkoutView: View {
     @Environment(\.presentationMode) var presentationMode
-    var viewModel: TrainingViewModel // Добавляем viewModel как свойство
+    var viewModel: TrainingViewModel
+    @Binding var isTrainingActive: Bool 
 
     var body: some View {
         VStack {
             Text("Тренировка завершена!")
                 .font(.title)
-            // Здесь могут быть добавлены другие элементы UI, отображающие статистику тренировки
-            
             Button("Закрыть") {
-                presentationMode.wrappedValue.dismiss()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Задержка на 0.5 секунды
+                    isTrainingActive = false
+                }
             }
+
             .padding()
             .background(Color.green)
             .foregroundColor(.white)

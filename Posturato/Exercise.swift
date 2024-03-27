@@ -29,8 +29,11 @@ struct Exercise: Identifiable {
 }
 
 let stretchExercises = [
-    Exercise(name: "Поза ворота", description: "Это упражнение помогает растянуть бедра и бока.", muscleGroups: ["Бедра", "Бока"], photoResource: "gatePose", videoURL: URL(string: "https://example.com/gatePose.mp4")),
-    Exercise(name: "Наклон к ноге", description: "Упражнение растягивает заднюю часть бедра.", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://example.com/legStretch.mp4"))
+    Exercise(name: "Поза ворота", description: "Это упражнение помогает растянуть бедра и бока.", muscleGroups: ["Бедра", "Бока"], photoResource: "gatePose", videoURL: URL(string: "https://mock")),
+    Exercise(name: "Наклон к ноге", description: "Упражнение растягивает заднюю часть бедра.", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock")),
+    Exercise(name: "Растяжка грудных", description: "Упражнение растягивает грудные мышцы", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock")),
+    Exercise(name: "Наклон к ноге", description: "Планка", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock")),
+    Exercise(name: "Наклон к ноге", description: "Растяжка передней поверхности бедра", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock"))
 ]
 
 let postureExercises = [

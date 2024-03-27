@@ -11,24 +11,25 @@ import SwiftUI
 struct WorkoutDetailView: View {
     var workout: Workout
     @ObservedObject var viewModel: TrainingViewModel
-    @State private var showWorkoutSession = false
+    @Binding var isTrainingActive: Bool // Изменено здесь
+    
 
     var body: some View {
         VStack {
-            // Детали тренировки
             Text(workout.name)
                 .font(.title)
             
             Button("Начать тренировку") {
-                showWorkoutSession = true
+                isTrainingActive = true // Изменено здесь
             }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
         }
-        .fullScreenCover(isPresented: $showWorkoutSession) {
-            WorkoutSessionView(workout: workout, viewModel: viewModel)
+        .fullScreenCover(isPresented: $isTrainingActive) {
+            WorkoutSessionView(workout: workout, viewModel: viewModel, isTrainingActive: $isTrainingActive) // Изменено здесь
         }
     }
 }
+

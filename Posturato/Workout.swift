@@ -30,6 +30,6 @@ let postureWorkout = Workout(
     id: UUID(),
     name: "Тренировка для улучшения осанки",
     description: "Комплекс упражнений направлен на укрепление мышц, отвечающих за правильную осанку.",
-    exercises: postureExercises.map { Workout.WorkoutExercise(exercise: $0, duration: 60) } // Предполагаемая длительность каждого упражнения — 60 секунд
+    exercises: postureExercises.map { Workout.WorkoutExercise(exercise: $0, duration: 60) } 
 )
 

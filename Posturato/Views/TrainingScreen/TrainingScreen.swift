@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct TrainingScreen: View {
     @ObservedObject var viewModel = TrainingViewModel()
     @State private var showingSettings = false
@@ -16,6 +14,7 @@ struct TrainingScreen: View {
     
     @State private var isTrainingActive = false
     @State private var showFinishWorkoutScreen = false
+    
     
     var body: some View {
         NavigationView {
@@ -35,8 +34,8 @@ struct TrainingScreen: View {
             .fullScreenCover(isPresented: $showingSettings) {
                 SettingsView()
             }
-            .sheet(item: $selectedWorkout) { workout in // Используйте sheet для отображения, когда selectedWorkout не nil
-                WorkoutDetailView(workout: workout, viewModel: viewModel)
+            .sheet(item: $selectedWorkout) { workout in
+                WorkoutDetailView(workout: workout, viewModel: viewModel, isTrainingActive: $isTrainingActive) // Добавлено $isTrainingActive
             }
         }
     }

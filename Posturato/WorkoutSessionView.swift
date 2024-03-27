@@ -11,6 +11,7 @@ import SwiftUI
 struct WorkoutSessionView: View {
     var workout: Workout
     @ObservedObject var viewModel: TrainingViewModel
+    @Binding var isTrainingActive: Bool // Изменено здесь
     @State private var currentExerciseIndex = 0
     @State private var showFinishWorkoutScreen = false
 
@@ -36,8 +37,9 @@ struct WorkoutSessionView: View {
             }
         }
         .fullScreenCover(isPresented: $showFinishWorkoutScreen) {
-            FinishWorkoutView(viewModel: viewModel)
+            FinishWorkoutView(viewModel: viewModel, isTrainingActive: $isTrainingActive)
         }
+
     }
 }
 
