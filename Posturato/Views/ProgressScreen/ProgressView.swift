@@ -11,11 +11,13 @@ import SwiftUI
 struct ProgressView: View {
     @State private var showingSettings = false
     
-    
     var body: some View {
         NavigationView {
             ScrollView {
-                Text("Progress Screen")
+                CalendarView()
+                    .offset(y: 40) 
+                
+                
             }
             .customNavigationBar(title: "Progress", onMenuTap: {
                 showingSettings = true
@@ -26,5 +28,8 @@ struct ProgressView: View {
         }
 
     }
+}
 
+#Preview {
+    ContentView()
 }

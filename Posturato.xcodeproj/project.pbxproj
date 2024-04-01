@@ -22,6 +22,7 @@
 		941893F62B8DF18200D0243A /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F52B8DF18200D0243A /* TrainingModel.swift */; };
 		9447CC322B971DD900AA35CA /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */; };
 		94508F652BA8606C0099BD44 /* TheoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94508F642BA8606C0099BD44 /* TheoryView.swift */; };
+		946224C72BBAC96300B5BCA4 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946224C62BBAC96300B5BCA4 /* CalendarView.swift */; };
 		946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6062B79D71900EE3869 /* PosturatoApp.swift */; };
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
 		946BE60B2B79D71900EE3869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60A2B79D71900EE3869 /* Assets.xcassets */; };
@@ -54,6 +55,7 @@
 		941893F52B8DF18200D0243A /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
 		9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		94508F642BA8606C0099BD44 /* TheoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryView.swift; sourceTree = "<group>"; };
+		946224C62BBAC96300B5BCA4 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		946BE6032B79D71900EE3869 /* Posturato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posturato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946BE6062B79D71900EE3869 /* PosturatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturatoApp.swift; sourceTree = "<group>"; };
 		946BE6082B79D71900EE3869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -176,6 +178,14 @@
 			path = Theory;
 			sourceTree = "<group>";
 		};
+		946224C32BBAC8FB00B5BCA4 /* SubView */ = {
+			isa = PBXGroup;
+			children = (
+				946224C62BBAC96300B5BCA4 /* CalendarView.swift */,
+			);
+			path = SubView;
+			sourceTree = "<group>";
+		};
 		946BE5FA2B79D71900EE3869 = {
 			isa = PBXGroup;
 			children = (
@@ -228,6 +238,7 @@
 		94A7553E2BBAB3E500322C09 /* ProgressScreen */ = {
 			isa = PBXGroup;
 			children = (
+				946224C32BBAC8FB00B5BCA4 /* SubView */,
 				94A7553F2BBAB3FF00322C09 /* ProgressView.swift */,
 			);
 			path = ProgressScreen;
@@ -377,6 +388,7 @@
 				94508F652BA8606C0099BD44 /* TheoryView.swift in Sources */,
 				941893F62B8DF18200D0243A /* TrainingModel.swift in Sources */,
 				941893F22B8DED2900D0243A /* TabBar.swift in Sources */,
+				946224C72BBAC96300B5BCA4 /* CalendarView.swift in Sources */,
 				94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,

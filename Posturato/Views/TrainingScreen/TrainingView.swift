@@ -40,3 +40,7 @@ struct TrainingView: View {
         }
     }
 }
+
+#Preview {
+    ContentView()
+}
