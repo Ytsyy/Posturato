@@ -18,19 +18,15 @@
 		9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412620B2B8A32EE00361141 /* CoreDataManage.swift */; };
 		9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412620D2B8A331700361141 /* SceneDelegate.swift */; };
 		941893F22B8DED2900D0243A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F12B8DED2900D0243A /* TabBar.swift */; };
-		941893F42B8DF10200D0243A /* TrainingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F32B8DF10200D0243A /* TrainingScreen.swift */; };
+		941893F42B8DF10200D0243A /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F32B8DF10200D0243A /* TrainingView.swift */; };
 		941893F62B8DF18200D0243A /* TrainingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F52B8DF18200D0243A /* TrainingModel.swift */; };
 		9447CC322B971DD900AA35CA /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */; };
-		94508F652BA8606C0099BD44 /* TheoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94508F642BA8606C0099BD44 /* TheoryScreen.swift */; };
+		94508F652BA8606C0099BD44 /* TheoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94508F642BA8606C0099BD44 /* TheoryView.swift */; };
 		946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6062B79D71900EE3869 /* PosturatoApp.swift */; };
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
 		946BE60B2B79D71900EE3869 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60A2B79D71900EE3869 /* Assets.xcassets */; };
 		946BE60F2B79D71900EE3869 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 946BE60E2B79D71900EE3869 /* Preview Assets.xcassets */; };
-		94D0CAA02BA1DB30007CC822 /* Coordinator .swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CA9F2BA1DB30007CC822 /* Coordinator .swift */; };
-		94D0CAA22BA1DB3C007CC822 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA12BA1DB3C007CC822 /* MainCoordinator.swift */; };
-		94D0CAA42BA1DB83007CC822 /* TrainingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */; };
-		94D0CAA62BA1DB96007CC822 /* ProgressCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */; };
-		94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */; };
+		94A755402BBAB3FF00322C09 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A7553F2BBAB3FF00322C09 /* ProgressView.swift */; };
 		94D0CAAC2BA2EC3D007CC822 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */; };
 		94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */; };
 		94D1375E2BADBB0600C0337C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1375D2BADBB0500C0337C /* Exercise.swift */; };
@@ -54,21 +50,17 @@
 		9412620B2B8A32EE00361141 /* CoreDataManage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManage.swift; sourceTree = "<group>"; };
 		9412620D2B8A331700361141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		941893F12B8DED2900D0243A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		941893F32B8DF10200D0243A /* TrainingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingScreen.swift; sourceTree = "<group>"; };
+		941893F32B8DF10200D0243A /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		941893F52B8DF18200D0243A /* TrainingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingModel.swift; sourceTree = "<group>"; };
 		9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
-		94508F642BA8606C0099BD44 /* TheoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryScreen.swift; sourceTree = "<group>"; };
+		94508F642BA8606C0099BD44 /* TheoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryView.swift; sourceTree = "<group>"; };
 		946BE6032B79D71900EE3869 /* Posturato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posturato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946BE6062B79D71900EE3869 /* PosturatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturatoApp.swift; sourceTree = "<group>"; };
 		946BE6082B79D71900EE3869 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		946BE60A2B79D71900EE3869 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		946BE60C2B79D71900EE3869 /* Posturato.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Posturato.entitlements; sourceTree = "<group>"; };
 		946BE60E2B79D71900EE3869 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		94D0CA9F2BA1DB30007CC822 /* Coordinator .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Coordinator .swift"; sourceTree = "<group>"; };
-		94D0CAA12BA1DB3C007CC822 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingCoordinator.swift; sourceTree = "<group>"; };
-		94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCoordinator.swift; sourceTree = "<group>"; };
-		94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryCoordinator.swift; sourceTree = "<group>"; };
+		94A7553F2BBAB3FF00322C09 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingButton.swift; sourceTree = "<group>"; };
 		94D1375D2BADBB0500C0337C /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
@@ -171,23 +163,15 @@
 		9447CC2D2B971C5900AA35CA /* TrainingScreen */ = {
 			isa = PBXGroup;
 			children = (
-				9447CC302B971CC500AA35CA /* Components */,
-				941893F32B8DF10200D0243A /* TrainingScreen.swift */,
+				941893F32B8DF10200D0243A /* TrainingView.swift */,
 			);
 			path = TrainingScreen;
-			sourceTree = "<group>";
-		};
-		9447CC302B971CC500AA35CA /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Components;
 			sourceTree = "<group>";
 		};
 		94508F632BA860370099BD44 /* Theory */ = {
 			isa = PBXGroup;
 			children = (
-				94508F642BA8606C0099BD44 /* TheoryScreen.swift */,
+				94508F642BA8606C0099BD44 /* TheoryView.swift */,
 			);
 			path = Theory;
 			sourceTree = "<group>";
@@ -212,9 +196,9 @@
 		946BE6052B79D71900EE3869 /* Posturato */ = {
 			isa = PBXGroup;
 			children = (
-				94D0CA9E2BA1DB0D007CC822 /* Coordinators */,
 				941261F02B8A312600361141 /* Supporting Files */,
 				941261ED2B8A30F000361141 /* Services */,
+				941261F52B8A31C700361141 /* ViewControllers */,
 				941261EC2B8A30DD00361141 /* ViewModels */,
 				94F1E9CA2B7B475900AE611C /* Models */,
 				94F1E9C92B7B457A00AE611C /* Views */,
@@ -241,6 +225,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		94A7553E2BBAB3E500322C09 /* ProgressScreen */ = {
+			isa = PBXGroup;
+			children = (
+				94A7553F2BBAB3FF00322C09 /* ProgressView.swift */,
+			);
+			path = ProgressScreen;
+			sourceTree = "<group>";
+		};
 		94D0CA9C2BA1D8B8007CC822 /* Exercise */ = {
 			isa = PBXGroup;
 			children = (
@@ -253,18 +245,6 @@
 			children = (
 			);
 			path = Progress;
-			sourceTree = "<group>";
-		};
-		94D0CA9E2BA1DB0D007CC822 /* Coordinators */ = {
-			isa = PBXGroup;
-			children = (
-				94D0CA9F2BA1DB30007CC822 /* Coordinator .swift */,
-				94D0CAA12BA1DB3C007CC822 /* MainCoordinator.swift */,
-				94D0CAA32BA1DB83007CC822 /* TrainingCoordinator.swift */,
-				94D0CAA52BA1DB96007CC822 /* ProgressCoordinator.swift */,
-				94D0CAA72BA1DBA9007CC822 /* TheoryCoordinator.swift */,
-			);
-			path = Coordinators;
 			sourceTree = "<group>";
 		};
 		94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */ = {
@@ -287,11 +267,11 @@
 		94F1E9C92B7B457A00AE611C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				94A7553E2BBAB3E500322C09 /* ProgressScreen */,
 				9447CC2D2B971C5900AA35CA /* TrainingScreen */,
 				94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */,
 				94508F632BA860370099BD44 /* Theory */,
 				941261FD2B8A321E00361141 /* CustomViews */,
-				941261F52B8A31C700361141 /* ViewControllers */,
 				941893F12B8DED2900D0243A /* TabBar.swift */,
 				9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */,
 			);
@@ -381,33 +361,29 @@
 				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
 				94D1376A2BADBDB900C0337C /* WorkoutCell.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
-				94D0CAA62BA1DB96007CC822 /* ProgressCoordinator.swift in Sources */,
 				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
-				94D0CAA42BA1DB83007CC822 /* TrainingCoordinator.swift in Sources */,
 				94D137622BADBC9600C0337C /* WorkoutViewModel.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
 				946BE6092B79D71900EE3869 /* ContentView.swift in Sources */,
+				94A755402BBAB3FF00322C09 /* ProgressView.swift in Sources */,
 				9412620C2B8A32EE00361141 /* CoreDataManage.swift in Sources */,
 				94D0CAAC2BA2EC3D007CC822 /* SettingsView.swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
-				94D0CAA02BA1DB30007CC822 /* Coordinator .swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
-				94D0CAA82BA1DBA9007CC822 /* TheoryCoordinator.swift in Sources */,
 				94D1375E2BADBB0600C0337C /* Exercise.swift in Sources */,
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
 				941262082B8A32D900361141 /* AuthService.swift in Sources */,
 				941262022B8A325600361141 /* SettingsViewModel.swift in Sources */,
-				94508F652BA8606C0099BD44 /* TheoryScreen.swift in Sources */,
+				94508F652BA8606C0099BD44 /* TheoryView.swift in Sources */,
 				941893F62B8DF18200D0243A /* TrainingModel.swift in Sources */,
 				941893F22B8DED2900D0243A /* TabBar.swift in Sources */,
 				94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,
 				94D137602BADBC0500C0337C /* Workout.swift in Sources */,
-				941893F42B8DF10200D0243A /* TrainingScreen.swift in Sources */,
-				94D0CAA22BA1DB3C007CC822 /* MainCoordinator.swift in Sources */,
+				941893F42B8DF10200D0243A /* TrainingView.swift in Sources */,
 				94D137642BADBD4900C0337C /* WorkoutDetailView.swift in Sources */,
-				941893F42B8DF10200D0243A /* TrainingScreen.swift in Sources */,
+				941893F42B8DF10200D0243A /* TrainingView.swift in Sources */,
 				941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */,
 				94D137662BADBD6100C0337C /* WorkoutSessionView.swift in Sources */,
 				9412620A2B8A32E400361141 /* APIClient.swift in Sources */,

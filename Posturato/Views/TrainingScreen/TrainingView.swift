@@ -1,5 +1,5 @@
 //
-//  HomeView.swift
+//  TrainingView.swift
 //  Posturato
 //
 //  Created by Maxim on 27.02.2024.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TrainingScreen: View {
+struct TrainingView: View {
     @ObservedObject var viewModel = TrainingViewModel()
     @State private var showingSettings = false
     @State private var selectedWorkout: Workout? // Изменено здесь

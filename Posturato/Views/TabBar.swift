@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct TabBar: View {
     @Binding var tabSelection: Int // Используем Binding для синхронизации состояния
     
@@ -20,13 +18,13 @@ struct TabBar: View {
                 }
                 .tag(1)
             
-            TrainingScreen()
+            TrainingView()
                 .tabItem {
                     Label("Training", image: "Home") 
                 }
                 .tag(2)
 
-            TheoryScreen()
+            TheoryView()
                 .tabItem {
                     Label("Theory", systemImage: "book")
                 }
@@ -34,12 +32,3 @@ struct TabBar: View {
         }
     }
 }
-
-
-struct ProgressView: View {
-    var body: some View {
-        Text("Progress Screen")
-    }
-}
-
-
