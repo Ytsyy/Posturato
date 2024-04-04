@@ -88,8 +88,6 @@
 		941261EC2B8A30DD00361141 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				941261FF2B8A324600361141 /* TrainingViewModel.swift */,
-				941262012B8A325600361141 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -166,8 +164,20 @@
 			isa = PBXGroup;
 			children = (
 				941893F32B8DF10200D0243A /* TrainingView.swift */,
+				941261FF2B8A324600361141 /* TrainingViewModel.swift */,
 			);
 			path = TrainingScreen;
+			sourceTree = "<group>";
+		};
+		944F81E82BBEDC880019627E /* Workout */ = {
+			isa = PBXGroup;
+			children = (
+				94D137632BADBD4900C0337C /* WorkoutDetailView.swift */,
+				94D137612BADBC9600C0337C /* WorkoutViewModel.swift */,
+				94D137652BADBD6100C0337C /* WorkoutSessionView.swift */,
+				94D137672BADBD7300C0337C /* FinishWorkoutView.swift */,
+			);
+			path = Workout;
 			sourceTree = "<group>";
 		};
 		94508F632BA860370099BD44 /* Theory */ = {
@@ -217,12 +227,6 @@
 				946BE60C2B79D71900EE3869 /* Posturato.entitlements */,
 				941261EF2B8A311200361141 /* Resourses */,
 				946BE60D2B79D71900EE3869 /* Preview Content */,
-				94D1375D2BADBB0500C0337C /* Exercise.swift */,
-				94D1375F2BADBC0500C0337C /* Workout.swift */,
-				94D137612BADBC9600C0337C /* WorkoutViewModel.swift */,
-				94D137632BADBD4900C0337C /* WorkoutDetailView.swift */,
-				94D137652BADBD6100C0337C /* WorkoutSessionView.swift */,
-				94D137672BADBD7300C0337C /* FinishWorkoutView.swift */,
 			);
 			path = Posturato;
 			sourceTree = "<group>";
@@ -244,25 +248,12 @@
 			path = ProgressScreen;
 			sourceTree = "<group>";
 		};
-		94D0CA9C2BA1D8B8007CC822 /* Exercise */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Exercise;
-			sourceTree = "<group>";
-		};
-		94D0CA9D2BA1D8C8007CC822 /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Progress;
-			sourceTree = "<group>";
-		};
 		94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
 				94D0CAB42BA2F4F9007CC822 /* Components */,
 				94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */,
+				941262012B8A325600361141 /* SettingsViewModel.swift */,
 			);
 			path = SettingsScreen;
 			sourceTree = "<group>";
@@ -278,6 +269,7 @@
 		94F1E9C92B7B457A00AE611C /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				944F81E82BBEDC880019627E /* Workout */,
 				94A7553E2BBAB3E500322C09 /* ProgressScreen */,
 				9447CC2D2B971C5900AA35CA /* TrainingScreen */,
 				94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */,
@@ -292,9 +284,9 @@
 		94F1E9CA2B7B475900AE611C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				94D0CA9D2BA1D8C8007CC822 /* Progress */,
-				94D0CA9C2BA1D8B8007CC822 /* Exercise */,
 				941893F52B8DF18200D0243A /* TrainingModel.swift */,
+				94D1375D2BADBB0500C0337C /* Exercise.swift */,
+				94D1375F2BADBC0500C0337C /* Workout.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
