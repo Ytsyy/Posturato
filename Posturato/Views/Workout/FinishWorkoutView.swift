@@ -10,20 +10,15 @@ import SwiftUI
 
 
 struct FinishWorkoutView: View {
-    @Environment(\.presentationMode) var presentationMode
-    var viewModel: TrainingViewModel
-    @Binding var isTrainingActive: Bool 
+    @ObservedObject var viewModel: FinishWorkoutViewModel
 
     var body: some View {
         VStack {
             Text("Тренировка завершена!")
                 .font(.title)
             Button("Закрыть") {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { // Задержка на 0.5 секунды
-                    isTrainingActive = false
-                }
+                viewModel.closeWorkout()
             }
-
             .padding()
             .background(Color.green)
             .foregroundColor(.white)
@@ -31,6 +26,3 @@ struct FinishWorkoutView: View {
         }
     }
 }
-
-
-

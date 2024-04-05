@@ -9,37 +9,26 @@ import Foundation
 import SwiftUI
 
 struct WorkoutSessionView: View {
-    var workout: Workout
-    @ObservedObject var viewModel: TrainingViewModel
-    @Binding var isTrainingActive: Bool // Изменено здесь
-    @State private var currentExerciseIndex = 0
-    @State private var showFinishWorkoutScreen = false
+    @ObservedObject var viewModel: WorkoutSessionViewModel
 
     var body: some View {
         VStack {
-            if currentExerciseIndex < workout.exercises.count {
-                let exercise = workout.exercises[currentExerciseIndex].exercise
+            if viewModel.currentExerciseIndex < viewModel.workout.exercises.count {
+                let exercise = viewModel.workout.exercises[viewModel.currentExerciseIndex].exercise
                 Text(exercise.name)
                     .font(.title)
-                // Отображение упражнения и таймера
+                // Display of exercise and timer
 
                 Button("Следующее упражнение") {
-                    if currentExerciseIndex + 1 < workout.exercises.count {
-                        currentExerciseIndex += 1
-                    } else {
-                        // Переход к экрану завершения тренировки
-                        showFinishWorkoutScreen = true
-                    }
+                    viewModel.goToNextExercise()
                 }
             } else {
-                // Эта ветка, вероятно, уже не будет выполняться, так как переход на экран завершения обрабатывается выше
                 EmptyView()
             }
         }
-        .fullScreenCover(isPresented: $showFinishWorkoutScreen) {
-            FinishWorkoutView(viewModel: viewModel, isTrainingActive: $isTrainingActive)
+        .fullScreenCover(isPresented: $viewModel.showFinishWorkoutScreen) {
+            FinishWorkoutView(viewModel: FinishWorkoutViewModel(trainingViewModel: viewModel.trainingViewModel, isTrainingActive: viewModel.isTrainingActive))
         }
-
     }
 }
 
