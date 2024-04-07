@@ -13,11 +13,19 @@ struct WorkoutSessionView: View {
 
     var body: some View {
         VStack {
-            if viewModel.currentExerciseIndex < viewModel.workout.exercises.count {
+            if viewModel.showingRestView {
+                RestView(isPresented: $viewModel.showingRestView) {
+                    viewModel.showingRestView = false
+                    if viewModel.currentExerciseIndex + 1 < viewModel.workout.exercises.count {
+                        viewModel.currentExerciseIndex += 1
+                    } else {
+                        viewModel.showFinishWorkoutScreen = true
+                    }
+                }
+            } else if viewModel.currentExerciseIndex < viewModel.workout.exercises.count {
                 let exercise = viewModel.workout.exercises[viewModel.currentExerciseIndex].exercise
                 Text(exercise.name)
                     .font(.title)
-                // Display of exercise and timer
 
                 Button("Следующее упражнение") {
                     viewModel.goToNextExercise()

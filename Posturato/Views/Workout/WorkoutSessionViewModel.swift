@@ -11,6 +11,7 @@ import SwiftUI
 class WorkoutSessionViewModel: ObservableObject {
     @Published var currentExerciseIndex = 0
     @Published var showFinishWorkoutScreen = false
+    @Published var showingRestView = false 
     var workout: Workout
     var trainingViewModel: TrainingViewModel
     var isTrainingActive: Binding<Bool>
@@ -23,7 +24,7 @@ class WorkoutSessionViewModel: ObservableObject {
     
     func goToNextExercise() {
         if currentExerciseIndex + 1 < workout.exercises.count {
-            currentExerciseIndex += 1
+            showingRestView = true
         } else {
             showFinishWorkoutScreen = true
         }
