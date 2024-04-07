@@ -32,6 +32,7 @@
 		94CAAB622BBFD095006D2926 /* WorkoutSessionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAAB612BBFD095006D2926 /* WorkoutSessionViewModel.swift */; };
 		94CAAB642BBFD121006D2926 /* FinishWorkoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAAB632BBFD121006D2926 /* FinishWorkoutViewModel.swift */; };
 		94CAAB662BC26329006D2926 /* RestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAAB652BC26329006D2926 /* RestView.swift */; };
+		94CAAB682BC26CFC006D2926 /* RestViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CAAB672BC26CFC006D2926 /* RestViewModel.swift */; };
 		94D0CAAC2BA2EC3D007CC822 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */; };
 		94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */; };
 		94D1375E2BADBB0600C0337C /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D1375D2BADBB0500C0337C /* Exercise.swift */; };
@@ -70,6 +71,7 @@
 		94CAAB612BBFD095006D2926 /* WorkoutSessionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutSessionViewModel.swift; sourceTree = "<group>"; };
 		94CAAB632BBFD121006D2926 /* FinishWorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishWorkoutViewModel.swift; sourceTree = "<group>"; };
 		94CAAB652BC26329006D2926 /* RestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestView.swift; sourceTree = "<group>"; };
+		94CAAB672BC26CFC006D2926 /* RestViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestViewModel.swift; sourceTree = "<group>"; };
 		94D0CAAB2BA2EC3D007CC822 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSettingButton.swift; sourceTree = "<group>"; };
 		94D1375D2BADBB0500C0337C /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 				94D137652BADBD6100C0337C /* WorkoutSessionView.swift */,
 				94CAAB612BBFD095006D2926 /* WorkoutSessionViewModel.swift */,
 				94CAAB652BC26329006D2926 /* RestView.swift */,
+				94CAAB672BC26CFC006D2926 /* RestViewModel.swift */,
 				94D137672BADBD7300C0337C /* FinishWorkoutView.swift */,
 				94CAAB632BBFD121006D2926 /* FinishWorkoutViewModel.swift */,
 			);
@@ -394,6 +397,7 @@
 				94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,
+				94CAAB682BC26CFC006D2926 /* RestViewModel.swift in Sources */,
 				94D137602BADBC0500C0337C /* Workout.swift in Sources */,
 				941893F42B8DF10200D0243A /* TrainingView.swift in Sources */,
 				94D137642BADBD4900C0337C /* WorkoutDetailView.swift in Sources */,

@@ -8,29 +8,26 @@
 import Foundation
 import SwiftUI
 
-struct RestView: View {
-    @Binding var isPresented: Bool
-    let skipAction: () -> Void
+import SwiftUI
 
-    @State private var remainingSeconds: Int = 10
-    @State private var timer: Timer?
+struct RestView: View {
+    @ObservedObject var viewModel: RestViewModel
 
     var body: some View {
         VStack {
             Text("Время отдыха")
                 .font(.title)
-            Text("\(remainingSeconds) секунд")
+            Text("\(viewModel.remainingSeconds) секунд")
                 .font(.largeTitle)
             Button("Пропустить") {
-                stopTimer()
-                skipAction()
+                viewModel.skipRest()
             }
             .padding()
             .background(Color.red)
             .foregroundColor(.white)
             .cornerRadius(8)
             Button("+ 10 секунд") {
-                addSeconds(10)
+                viewModel.addSeconds(10)
             }
             .padding()
             .background(Color.blue)
@@ -38,31 +35,10 @@ struct RestView: View {
             .cornerRadius(8)
         }
         .onAppear {
-            startTimer()
+            viewModel.startTimer()
         }
         .onDisappear {
-            stopTimer()
+            viewModel.stopTimer()
         }
-    }
-
-    private func startTimer() {
-        stopTimer() // Остановите предыдущий таймер, если он был активен
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { _ in
-            if self.remainingSeconds > 0 {
-                self.remainingSeconds -= 1
-            } else {
-                self.stopTimer()
-                self.skipAction()
-            }
-        }
-    }
-
-    private func stopTimer() {
-        timer?.invalidate()
-        timer = nil
-    }
-
-    private func addSeconds(_ seconds: Int) {
-        remainingSeconds += seconds
     }
 }

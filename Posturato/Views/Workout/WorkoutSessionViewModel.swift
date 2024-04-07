@@ -11,7 +11,7 @@ import SwiftUI
 class WorkoutSessionViewModel: ObservableObject {
     @Published var currentExerciseIndex = 0
     @Published var showFinishWorkoutScreen = false
-    @Published var showingRestView = false 
+    @Published var showingRestView = false
     var workout: Workout
     var trainingViewModel: TrainingViewModel
     var isTrainingActive: Binding<Bool>
