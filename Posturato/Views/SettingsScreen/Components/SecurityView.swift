@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/*
 struct SecurityView: View {
     @ObservedObject var viewModel: SecurityViewModel
     
@@ -23,4 +24,4 @@ struct SecurityView: View {
 //FUTURE перенести
 class SecurityViewModel: ObservableObject {
     @Published var text: String = "Это текст Политики конфиденциальности. Здесь описывается, как приложение собирает, использует и защищает личную информацию пользователей. Важно чётко указать, какие данные собираются, для чего они используются и кому могут быть раскрыты."
-}
+}*/

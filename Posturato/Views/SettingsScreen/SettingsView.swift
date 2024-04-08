@@ -51,10 +51,12 @@ enum SupportSettings: CaseIterable {
 }
 
 struct SettingsView: View {
+    @Environment(\.dismiss) private var dismiss
     @State private var isProfileViewPresented = false
     @State private var isSubscriptionViewPresented = false
     @State private var isNotificationsViewPresented = false
     @State private var isLanguageViewPresented = false
+    @State private var isFrequentlyAskedQuestionsViewPresented = false
     @State private var isContactSupportViewPresented = false
     @State private var isTermsOfUseViewPresented = false
     @State private var isPrivacyPolicyViewPresented = false
@@ -95,6 +97,13 @@ struct SettingsView: View {
                 }
                 
                 Section(header: Text("Support")) {
+                    Button("Frequently Asked Questions") {
+                        isFrequentlyAskedQuestionsViewPresented = true
+                    }
+                    .navigationDestination(isPresented: $isFrequentlyAskedQuestionsViewPresented) {
+                        FrequentlyAskedQuestionsView(viewModel: FrequentlyAskedQuestionsViewModel())
+                    }
+                    
                     Button("Contact Support") {
                         isContactSupportViewPresented = true
                     }
@@ -118,6 +127,15 @@ struct SettingsView: View {
                 }
             }
             .navigationTitle("Settings")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Image(systemName: "xmark")
+                    }
+                }
+            }
         }
     }
 }
