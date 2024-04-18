@@ -8,15 +8,11 @@
 import Foundation
 
 class TrainingViewModel: ObservableObject {
-    @Published var workouts: [Workout] = []
+
 
     init() {
-        loadWorkouts()
+        
     }
 
-    func loadWorkouts() {
-        // Добавление тренировки для осанки в список тренировок
-        workouts.append(postureWorkout)
-    }
 }
 
