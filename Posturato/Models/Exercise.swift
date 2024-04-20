@@ -6,58 +6,67 @@
 //
 
 import Foundation
-import SwiftUI
 
-struct Exercise: Identifiable {
+
+struct Exercise {
     let id: UUID
     let name: String
-    let description: String
-    let muscleGroups: [String]
-    let photoURL: URL?
-    let photoResource: String? // Имя ресурса изображения в Assets
+    let details: String
+    let image: String?  // Теперь это имя файла изображения
     let videoURL: URL?
-
-    init(id: UUID = UUID(), name: String, description: String, muscleGroups: [String], photoURL: URL? = nil, photoResource: String? = nil, videoURL: URL? = nil) {
-        self.id = id
-        self.name = name
-        self.description = description
-        self.muscleGroups = muscleGroups
-        self.photoURL = photoURL
-        self.photoResource = photoResource
-        self.videoURL = videoURL
-    }
+    let targetMuscleGroups: [MuscleGroup]
 }
 
-let stretchExercises = [
-    Exercise(name: "Поза ворота", description: "Это упражнение помогает растянуть бедра и бока.", muscleGroups: ["Бедра", "Бока"], photoResource: "gatePose", videoURL: URL(string: "https://mock")),
-    Exercise(name: "Наклон к ноге", description: "Упражнение растягивает заднюю часть бедра.", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock")),
-    Exercise(name: "Растяжка грудных", description: "Упражнение растягивает грудные мышцы", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock")),
-    Exercise(name: "Наклон к ноге", description: "Планка", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock")),
-    Exercise(name: "Наклон к ноге", description: "Растяжка передней поверхности бедра", muscleGroups: ["Задняя часть бедра"], photoResource: "legStretch", videoURL: URL(string: "https://mock"))
-]
+enum MuscleGroup: String, CaseIterable {
+    case upperBack = "Upper Back"
+    case lowerBack = "Lower Back"
+    case shoulders = "Shoulders"
+    case neck = "Neck"
+    case abs = "Abs"
+    case chest = "Chest"
+    case glutes = "Glutes"
+    case thighs = "Thighs"
+}
 
-let postureExercises = [
+let globalExercises: [Exercise] = [
     Exercise(
-        name: "Растяжка кота",
-        description: "Имитируйте движение кота, округляя спину вверх и вниз, чтобы улучшить гибкость позвоночника.",
-        muscleGroups: ["Позвоночник"],
-        photoResource: "catStretch",
-        videoURL: nil
+        id: UUID(),
+        name: "cat_cow",
+        details: "Описание",
+        image: "cat_cow.png",
+        videoURL: nil,
+        targetMuscleGroups: [.glutes, .thighs]
     ),
     Exercise(
-        name: "Плечевые мосты",
-        description: "Лягте на спину, согните колени и поднимайте таз, удерживая плечи на полу, чтобы укрепить нижнюю часть спины и ягодицы.",
-        muscleGroups: ["Нижняя часть спины", "Ягодицы"],
-        photoResource: "shoulderBridges",
-        videoURL: nil
+        id: UUID(),
+        name: "Подъемы плеч",
+        details: "Сидя или стоя, медленно поднимайте плечи к ушам и опускайте их обратно. Повторите 15 раз.",
+        image: "shoulder_shrugs.png",
+        videoURL: nil,
+        targetMuscleGroups: [.shoulders, .neck]
     ),
     Exercise(
-        name: "Растяжка грудных мышц",
-        description: "Используйте дверной косяк для растяжки грудных мышц, что способствует открытию грудной клетки и улучшению осанки.",
-        muscleGroups: ["Грудные мышцы"],
-        photoResource: "chestStretch",
-        videoURL: nil
+        id: UUID(),
+        name: "Планка",
+        details: "Встаньте в упор лежа в планку",
+        image: "PlankImage",
+        videoURL: nil,
+        targetMuscleGroups: [.upperBack, .lowerBack]
+    ),
+    Exercise(
+        id: UUID(),
+        name: "Растяжка 'лебедь'",
+        details: "Лягте на живот, руки вытяните перед собой. Медленно поднимайте голову, плечи и руки, держа ноги на полу. Задержитесь в этом положении на 5 секунд, затем опуститесь.",
+        image: "swan_stretch.png",
+        videoURL: nil,
+        targetMuscleGroups: [.lowerBack, .shoulders]
+    ),
+    Exercise(
+        id: UUID(),
+        name: "Скручивания на пресс",
+        details: "Лягте на спину, ноги согните в коленях, стопы на полу. Касаясь руками затылка, медленно поднимайте верх туловища от пола и опускайте обратно. Повторите 20 раз.",
+        image: "crunches.png",
+        videoURL: nil,
+        targetMuscleGroups: [.abs]
     )
 ]
-
-
