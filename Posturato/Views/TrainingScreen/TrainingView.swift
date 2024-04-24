@@ -9,18 +9,17 @@ import SwiftUI
 
 struct TrainingView: View {
     @StateObject var viewModel = TrainingViewModel()
-    
+
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView {
                 VStack {
                     Text("Выберите тренировку:")
                         .font(.title2)
                         .padding()
-                    
-                    // Элементы управления, например список тренировок, можно добавить здесь
+
                     ForEach(viewModel.workouts.indices, id: \.self) { index in
-                        NavigationLink(destination: DetailView(workout: self.viewModel.workouts[index])) {
+                        NavigationLink(destination: DetailView(workout: viewModel.workouts[index])) {
                             Text("Подробнее о тренировке \(index + 1)")
                                 .padding()
                                 .background(Color.blue)
@@ -30,6 +29,14 @@ struct TrainingView: View {
                     }
                 }
                 .navigationTitle("Training")
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "gear")
+                            .imageScale(.large)
+                    }
+                }
             }
         }
     }

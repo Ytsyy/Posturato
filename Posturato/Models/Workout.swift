@@ -12,16 +12,16 @@ struct Workout{
     let name: String
     let description: String
     let exercises: [Exercise]
-    var durations: [Int]  
+    let image: String?
+    var durations: [Int]
 }
 
 var selectedExercises = postureBasicExercises
-let workout = Workout(
+let globalWorkout = Workout(
     id: UUID(),
-    name: "Улучшение осанки",
-    description: "Эта тренировка нацелена на улучшение вашей осанки через ряд специализированных упражнений, направленных на ключевые группы мышц.",
+    name: "Improving posture",
+    description: "This basic workout is for improving your posture",
     exercises: selectedExercises,
-    durations: Array(repeating: 0, count: selectedExercises.count)  
+    image: "BasicTrainingImg",
+    durations: Array(repeating: 0, count: selectedExercises.count)
 )
-
-let globalWorkout = workout
