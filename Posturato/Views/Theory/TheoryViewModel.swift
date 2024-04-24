@@ -12,6 +12,6 @@ class TheoryViewModel: ObservableObject {
 
     init() {
         // Предполагается, что `globalExercises` - это глобальная переменная, доступная в вашем проекте
-        self.exercises = globalExercises
+        self.exercises = postureBasicExercises
     }
 }

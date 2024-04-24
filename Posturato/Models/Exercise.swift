@@ -28,7 +28,7 @@ enum MuscleGroup: String, CaseIterable {
     case thighs = "Thighs"
 }
 
-let globalExercises: [Exercise] = [
+let postureBasicExercises: [Exercise] = [
     Exercise(
         id: UUID(),
         name: "cat_cow",
@@ -39,9 +39,9 @@ let globalExercises: [Exercise] = [
     ),
     Exercise(
         id: UUID(),
-        name: "Подъемы плеч",
-        details: "Сидя или стоя, медленно поднимайте плечи к ушам и опускайте их обратно. Повторите 15 раз.",
-        image: "shoulder_shrugs.png",
+        name: "Bird Dog",
+        details: " Begin on your hands and knees, aligning your palms under your shoulders and knees under your hips. Activate your core to achieve a neutral spine. Lift your right hand and extend it forward while simultaneously extending your left leg back, keeping both at shoulder and hip height respectively. Hold this pose for a second, then return to the starting position and repeat on the opposite side ",
+        image: "bird-Dog",
         videoURL: nil,
         targetMuscleGroups: [.shoulders, .neck]
     ),
