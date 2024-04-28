@@ -30,6 +30,7 @@ struct TrainingView: View {
                 }
                 .navigationTitle("Training")
             }
+            .toolbar(.visible, for: .tabBar)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     NavigationLink(destination: SettingsView()) {

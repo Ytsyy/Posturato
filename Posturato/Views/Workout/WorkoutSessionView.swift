@@ -8,37 +8,26 @@
 import Foundation
 import SwiftUI
 
-struct ExerciseView: View {
-    @ObservedObject var viewModel: ExerciseViewModel
-    var exercise: Exercise
-    var onComplete: () -> Void
-    
+struct WorkoutView: View {
+    var workout: Workout
+
     var body: some View {
         VStack {
-            Text(exercise.name)
-                .font(.largeTitle)
-            if let imageName = exercise.image {
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 300)
-            }
-            Text("\(viewModel.secondsRemaining) секунд")
-                .font(.headline)
-            
-            Button("Пропустить") {
-                viewModel.timer?.cancel()
-                onComplete()
-            }
-            .padding()
-            .background(Color.red)
-            .foregroundColor(.white)
-            .cornerRadius(10)
+            Text("Тренировка: \(workout.name)")
+                .font(.title)
+                .padding()
+
+            // Добавьте дополнительный контент для WorkoutView
+            Spacer()
         }
-        .onAppear {
-            viewModel.startTimer {
-                onComplete()  // Перейти к отдыху или следующему упражнению
+        .navigationTitle("Во время тренировки")
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true) // Скрываем кнопку "Назад"
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                EmptyView() // Убираем место, где обычно находится кнопка "Назад"
             }
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }
