@@ -1,20 +1,21 @@
 //
-//  RestView.swift
+//  WorkoutExerciseView.swift
 //  Posturato
 //
-//  Created by Maxim on 07.04.2024.
+//  Created by Maxim on 30.04.2024.
 //
 
+import Foundation
 import SwiftUI
-
-struct RestView: View {
+struct WorkoutExerciseView: View {
     @ObservedObject var viewModel: WorkoutViewModel
+    var exercise: Exercise
 
     @State private var timerSeconds: Int = 10
 
     var body: some View {
         VStack {
-            Text("Rest")
+            Text("Exercise: \(exercise.name)")
                 .font(.largeTitle)
             
             // Таймер
@@ -32,7 +33,7 @@ struct RestView: View {
                     .cornerRadius(10)
             }
 
-            // Кнопка пропуска
+            // Кнопка пропуска упражнения
             Button(action: {
                 viewModel.skip()
             }) {
@@ -43,6 +44,6 @@ struct RestView: View {
                     .cornerRadius(10)
             }
         }
-        .navigationTitle("Rest View")
+        .navigationTitle("Workout Exercise")
     }
 }

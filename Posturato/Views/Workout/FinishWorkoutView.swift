@@ -6,22 +6,24 @@
 //
 
 import SwiftUI
+import SwiftUI
+
 struct FinishView: View {
-    @Environment(\.presentationMode) var presentationMode
-    
     var body: some View {
         VStack {
-            Text("Тренировка завершена!")
+            Text("Workout Finished!")
                 .font(.largeTitle)
-            Text("Поздравляем с завершением тренировки.")
-                .padding()
-            Button("Закончить") {
-                presentationMode.wrappedValue.dismiss()
+            
+            Button(action: {
+                // Здесь можно добавить логику для перехода на корневой экран
+            }) {
+                Text("Go Back")
+                    .padding()
+                    .foregroundColor(.white)
+                    .background(Color.green)
+                    .cornerRadius(10)
             }
-            .padding()
-            .background(Color.green)
-            .foregroundColor(.white)
-            .cornerRadius(10)
         }
+        .navigationTitle("Finish")
     }
 }

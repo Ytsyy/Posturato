@@ -13,7 +13,7 @@ class TrainingViewModel: ObservableObject {
 
     init() {
         // Initialize workouts here, for example:
-        workouts = [globalWorkout]
+        workouts = [basicPostureWorkoutDay1]
     }
 
     @Published var workouts: [Workout] = []

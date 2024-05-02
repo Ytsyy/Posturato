@@ -8,11 +8,11 @@
 import Foundation
 
 
-struct Exercise {
+struct Exercise: Identifiable, Equatable, Hashable {
     let id: UUID
     let name: String
     let details: String
-    let image: String?  
+    let image: String?
     let videoURL: URL?
     let targetMuscleGroups: [MuscleGroup]
 }

@@ -7,43 +7,29 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 
-struct DetailView: View {
+struct WorkoutDetailView: View {
     var workout: Workout
 
     var body: some View {
-        NavigationStack {
-            List(workout.exercises, id: \.id) { exercise in
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text(exercise.name.uppercased()) // Название упражнения заглавными
-                            .font(.headline)
-                        Text(exercise.details) // Описание упражнения
-                            .font(.subheadline)
-                            .foregroundColor(.gray)
-                    }
-                    Spacer()
-                    if let imageName = exercise.image, let image = UIImage(named: imageName) {
-                        Image(uiImage: image)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 50, height: 50) // Размер картинки
-                            .cornerRadius(10)
-                    }
-                }
-            }
-            .navigationTitle(workout.name) // Название тренировки
-            .toolbar(.hidden, for: .tabBar)
-
-            NavigationLink(destination: WorkoutView(workout: workout)) {
+        VStack {
+            Text(workout.name)
+                .font(.title)
+                .padding()
+            
+            Text(workout.description)
+                .padding()
+            
+            NavigationLink(destination: WorkoutView(viewModel: WorkoutViewModel(workout: workout))) {
                 Text("Начать тренировку")
                     .padding()
                     .background(Color.green)
                     .foregroundColor(.white)
-                    .cornerRadius(8)
+                    .cornerRadius(10)
             }
-            .buttonStyle(PlainButtonStyle())  // Убираем стандартный стиль кнопки для NavigationLink
         }
+        .navigationTitle("Workout Details")
     }
 }
