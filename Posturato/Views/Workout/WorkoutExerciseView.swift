@@ -11,20 +11,18 @@ struct WorkoutExerciseView: View {
     @ObservedObject var viewModel: WorkoutViewModel
     var exercise: Exercise
 
-    @State private var timerSeconds: Int = 10
-
     var body: some View {
         VStack {
             Text("Exercise: \(exercise.name)")
                 .font(.largeTitle)
             
             // Таймер
-            Text("\(timerSeconds) сек")
+            Text("\(viewModel.remainingTime) сек")
                 .font(.largeTitle)
             
             // Кнопка добавления времени
             Button(action: {
-                timerSeconds += 10
+                viewModel.addTime()
             }) {
                 Text("+10 сек")
                     .padding()

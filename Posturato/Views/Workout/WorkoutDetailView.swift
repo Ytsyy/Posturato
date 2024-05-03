@@ -12,6 +12,7 @@ import Combine
 
 struct WorkoutDetailView: View {
     var workout: Workout
+    var router: TrainingRouter
 
     var body: some View {
         VStack {
@@ -22,7 +23,7 @@ struct WorkoutDetailView: View {
             Text(workout.description)
                 .padding()
             
-            NavigationLink(destination: WorkoutView(viewModel: WorkoutViewModel(workout: workout))) {
+            NavigationLink(destination: WorkoutView(viewModel: WorkoutViewModel(workout: workout), router: router)) {
                 Text("Начать тренировку")
                     .padding()
                     .background(Color.green)

@@ -8,9 +8,10 @@
 import SwiftUI
 struct TrainingView: View {
     @StateObject var viewModel = TrainingViewModel()
+    @StateObject var router = TrainingRouter()
     
     var body: some View {
-        NavigationView {
+        NavigationStack(path: $router.path) {
             ScrollView {
                 VStack {
                     Text("Выберите тренировку:")
@@ -19,7 +20,7 @@ struct TrainingView: View {
                     
                     ForEach(viewModel.workouts.indices, id: \.self) { index in
                         NavigationLink(
-                            destination: WorkoutDetailView(workout: viewModel.workouts[index])
+                            destination: WorkoutDetailView(workout: viewModel.workouts[index], router: router)
                         ) {
                             Text("Подробнее о тренировке \(index + 1)")
                                 .padding()

@@ -9,15 +9,17 @@ import SwiftUI
 import SwiftUI
 
 struct FinishView: View {
+    var router: TrainingRouter
+
     var body: some View {
         VStack {
             Text("Workout Finished!")
                 .font(.largeTitle)
             
             Button(action: {
-                // Здесь можно добавить логику для перехода на корневой экран
+                router.backToRoot()
             }) {
-                Text("Go Back")
+                Text("Закончить тренировку")
                     .padding()
                     .foregroundColor(.white)
                     .background(Color.green)
@@ -27,3 +29,4 @@ struct FinishView: View {
         .navigationTitle("Finish")
     }
 }
+

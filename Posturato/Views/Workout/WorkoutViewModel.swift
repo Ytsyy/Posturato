@@ -7,8 +7,6 @@
 
 import Foundation
 import Combine
-
-
 import SwiftUI
 
 enum TrainingRoute: Hashable, Equatable {
@@ -20,7 +18,7 @@ enum TrainingRoute: Hashable, Equatable {
         case (.workoutDetail(let lhsWorkout), .workoutDetail(let rhsWorkout)):
             return lhsWorkout == rhsWorkout
         case (.workout(let lhsViewModel), .workout(let rhsViewModel)):
-            return lhsViewModel.workout == rhsViewModel.workout
+            return lhsViewModel.workout.id == rhsViewModel.workout.id
         default:
             return false
         }
@@ -29,9 +27,9 @@ enum TrainingRoute: Hashable, Equatable {
     func hash(into hasher: inout Hasher) {
         switch self {
         case .workoutDetail(let workout):
-            hasher.combine(workout.id) // Assuming Workout has an 'id' property
+            hasher.combine(workout.id)
         case .workout(let workoutViewModel):
-            hasher.combine(workoutViewModel.workout.id) // Assuming Workout has an 'id' property
+            hasher.combine(workoutViewModel.workout.id)
         }
     }
 }
@@ -48,16 +46,17 @@ final class TrainingRouter: ObservableObject {
     }
 
     func backToRoot() {
-        path.removeAll()
+        path = []
     }
 }
 
-
 class WorkoutViewModel: ObservableObject {
-    @Published internal var workout: Workout // Изменен уровень доступа на internal
     @Published var currentStep: Step
+    internal let workout: Workout
     private var exerciseIndex: Int = 0
-    
+    private var timer: Timer?
+    @Published var remainingTime: Int
+
     enum Step: Equatable {
         case exercise(Exercise)
         case rest
@@ -67,9 +66,39 @@ class WorkoutViewModel: ObservableObject {
     init(workout: Workout) {
         self.workout = workout
         self.currentStep = .exercise(workout.exercises.first!)
+        self.remainingTime = workout.durations.first ?? 10
+        startTimer()
     }
     
-    func nextStep() {
+    func startTimer() {
+        timer?.invalidate()
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
+            guard let self = self else { return }
+            
+            DispatchQueue.main.async {
+                if self.remainingTime > 0 {
+                    self.remainingTime -= 1
+                } else {
+                    self.nextStep()
+                }
+            }
+        }
+    }
+    
+    func addTime() {
+        DispatchQueue.main.async {
+            self.remainingTime += 10
+        }
+    }
+
+    func skip() {
+        DispatchQueue.main.async {
+            self.nextStep()
+        }
+    }
+    
+    private func nextStep() {
+        timer?.invalidate()
         switch currentStep {
         case .exercise:
             exerciseIndex += 1
@@ -83,19 +112,21 @@ class WorkoutViewModel: ObservableObject {
         case .finish:
             break
         }
-    }
-    
-    func addTime() {
-        // Логика добавления времени на таймере
-    }
-    
-    func skip() {
-        nextStep()
+
+        if case .exercise = currentStep {
+            remainingTime = workout.durations[exerciseIndex]
+        } else {
+            remainingTime = 10 // sec
+        }
+
+        startTimer()
     }
 }
 
+
 struct WorkoutView: View {
     @ObservedObject var viewModel: WorkoutViewModel
+    var router: TrainingRouter
 
     var body: some View {
         switch viewModel.currentStep {
@@ -104,7 +135,7 @@ struct WorkoutView: View {
         case .rest:
             RestView(viewModel: viewModel)
         case .finish:
-            FinishView()
+            FinishView(router: router)
         }
     }
 }

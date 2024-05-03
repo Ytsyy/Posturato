@@ -24,7 +24,7 @@ let basicPostureWorkoutDay1 = Workout(
     description: "This basic workout is for improving your posture",
     exercises: selectedExercises,
     image: "BasicTrainingImg",
-    durations: Array(repeating: 0, count: selectedExercises.count)
+    durations: Array(repeating: 10, count: selectedExercises.count)
 )
 let basicPostureWorkoutDay2 = createWorkoutDay(from: basicPostureWorkoutDay1, addSeconds: 5)
 let basicPostureWorkoutDay3 = createWorkoutDay(from: basicPostureWorkoutDay1, addSeconds: 10)
