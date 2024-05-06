@@ -7,14 +7,11 @@
 
 import Foundation
 
-
 class TrainingViewModel: ObservableObject {
     @Published var selectedWorkoutIndex = 0
+    @Published var workouts: [Workout] = []
 
     init() {
-        // Initialize workouts here, for example:
         workouts = [basicPostureWorkoutDay1]
     }
-
-    @Published var workouts: [Workout] = []
 }

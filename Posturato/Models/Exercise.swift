@@ -26,6 +26,8 @@ enum MuscleGroup: String, CaseIterable {
     case chest = "Chest"
     case glutes = "Glutes"
     case thighs = "Thighs"
+    case calves = "Calves"
+    case hamstrings = "Hamstrings"
 }
 
 let postureBasicExercises: [Exercise] = [
@@ -49,7 +51,7 @@ let postureBasicExercises: [Exercise] = [
         id: UUID(),
         name: "Plank",
         details: "The plank is a core strength exercise that involves maintaining a position similar to a push-up for the maximum possible time. It engages multiple muscle groups including the abs, back, and shoulders.",
-        image: "PlankImage",
+        image: "Plank",
         videoURL: nil,
         targetMuscleGroups: [.abs, .chest, .shoulders]
     ),
@@ -68,5 +70,32 @@ let postureBasicExercises: [Exercise] = [
         image: "WallAngel",
         videoURL: nil,
         targetMuscleGroups: [.upperBack, .shoulders]
+    )
+]
+
+let legStretchingExercises: [Exercise] = [
+    Exercise(
+        id: UUID(),
+        name: "Hamstring Stretch",
+        details: "Sit on the floor with one leg extended and the other bent with the sole of the foot against the inner thigh of the extended leg. Reach forward towards the toes of the extended leg, feeling a stretch in the hamstring.",
+        image: "HamstringStretch",
+        videoURL: nil,
+        targetMuscleGroups: [.hamstrings, .glutes]
+    ),
+    Exercise(
+        id: UUID(),
+        name: "Quad Stretch",
+        details: "Stand on one leg while pulling the other foot towards your glutes. Hold the stretch for 20-30 seconds while keeping the supporting knee slightly bent.",
+        image: "QuadStretch",
+        videoURL: nil,
+        targetMuscleGroups: [.thighs]
+    ),
+    Exercise(
+        id: UUID(),
+        name: "Calf Stretch",
+        details: "Stand facing a wall with one foot in front of the other. Bend the front knee while keeping the back leg straight, pushing the heel of the back foot into the ground to stretch the calf.",
+        image: "CalfStretch",
+        videoURL: nil,
+        targetMuscleGroups: [.thighs, .calves]
     )
 ]

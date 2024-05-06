@@ -8,9 +8,10 @@
 import Foundation
 
 class TheoryViewModel: ObservableObject {
-    @Published var exercises: [Exercise]
+    let exercises: [Exercise] = ExerciseModel.exercises
+    let postureDisorders: [PostureDisorder] = PostureDisorderModel.postureDisorders
+    let healthTips: [HealthTip] = HealthTipModel.healthTips
+    let postureBasics: [PostureBasic] = PostureBasicModel.postureBasics
+    let riskFactors: [RiskFactor] = RiskFactorModel.riskFactors
 
-    init() {
-        self.exercises = postureBasicExercises
-    }
 }

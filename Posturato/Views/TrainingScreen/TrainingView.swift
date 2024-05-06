@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+
 struct TrainingView: View {
     @StateObject var viewModel = TrainingViewModel()
     @StateObject var router = TrainingRouter()
@@ -35,3 +36,60 @@ struct TrainingView: View {
         }
     }
 }
+
+//FUTURE - new view
+/*
+struct TrainingView: View {
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading) {
+                Text("Browse by Area")
+                    .font(.title2)
+                    .padding(.horizontal)
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHGrid(rows: [GridItem(), GridItem()]) {
+                        ForEach(MuscleGroup.allCases, id: \.self) { muscleGroup in
+                            VStack {
+                                Image(systemName: "figure.walk") 
+                                    .resizable()
+                                    .frame(width: 40, height: 40)
+                                Text(muscleGroup.rawValue)
+                            }
+                            .frame(width: 100, height: 100)
+                            .background(Color(.secondarySystemBackground))
+                            .cornerRadius(10)
+                            .padding(.vertical)
+                        }
+                    }
+                    .padding(.horizontal)
+                }
+                
+                // Recommended
+                Text("Recommended")
+                    .font(.title2)
+                    .padding([.horizontal, .top])
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        WorkoutCardView(workout: basicPostureWorkoutDay1)
+                    }
+                    .padding(.horizontal)
+                }
+                
+                Text("Quick & Easy")
+                    .font(.title2)
+                    .padding([.horizontal, .top])
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 20) {
+                        WorkoutCardView(workout: legStretchingWorkout)
+                    }
+                    .padding(.horizontal)
+                }
+            }
+        }
+        .navigationTitle("Training")
+    }
+}
+*/

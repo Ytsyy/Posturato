@@ -16,103 +16,25 @@ struct TheoryView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    Text("Exercises")
-                        .font(.title)
-                        .padding(.leading, 15)
-                        .padding(.top, 10)
-                    
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 10) {
-                            ForEach(viewModel.exercises, id: \.id) { exercise in
-                                ExerciseCell(exercise: exercise)
-                                    .frame(width: 120, height: 120)
-                            }
-                        }
-                        .padding(.horizontal)
+                    SectionView(title: "Exercises", items: viewModel.exercises) { exercise in
+                        (title: exercise.name, description: exercise.details, image: exercise.image, videoURL: exercise.videoURL)
                     }
-                    Spacer()
-                    
-                    
-                    Text("Posture disorder")
-                        .font(.title)
-                        .padding(.leading, 15)
-                        .padding(.top, 10)
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 10) {
-                            ForEach(viewModel.exercises, id: \.id) { exercise in
-                                ExerciseCell(exercise: exercise)
-                                    .frame(width: 120, height: 120)
-                            }
-                        }
-                        .padding(.horizontal)
+
+                    SectionView(title: "Posture disorder", items: viewModel.postureDisorders) { disorder in
+                        (title: disorder.name, description: disorder.description, image: disorder.image, videoURL: disorder.videoURL)
                     }
-                    Spacer()
-                    
-                    
-                    Text("Health tips")
-                        .font(.title)
-                        .padding(.leading, 15)
-                        .padding(.top, 10)
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 10) {
-                            ForEach(viewModel.exercises, id: \.id) { exercise in
-                                ExerciseCell(exercise: exercise)
-                                    .frame(width: 120, height: 120)
-                            }
-                        }
-                        .padding(.horizontal)
+
+                    SectionView(title: "Health tips", items: viewModel.healthTips) { tip in
+                        (title: tip.title, description: tip.details, image: tip.image, videoURL: tip.videoURL)
                     }
-                    Spacer()
-                    
-                    
-                    Text("Posture Basics")
-                        .font(.title)
-                        .padding(.leading, 15)
-                        .padding(.top, 10)
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 10) {
-                            ForEach(viewModel.exercises, id: \.id) { exercise in
-                                ExerciseCell(exercise: exercise)
-                                    .frame(width: 120, height: 120)
-                            }
-                        }
-                        .padding(.horizontal)
+
+                    SectionView(title: "Posture Basics", items: viewModel.postureBasics) { basic in
+                        (title: basic.title, description: basic.description, image: basic.image, videoURL: basic.videoURL)
                     }
-                    Spacer()
-                    
-                    
-                    Text("Risk Factors and Causes")
-                        .font(.title)
-                        .padding(.leading, 15)
-                        .padding(.top, 10)
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 10) {
-                            ForEach(viewModel.exercises, id: \.id) { exercise in
-                                ExerciseCell(exercise: exercise)
-                                    .frame(width: 120, height: 120)
-                            }
-                        }
-                        .padding(.horizontal)
+
+                    SectionView(title: "Risk Factors and Causes", items: viewModel.riskFactors) { factor in
+                        (title: factor.name, description: factor.description, image: factor.image, videoURL: factor.videoURL)
                     }
-                    Spacer()
-                    
-                    
-                    Text("Health tips")
-                        .font(.title)
-                        .padding(.leading, 15)
-                        .padding(.top, 10)
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(alignment: .top, spacing: 10) {
-                            ForEach(viewModel.exercises, id: \.id) { exercise in
-                                ExerciseCell(exercise: exercise)
-                                    .frame(width: 120, height: 120)
-                            }
-                        }
-                        .padding(.horizontal)
-                    }
-                    Spacer()
-                    
                 }
                 .customNavigationBar(title: "Theory", onMenuTap: {
                     showingSettings = true
@@ -125,28 +47,4 @@ struct TheoryView: View {
     }
 }
 
-struct ExerciseCell: View {
-    var exercise: Exercise
-    
-    var body: some View {
-        VStack {
-            if let imageName = exercise.image {
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 84)  // Указание высоты картинки
-                    .cornerRadius(10)  
-            }
-            Text(exercise.name)
-                .font(.headline)
-                .fontWeight(.bold)
-                .multilineTextAlignment(.center)
-                .padding(.top, 4)
-                .padding([.bottom, .horizontal], 8)
-        }
-        .frame(width: 120, height: 120)
-        .background(Color.white)
-        .cornerRadius(10)
-        .shadow(color: .gray, radius: 3, x: 0, y: 2)
-    }
-}
+

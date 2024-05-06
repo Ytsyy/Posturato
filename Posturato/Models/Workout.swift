@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Workout: Equatable, Hashable {
+struct Workout: Equatable, Hashable,Identifiable{
     let id: UUID
     let name: String
     let description: String
@@ -29,6 +29,17 @@ let basicPostureWorkoutDay1 = Workout(
 let basicPostureWorkoutDay2 = createWorkoutDay(from: basicPostureWorkoutDay1, addSeconds: 5)
 let basicPostureWorkoutDay3 = createWorkoutDay(from: basicPostureWorkoutDay1, addSeconds: 10)
 
+
+
+
+let legStretchingWorkout = Workout(
+    id: UUID(),
+    name: "Leg Stretching",
+    description: "This workout focuses on stretching and improving flexibility in your legs.",
+    exercises: legStretchingExercises,
+    image: "LegStretching",
+    durations: Array(repeating: 10, count: legStretchingExercises.count)
+)
 
 
 // MARK: - Workout Methods
