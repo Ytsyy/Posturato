@@ -9,133 +9,86 @@ import Foundation
 import Combine
 import SwiftUI
 
-enum TrainingRoute: Hashable, Equatable {
-    case workoutDetail(workout: Workout)
-    case workout(workoutViewModel: WorkoutViewModel)
-    
-    static func == (lhs: TrainingRoute, rhs: TrainingRoute) -> Bool {
-        switch (lhs, rhs) {
-        case (.workoutDetail(let lhsWorkout), .workoutDetail(let rhsWorkout)):
-            return lhsWorkout == rhsWorkout
-        case (.workout(let lhsViewModel), .workout(let rhsViewModel)):
-            return lhsViewModel.workout.id == rhsViewModel.workout.id
-        default:
-            return false
-        }
-    }
-
-    func hash(into hasher: inout Hasher) {
-        switch self {
-        case .workoutDetail(let workout):
-            hasher.combine(workout.id)
-        case .workout(let workoutViewModel):
-            hasher.combine(workoutViewModel.workout.id)
-        }
-    }
-}
-final class TrainingRouter: ObservableObject {
-    @Published var path = [TrainingRoute]()
-    
-    func showWorkoutDetail(workout: Workout) {
-        path.append(.workoutDetail(workout: workout))
-    }
-
-    func startWorkout(workout: Workout) {
-        let workoutViewModel = WorkoutViewModel(workout: workout)
-        path.append(.workout(workoutViewModel: workoutViewModel))
-    }
-
-    func backToRoot() {
-        path = []
-    }
-}
-
 class WorkoutViewModel: ObservableObject {
     @Published var currentStep: Step
-    internal let workout: Workout
+    @Published var remainingTime: Int
     private var exerciseIndex: Int = 0
     private var timer: Timer?
-    @Published var remainingTime: Int
 
-    enum Step: Equatable {
+    internal let workout: Workout
+
+    enum Step {
         case exercise(Exercise)
         case rest
         case finish
     }
-    
+
     init(workout: Workout) {
         self.workout = workout
         self.currentStep = .exercise(workout.exercises.first!)
-        self.remainingTime = workout.durations.first ?? 10
-        startTimer()
+        self.remainingTime = workout.durations.first ?? 0
+
     }
-    
+
     func startTimer() {
         timer?.invalidate()
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
-            guard let self = self else { return }
-            
             DispatchQueue.main.async {
-                if self.remainingTime > 0 {
-                    self.remainingTime -= 1
-                } else {
-                    self.nextStep()
-                }
+                self?.updateTimer()
             }
         }
     }
-    
-    func addTime() {
-        DispatchQueue.main.async {
-            self.remainingTime += 10
+
+    func updateTimer() {
+        if self.remainingTime > 0 {
+            self.remainingTime -= 1
+        } else {
+            nextStep()
         }
     }
 
+    func addTime() {
+        self.remainingTime += 10
+    }
+
     func skip() {
-        DispatchQueue.main.async {
-            self.nextStep()
+        self.nextStep()
+    }
+    func startWorkout() {
+        if timer == nil, case .exercise = currentStep {
+            startTimer()
         }
     }
-    
+
     private func nextStep() {
-        timer?.invalidate()
         switch currentStep {
         case .exercise:
             exerciseIndex += 1
             if exerciseIndex < workout.exercises.count {
                 currentStep = .rest
+                remainingTime = 10 // Rest duration
             } else {
                 currentStep = .finish
+                timer?.invalidate()
             }
         case .rest:
-            currentStep = .exercise(workout.exercises[exerciseIndex])
+            if exerciseIndex < workout.exercises.count {
+                currentStep = .exercise(workout.exercises[exerciseIndex])
+                remainingTime = workout.durations[exerciseIndex]
+            } else {
+                currentStep = .finish
+                timer?.invalidate()
+            }
         case .finish:
-            break
+            timer?.invalidate()
         }
-
-        if case .exercise = currentStep {
-            remainingTime = workout.durations[exerciseIndex]
-        } else {
-            remainingTime = 10 // sec
-        }
-
         startTimer()
     }
-}
 
-
-struct WorkoutView: View {
-    @ObservedObject var viewModel: WorkoutViewModel
-    var router: TrainingRouter
-
-    var body: some View {
-        switch viewModel.currentStep {
-        case .exercise(let exercise):
-            WorkoutExerciseView(viewModel: viewModel, exercise: exercise)
-        case .rest:
-            RestView(viewModel: viewModel)
-        case .finish:
-            FinishView(router: router)
-        }
+    func resetWorkout() {
+        self.currentStep = .exercise(workout.exercises.first!)
+        self.remainingTime = workout.durations.first ?? 0
+        self.exerciseIndex = 0
+        startTimer()
     }
 }

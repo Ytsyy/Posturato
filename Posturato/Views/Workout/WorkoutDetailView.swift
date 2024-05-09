@@ -9,10 +9,9 @@ import Foundation
 import SwiftUI
 import Combine
 
-
 struct WorkoutDetailView: View {
     var workout: Workout
-    var router: TrainingRouter
+    @Binding var navigationPath: NavigationPath
 
     var body: some View {
         VStack {
@@ -23,7 +22,16 @@ struct WorkoutDetailView: View {
             Text(workout.description)
                 .padding()
             
-            NavigationLink(destination: WorkoutView(viewModel: WorkoutViewModel(workout: workout), router: router)) {
+            if let imageName = workout.image {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 200)
+            }
+
+            Button(action: {
+                navigationPath.append("workout-\(workout.id)")
+            }) {
                 Text("Начать тренировку")
                     .padding()
                     .background(Color.green)
@@ -32,5 +40,10 @@ struct WorkoutDetailView: View {
             }
         }
         .navigationTitle("Workout Details")
+        .navigationDestination(for: String.self) { destination in
+            if destination == "workout-\(workout.id)" {
+                WorkoutView(viewModel: WorkoutViewModel(workout: workout), navigationPath: $navigationPath)
+            }
+        }
     }
 }

@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct PostureDisorder: Identifiable {
     let id = UUID()
     let name: String

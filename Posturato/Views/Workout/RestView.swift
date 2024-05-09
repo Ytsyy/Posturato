@@ -12,35 +12,46 @@ struct RestView: View {
 
     var body: some View {
         VStack {
+            Spacer()
+            
             Text("Rest")
                 .font(.largeTitle)
+                .padding()
             
-            // Таймер
             Text("\(viewModel.remainingTime) сек")
                 .font(.largeTitle)
+                .padding(.bottom)
             
-            // Кнопка добавления времени
-            Button(action: {
-                viewModel.addTime()
-            }) {
-                Text("+10 сек")
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
-            }
+            Spacer()
+            
+            HStack(spacing: 30) {
+                Button(action: {
+                    viewModel.addTime()
+                }) {
+                    Text("+10 сек")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
 
-            // Кнопка пропуска
-            Button(action: {
-                viewModel.skip()
-            }) {
-                Text("Пропустить")
-                    .padding()
-                    .foregroundColor(.white)
-                    .background(Color.red)
-                    .cornerRadius(10)
+                Button(action: {
+                    viewModel.skip()
+                }) {
+                    Text("Пропустить")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                        .cornerRadius(10)
+                }
             }
+            .padding(.bottom)
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.white)
+        .edgesIgnoringSafeArea(.all)
         .navigationTitle("Rest View")
+        .navigationBarHidden(true)
+        .toolbar(.hidden, for: .tabBar)
     }
 }

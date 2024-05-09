@@ -9,24 +9,26 @@ import SwiftUI
 import SwiftUI
 
 struct FinishView: View {
-    var router: TrainingRouter
+    @ObservedObject var viewModel: WorkoutViewModel
+    @Binding var navigationPath: NavigationPath
 
     var body: some View {
         VStack {
-            Text("Workout Finished!")
+            Spacer()
+            Text("Congratulations!")
                 .font(.largeTitle)
-            
+                .padding()
+            Spacer()
             Button(action: {
-                router.backToRoot()
+                navigationPath.removeLast(navigationPath.count)
             }) {
-                Text("Закончить тренировку")
+                Text("Back to Training")
                     .padding()
-                    .foregroundColor(.white)
                     .background(Color.green)
+                    .foregroundColor(.white)
                     .cornerRadius(10)
             }
         }
-        .navigationTitle("Finish")
+        .toolbar(.hidden, for: .tabBar)
     }
 }
-

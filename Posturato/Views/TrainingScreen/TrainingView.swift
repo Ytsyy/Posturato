@@ -9,87 +9,47 @@ import SwiftUI
 
 struct TrainingView: View {
     @StateObject var viewModel = TrainingViewModel()
-    @StateObject var router = TrainingRouter()
+    @State private var navigationPath = NavigationPath()
     
     var body: some View {
-        NavigationStack(path: $router.path) {
+        NavigationStack(path: $navigationPath) {
             ScrollView {
-                VStack {
-                    Text("Выберите тренировку:")
+                VStack(alignment: .leading) {
+                    Text("Recommended")
                         .font(.title2)
-                        .padding()
+                        .padding([.horizontal, .top])
                     
-                    ForEach(viewModel.workouts.indices, id: \.self) { index in
-                        NavigationLink(
-                            destination: WorkoutDetailView(workout: viewModel.workouts[index], router: router)
-                        ) {
-                            Text("Подробнее о тренировке \(index + 1)")
-                                .padding()
-                                .background(Color.blue)
-                                .foregroundColor(.white)
-                                .cornerRadius(10)
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(viewModel.recommendedWorkouts) { workout in
+                                NavigationLink(value: workout) {
+                                    WorkoutCardView(workout: workout)
+                                }
+                            }
                         }
+                        .padding(.horizontal)
+                    }
+                    
+                    Text("Quick & Easy")
+                        .font(.title2)
+                        .padding([.horizontal, .top])
+                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(viewModel.quickAndEasyWorkouts) { workout in
+                                NavigationLink(value: workout) {
+                                    WorkoutCardView(workout: workout)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
                     }
                 }
             }
             .navigationTitle("Training")
-        }
-    }
-}
-
-//FUTURE - new view
-/*
-struct TrainingView: View {
-    var body: some View {
-        ScrollView {
-            VStack(alignment: .leading) {
-                Text("Browse by Area")
-                    .font(.title2)
-                    .padding(.horizontal)
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    LazyHGrid(rows: [GridItem(), GridItem()]) {
-                        ForEach(MuscleGroup.allCases, id: \.self) { muscleGroup in
-                            VStack {
-                                Image(systemName: "figure.walk") 
-                                    .resizable()
-                                    .frame(width: 40, height: 40)
-                                Text(muscleGroup.rawValue)
-                            }
-                            .frame(width: 100, height: 100)
-                            .background(Color(.secondarySystemBackground))
-                            .cornerRadius(10)
-                            .padding(.vertical)
-                        }
-                    }
-                    .padding(.horizontal)
-                }
-                
-                // Recommended
-                Text("Recommended")
-                    .font(.title2)
-                    .padding([.horizontal, .top])
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        WorkoutCardView(workout: basicPostureWorkoutDay1)
-                    }
-                    .padding(.horizontal)
-                }
-                
-                Text("Quick & Easy")
-                    .font(.title2)
-                    .padding([.horizontal, .top])
-
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 20) {
-                        WorkoutCardView(workout: legStretchingWorkout)
-                    }
-                    .padding(.horizontal)
-                }
+            .navigationDestination(for: Workout.self) { workout in
+                WorkoutDetailView(workout: workout, navigationPath: $navigationPath)
             }
         }
-        .navigationTitle("Training")
     }
 }
-*/

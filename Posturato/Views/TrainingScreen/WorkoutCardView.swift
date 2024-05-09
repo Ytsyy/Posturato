@@ -8,25 +8,24 @@
 import Foundation
 import SwiftUI
 
+
 struct WorkoutCardView: View {
-    let workout: Workout
+    var workout: Workout
     
     var body: some View {
         VStack {
-            Image(workout.image ?? "defaultTraining")
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
-            
+            if let imageName = workout.image {
+                Image(imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 150)
+            }
             Text(workout.name)
                 .font(.headline)
-            
-            Text("\(workout.durations.reduce(0, +)/60) Minutes")
-                .font(.subheadline)
         }
-        .frame(width: 150)
-        .padding()
+        .frame(width: 200, height: 250)
         .background(Color(.secondarySystemBackground))
         .cornerRadius(10)
+        .shadow(radius: 5)
     }
 }

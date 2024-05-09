@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TabBar: View {
-    @Binding var tabSelection: Int // Используем Binding для синхронизации состояния
+    @Binding var tabSelection: Int 
     
     var body: some View {
         TabView(selection: $tabSelection) { 
