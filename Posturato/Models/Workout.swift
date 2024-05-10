@@ -17,29 +17,37 @@ struct Workout: Equatable, Hashable,Identifiable{
 }
 
 
-var selectedExercises = postureBasicExercises
 let basicPostureWorkoutDay1 = Workout(
     id: UUID(),
-    name: "Improving posture",
-    description: "This basic workout is for improving your posture",
-    exercises: selectedExercises,
+    name: "Improving Posture",
+    description: "This basic workout is for improving your posture.",
+    exercises: [catCow, birdDog, plank, chestStretch, wallAngel],
     image: "BasicTrainingImg",
-    durations: Array(repeating: 10, count: selectedExercises.count)
+    durations: [30, 30, 30, 30, 30]
 )
 let basicPostureWorkoutDay2 = createWorkoutDay(from: basicPostureWorkoutDay1, addSeconds: 5)
 let basicPostureWorkoutDay3 = createWorkoutDay(from: basicPostureWorkoutDay1, addSeconds: 10)
 
 
-
-
 let legStretchingWorkout = Workout(
     id: UUID(),
-    name: "Leg Stretching",
-    description: "This workout focuses on stretching and improving flexibility in your legs.",
-    exercises: legStretchingExercises,
-    image: "LegStretching",
-    durations: Array(repeating: 10, count: legStretchingExercises.count)
+    name: "Leg Stretching Workout",
+    description: "A light workout focused on stretching and relaxing the leg muscles.",
+    exercises: [hamstringStretch, quadStretch, calfStretch],
+    image: "leg_stretching_workout",
+    durations: [30, 30, 30]
 )
+
+let morningPostureWorkoutDay1 = Workout(
+    id: UUID(),
+    name: "Morning Posture Workout",
+    description: "A light morning workout for improving posture.",
+    exercises: [catStretch, hipFlexorStretch, chestOpenerStretch, birdDog, childsPose],
+    image: "morning_posture_workout",
+    durations: [30, 30, 30, 30, 30]
+)
+
+
 
 
 // MARK: - Workout Methods
