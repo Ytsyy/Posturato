@@ -7,7 +7,4 @@
 
 import Foundation
 
-class SubscriptionViewModel: ObservableObject {
-    @Published var subscriptionStatus: String = "Active"
-    // Дополнительные данные и логика для страницы подписки
-}
+

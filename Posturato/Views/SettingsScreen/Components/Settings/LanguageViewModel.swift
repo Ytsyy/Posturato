@@ -7,6 +7,3 @@
 
 import Foundation
 
-class LanguageViewModel: ObservableObject {
-    @Published var selectedLanguage: String = "English"
-}

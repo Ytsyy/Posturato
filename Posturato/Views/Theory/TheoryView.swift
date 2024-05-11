@@ -10,7 +10,6 @@ import SwiftUI
 
 struct TheoryView: View {
     @ObservedObject var viewModel = TheoryViewModel()
-    @State private var showingSettings = false
 
     var body: some View {
         NavigationView {
@@ -36,11 +35,14 @@ struct TheoryView: View {
                         (title: factor.name, description: factor.description, image: factor.image, videoURL: factor.videoURL)
                     }
                 }
-                .customNavigationBar(title: "Theory", onMenuTap: {
-                    showingSettings = true
-                })
-                .fullScreenCover(isPresented: $showingSettings) {
-                    SettingsView()
+
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "line.horizontal.3")
+                            .imageScale(.large)
+                    }
                 }
             }
         }

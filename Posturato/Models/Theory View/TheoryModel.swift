@@ -40,17 +40,12 @@ struct RiskFactor: Identifiable {
 }
 
 class ExerciseModel {
-    static let exercises: [Exercise] = [
-        Exercise(id: UUID(), name: "Push Up", details: "Upper body exercise", image: "pushup", videoURL: nil, targetMuscleGroups: [.chest]),
-        Exercise(id: UUID(), name: "Squat", details: "Leg exercise", image: "squat", videoURL: nil, targetMuscleGroups: []),
-        Exercise(id: UUID(), name: "Plank", details: "Core exercise", image: "plank", videoURL: nil, targetMuscleGroups: []),
-        Exercise(id: UUID(), name: "Lunge", details: "Leg exercise", image: "lunge", videoURL: nil, targetMuscleGroups: []),
-    ]
+    static let exercises: [Exercise] = [catStretch, hipFlexorStretch, chestOpenerStretch, birdDog, childsPose]
 }
 
 class PostureDisorderModel {
     static let postureDisorders: [PostureDisorder] = [
-        PostureDisorder(name: "Kyphosis", description: "Excessive curvature of the upper back", image: "kyphosis", videoURL: nil),
+        PostureDisorder(name: "Kyphosis", description: "Excessive curvature of the upper back", image: "Kyphosis", videoURL: nil),
         PostureDisorder(name: "Scoliosis", description: "Abnormal curvature of the spine", image: "scoliosis", videoURL: nil),
         PostureDisorder(name: "Lordosis", description: "Excessive curvature of the lower back", image: "lordosis", videoURL: nil),
         PostureDisorder(name: "Forward Head Posture", description: "Head positioned forward", image: "forward_head", videoURL: nil),
@@ -62,7 +57,7 @@ class HealthTipModel {
         HealthTip(title: "Stretch Regularly", details: "Stretching improves flexibility", image: "stretch", videoURL: nil),
         HealthTip(title: "Walk 8000 steps per day", details: "Every day", image: "Walk", videoURL: nil),
         HealthTip(title: "Maintain a Balanced Diet", details: "Eating a balanced diet is essential", image: "balanced_diet", videoURL: nil),
-        HealthTip(title: "Get Enough Sleep", details: "Sleep is essential for recovery", image: "sleep", videoURL: nil),
+        HealthTip(title: "Get Enough Sleep", details: "Sleep is essential for recovery", image: "Sleep", videoURL: nil),
     ]
 }
 
@@ -80,6 +75,6 @@ class RiskFactorModel {
         RiskFactor(name: "Sedentary Lifestyle", description: "Lack of physical activity", image: "sedentary", videoURL: nil),
         RiskFactor(name: "Poor Ergonomics", description: "Improper workstation setup", image: "ergonomics", videoURL: nil),
         RiskFactor(name: "Obesity", description: "Excess body weight", image: "obesity", videoURL: nil),
-        RiskFactor(name: "Age", description: "Increased risk with age", image: "age", videoURL: nil),
+        RiskFactor(name: "Age", description: "Increased risk with age", image: "AgeFactor", videoURL: nil),
     ]
 }

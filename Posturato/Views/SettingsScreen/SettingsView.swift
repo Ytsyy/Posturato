@@ -7,135 +7,36 @@
 
 import SwiftUI
 
-import SwiftUI
-
 enum SettingScreen {
     case contact, termsOfUse, privacyPolicy, profile, subscription, notifications, language
 }
 
-enum AccountSettings: CaseIterable {
-    case profile, subscription
-    // Добавьте остальные случаи по мере необходимости
-    
-    var title: String {
-        switch self {
-        case .profile: return "Profile"
-        case .subscription: return "Subscription"
-        }
-    }
-}
 
-enum GeneralSettings: CaseIterable {
-    case notifications, language
-    // Добавьте остальные случаи по мере необходимости
-    
-    var title: String {
-        switch self {
-        case .notifications: return "Notifications"
-        case .language: return "Language"
-        }
-    }
-}
 
-enum SupportSettings: CaseIterable {
-    case contact, termsOfUse, privacyPolicy
-    // Добавьте остальные случаи по мере необходимости
-    
-    var title: String {
-        switch self {
-        case .contact: return "Contact Support"
-        case .termsOfUse: return "Terms of Use"
-        case .privacyPolicy: return "Privacy Policy"
-        }
-    }
-}
 
 struct SettingsView: View {
-    @Environment(\.dismiss) private var dismiss
-    @State private var isProfileViewPresented = false
-    @State private var isSubscriptionViewPresented = false
-    @State private var isNotificationsViewPresented = false
-    @State private var isLanguageViewPresented = false
-    @State private var isFrequentlyAskedQuestionsViewPresented = false
-    @State private var isContactSupportViewPresented = false
-    @State private var isTermsOfUseViewPresented = false
-    @State private var isPrivacyPolicyViewPresented = false
-
     var body: some View {
-        NavigationStack {
-            List {
-                Section(header: Text("Account")) {
-                    Button("Profile") {
-                        isProfileViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isProfileViewPresented) {
-                        ProfileView(viewModel: ProfileViewModel())
-                    }
-                    
-                    Button("Subscription") {
-                        isSubscriptionViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isSubscriptionViewPresented) {
-                        SubscriptionView(viewModel: SubscriptionViewModel())
-                    }
-                }
-                
-                Section(header: Text("Preferences")) {
-                    Button("Notifications") {
-                        isNotificationsViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isNotificationsViewPresented) {
-                        NotificationsView(viewModel: NotificationsViewModel())
-                    }
-                    
-                    Button("Language") {
-                        isLanguageViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isLanguageViewPresented) {
-                        LanguageView(viewModel: LanguageViewModel())
-                    }
-                }
-                
-                Section(header: Text("Support")) {
-                    Button("Frequently Asked Questions") {
-                        isFrequentlyAskedQuestionsViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isFrequentlyAskedQuestionsViewPresented) {
-                        FrequentlyAskedQuestionsView(viewModel: FrequentlyAskedQuestionsViewModel())
-                    }
-                    
-                    Button("Contact Support") {
-                        isContactSupportViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isContactSupportViewPresented) {
-                        ContactSupportView(viewModel: ContactSupportViewModel())
-                    }
-                    
-                    Button("Terms of Use") {
-                        isTermsOfUseViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isTermsOfUseViewPresented) {
-                        TermsOfUseView(viewModel: TermsOfUseViewModel())
-                    }
-                    
-                    Button("Privacy Policy") {
-                        isPrivacyPolicyViewPresented = true
-                    }
-                    .navigationDestination(isPresented: $isPrivacyPolicyViewPresented) {
-                        PrivacyPolicyView(viewModel: PrivacyPolicyViewModel())
-                    }
-                }
+        List {
+            Section(header: Text("Account")) {
+                NavigationLink("Profile", destination: ProfileView(viewModel: ProfileViewModel()))
+                NavigationLink("Subscription", destination: SubscriptionView(viewModel: SubscriptionViewModel()))
             }
-            .navigationTitle("Settings")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button(action: {
-                        dismiss()
-                    }) {
-                        Image(systemName: "xmark")
-                    }
-                }
+            
+            Section(header: Text("Preferences")) {
+                NavigationLink("Notifications", destination: NotificationsView(viewModel: NotificationsViewModel()))
+                NavigationLink("Language", destination: LanguageView(viewModel: LanguageViewModel()))
             }
+            
+            Section(header: Text("Support")) {
+                NavigationLink("Frequently Asked Questions", destination: FrequentlyAskedQuestionsView(viewModel: FrequentlyAskedQuestionsViewModel()))
+                NavigationLink("Contact Support", destination: ContactSupportView(viewModel: ContactSupportViewModel()))
+                NavigationLink("Terms of Use", destination: TermsOfUseView(viewModel: TermsOfUseViewModel()))
+                NavigationLink("Privacy Policy", destination: PrivacyPolicyView(viewModel: PrivacyPolicyViewModel()))
+            }
+        }
+        .navigationTitle("Settings")
+        .toolbar {
+
         }
     }
 }

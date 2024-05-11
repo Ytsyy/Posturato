@@ -7,6 +7,3 @@
 
 import Foundation
 
-class FrequentlyAskedQuestionsViewModel: ObservableObject {
-    @Published var text: String = "FAQ"
-}

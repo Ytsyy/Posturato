@@ -8,28 +8,24 @@
 import Foundation
 import SwiftUI
 
+import SwiftUI
+
 struct ProgressView: View {
-    @State private var showingSettings = false
-    
     var body: some View {
         NavigationView {
             ScrollView {
                 CalendarView()
-                    .offset(y: 40) 
-                
-                
+                    .offset(y: 40)
             }
-            .customNavigationBar(title: "Progress", onMenuTap: {
-                showingSettings = true
-            })
-            .fullScreenCover(isPresented: $showingSettings) {
-                SettingsView()
+            .navigationTitle("Progress")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "line.horizontal.3")
+                            .imageScale(.large)
+                    }
+                }
             }
         }
-
     }
-}
-
-#Preview {
-    ContentView()
 }

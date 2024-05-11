@@ -121,7 +121,7 @@ let catCow = Exercise(
     id: UUID(),
     name: "Cat-Cow",
     details: "The cat-cow stretch is performed on your hands and knees, alternating between arching your back up like a cat and then letting your belly drop towards the floor like a cow. This stretch helps to improve flexibility and mobility in the spine.",
-    image: "cat_cow",
+    image: "CatCow",
     videoURL: nil,
     targetMuscleGroups: [.erectorSpinae, .quadratusLumborum, .upperBack, .neckExtensors]
 )

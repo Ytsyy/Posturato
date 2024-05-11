@@ -7,17 +7,5 @@
 
 import Foundation
 
-import Foundation
-import SwiftUI
 
-struct FrequentlyAskedQuestionsView: View {
-    @ObservedObject var viewModel: FrequentlyAskedQuestionsViewModel
-    
-    var body: some View {
-        ScrollView {
-            Text(viewModel.text)
-                .padding()
-        }
-        .navigationBarTitle("FrequentlyAskedQuestionsView", displayMode: .inline)
-    }
-}
+

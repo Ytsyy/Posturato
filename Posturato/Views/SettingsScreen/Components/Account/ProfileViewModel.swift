@@ -7,7 +7,3 @@
 
 import Foundation
 
-class ProfileViewModel: ObservableObject {
-    @Published var username: String = "User123"
-    // Дополнительные данные и логика для страницы профиля
-}

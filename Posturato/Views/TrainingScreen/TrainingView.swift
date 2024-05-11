@@ -44,11 +44,23 @@ struct TrainingView: View {
                         }
                         .padding(.horizontal)
                     }
+                    
+                    
+                    
+                    
                 }
             }
             .navigationTitle("Training")
             .navigationDestination(for: Workout.self) { workout in
                 WorkoutDetailView(workout: workout, navigationPath: $navigationPath)
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: SettingsView()) {
+                        Image(systemName: "line.horizontal.3")
+                            .imageScale(.large)
+                    }
+                }
             }
         }
     }

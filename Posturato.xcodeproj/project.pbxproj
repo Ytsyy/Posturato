@@ -19,7 +19,6 @@
 		9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9412620D2B8A331700361141 /* SceneDelegate.swift */; };
 		941893F22B8DED2900D0243A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F12B8DED2900D0243A /* TabBar.swift */; };
 		941893F42B8DF10200D0243A /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F32B8DF10200D0243A /* TrainingView.swift */; };
-		9447CC322B971DD900AA35CA /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */; };
 		94508F652BA8606C0099BD44 /* TheoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94508F642BA8606C0099BD44 /* TheoryView.swift */; };
 		946224C72BBAC96300B5BCA4 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946224C62BBAC96300B5BCA4 /* CalendarView.swift */; };
 		946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6062B79D71900EE3869 /* PosturatoApp.swift */; };
@@ -77,7 +76,6 @@
 		9412620D2B8A331700361141 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		941893F12B8DED2900D0243A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		941893F32B8DF10200D0243A /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
-		9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		94508F642BA8606C0099BD44 /* TheoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryView.swift; sourceTree = "<group>"; };
 		946224C62BBAC96300B5BCA4 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		946BE6032B79D71900EE3869 /* Posturato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posturato.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -383,7 +381,6 @@
 				94508F632BA860370099BD44 /* Theory */,
 				941261FD2B8A321E00361141 /* CustomViews */,
 				941893F12B8DED2900D0243A /* TabBar.swift */,
-				9447CC312B971DD900AA35CA /* CustomNavigationBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -523,7 +520,6 @@
 				941261FB2B8A320400361141 /* SettingsViewController.swift in Sources */,
 				94CAAB8C2BC40927006D2926 /* ProfileView.swift in Sources */,
 				9412620A2B8A32E400361141 /* APIClient.swift in Sources */,
-				9447CC322B971DD900AA35CA /* CustomNavigationBar.swift in Sources */,
 				94D137682BADBD7300C0337C /* FinishView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

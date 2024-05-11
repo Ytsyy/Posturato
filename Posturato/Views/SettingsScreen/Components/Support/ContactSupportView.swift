@@ -8,14 +8,3 @@
 import Foundation
 import SwiftUI
 
-struct ContactSupportView: View {
-    @ObservedObject var viewModel: ContactSupportViewModel
-    
-    var body: some View {
-        ScrollView {
-            Text(viewModel.info)
-                .padding()
-        }
-        .navigationBarTitle("Contact Support", displayMode: .inline)
-    }
-}

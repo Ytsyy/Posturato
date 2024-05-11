@@ -7,7 +7,3 @@
 
 import Foundation
 
-class NotificationsViewModel: ObservableObject {
-    @Published var notificationsEnabled: Bool = true
-    // Дополнительные данные и логика для страницы уведомлений
-}
