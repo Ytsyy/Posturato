@@ -38,15 +38,58 @@ let legStretchingWorkout = Workout(
     durations: [30, 30, 30]
 )
 
-let morningPostureWorkoutDay1 = Workout(
+let morningWorkoutDay1 = Workout(
     id: UUID(),
-    name: "Morning Posture Workout",
+    name: "Morning Workout",
     description: "A light morning workout for improving posture.",
     exercises: [catStretch, hipFlexorStretch, chestOpenerStretch, birdDog, childsPose],
     image: "morning_posture_workout",
     durations: [30, 30, 30, 30, 30]
 )
 
+let officeWorkoutDay1 = Workout(
+    id: UUID(),
+    name: "Office Posture Workout",
+    description: "A light workout to improve posture while working in the office.",
+    exercises: [
+        neckStretchSitting,
+        shoulderShrugs,
+        seatedTorsoTwist,
+        wristStretch,
+        seatedLegExtension
+    ],
+    image: "office_posture_workout",
+    durations: [30, 30, 30, 30, 30]
+)
+
+let middayBackRelaxationWorkoutDay1 = Workout(
+    id: UUID(),
+    name: "Midday Back Relaxation",
+    description: "A light workout to relax the lower back and spine during the workday.",
+    exercises: [
+        seatedForwardBend,
+        catCowStretchSitting,
+        standingBackExtension,
+        seatedSpinalTwist
+    ],
+    image: "midday_back_relaxation_workout",
+    durations: [30, 30, 30, 30, 30]
+)
+
+let eveningStretchWorkoutDay1 = Workout(
+    id: UUID(),
+    name: "Evening stretch",
+    description: "A gentle evening workout focused on slow stretching of muscles before sleep.",
+    exercises: [
+        recliningBoundAngle,
+        supineSpinalTwist,
+        legsUpTheWall,
+        seatedForwardBendYoga,
+        childsPose
+    ],
+    image: "evening_stretch",
+    durations: [120, 60, 120, 60, 60]
+)
 
 
 

@@ -179,3 +179,120 @@ let calfStretch = Exercise(
     videoURL: nil,
     targetMuscleGroups: [.thighs, .calves]
 )
+
+let neckStretchSitting = Exercise(
+    id: UUID(),
+    name: "Neck Stretch Sitting",
+    details: "Sit on an office chair with your back straight. Tilt your head towards one shoulder, using the opposite hand to assist. Repeat on the other side.",
+    image: "neck_stretch_sitting",
+    videoURL: nil,
+    targetMuscleGroups: [.neckFlexors, .neckExtensors, .neckRotators]
+)
+
+let shoulderShrugs = Exercise(
+    id: UUID(),
+    name: "Shoulder Shrugs",
+    details: "Sitting or standing, raise your shoulders towards your ears and then lower them while relaxing your muscles. Repeat several times.",
+    image: "shoulder_shrugs",
+    videoURL: nil,
+    targetMuscleGroups: [.shoulders, .trapeziusUpper]
+)
+
+let seatedTorsoTwist = Exercise(
+    id: UUID(),
+    name: "Seated Torso Twist",
+    details: "Sit on an office chair with your back straight. Twist to one side, using the opposite hand to assist. Repeat on the other side.",
+    image: "seated_torso_twist",
+    videoURL: nil,
+    targetMuscleGroups: [.obliques, .upperBack, .lowerBack]
+)
+
+let wristStretch = Exercise(
+    id: UUID(),
+    name: "Wrist Stretch",
+    details: "Extend one arm forward with the palm facing down. Gently bend the wrist down and then up using the opposite hand. Repeat with the other arm.",
+    image: "wrist_stretch",
+    videoURL: nil,
+    targetMuscleGroups: []
+)
+
+let seatedLegExtension = Exercise(
+    id: UUID(),
+    name: "Seated Leg Extension",
+    details: "Sit on an office chair and straighten one leg in front of you, holding for a few seconds. Then switch legs.",
+    image: "seated_leg_extension",
+    videoURL: nil,
+    targetMuscleGroups: [.quadriceps, .hamstrings]
+)
+let seatedForwardBend = Exercise(
+    id: UUID(),
+    name: "Seated Forward Bend",
+    details: "Sit on an office chair with your feet flat on the ground. Lean forward, reaching your hands towards your feet while keeping your back straight. Hold for a few seconds and return to the starting position.",
+    image: "seated_forward_bend",
+    videoURL: nil,
+    targetMuscleGroups: [.lowerBack, .erectorSpinae, .hamstrings]
+)
+
+let catCowStretchSitting = Exercise(
+    id: UUID(),
+    name: "Cat-Cow Stretch Sitting",
+    details: "Sit on an office chair with your feet flat on the ground. Alternate between arching your back (cow pose) and rounding your spine (cat pose), synchronizing the movement with your breath.",
+    image: "cat_cow_sitting",
+    videoURL: nil,
+    targetMuscleGroups: [.lowerBack, .erectorSpinae, .upperBack]
+)
+
+let standingBackExtension = Exercise(
+    id: UUID(),
+    name: "Standing Back Extension",
+    details: "Stand with your feet shoulder-width apart. Place your hands on your lower back for support and gently arch backwards. Hold for a few seconds and return to the starting position.",
+    image: "standing_back_extension",
+    videoURL: nil,
+    targetMuscleGroups: [.lowerBack, .erectorSpinae]
+)
+
+let seatedSpinalTwist = Exercise(
+    id: UUID(),
+    name: "Seated Spinal Twist",
+    details: "Sit on an office chair with your back straight. Twist your torso to one side, using the opposite hand to assist. Hold for a few seconds and repeat on the other side.",
+    image: "seated_spinal_twist",
+    videoURL: nil,
+    targetMuscleGroups: [.obliques, .upperBack, .lowerBack]
+)
+
+let recliningBoundAngle = Exercise(
+    id: UUID(),
+    name: "Reclining Bound Angle Pose",
+    details: "Lie on your back with the soles of your feet together and knees bent out to the sides. Place your arms at your sides with palms facing up. Hold for a few minutes while breathing deeply.",
+    image: "reclining_bound_angle_pose",
+    videoURL: nil,
+    targetMuscleGroups: [.hipAdductors, .hipFlexors, .lowerBack]
+)
+
+let supineSpinalTwist = Exercise(
+    id: UUID(),
+    name: "Supine Spinal Twist",
+    details: "Lie on your back with your arms extended out to the sides. Bend one knee and cross it over your body towards the opposite side. Hold for a few seconds and repeat on the other side.",
+    image: "supine_spinal_twist",
+    videoURL: nil,
+    targetMuscleGroups: [.obliques, .lowerBack, .glutes]
+)
+
+let legsUpTheWall = Exercise(
+    id: UUID(),
+    name: "Legs-Up-the-Wall Pose",
+    details: "Sit close to a wall with your knees bent. Lie back and extend your legs up along the wall, keeping your back relaxed on the ground. Hold for a few minutes while breathing deeply.",
+    image: "legs_up_the_wall_pose",
+    videoURL: nil,
+    targetMuscleGroups: [.hamstrings, .lowerBack, .calves]
+)
+
+let seatedForwardBendYoga = Exercise(
+    id: UUID(),
+    name: "Seated Forward Bend",
+    details: "Sit on the floor with your legs extended in front of you. Reach forward towards your feet, keeping your back straight. Hold for a few seconds while breathing deeply.",
+    image: "seated_forward_bend_yoga",
+    videoURL: nil,
+    targetMuscleGroups: [.hamstrings, .erectorSpinae, .calves]
+)
+

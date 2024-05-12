@@ -18,6 +18,7 @@ struct TrainingView: View {
                     Text("Recommended")
                         .font(.title2)
                         .padding([.horizontal, .top])
+                        .foregroundStyle(.gray)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 20) {
@@ -45,11 +46,25 @@ struct TrainingView: View {
                         .padding(.horizontal)
                     }
                     
+                    Text("Daily Workouts for Posture Maintenance")
+                        .font(.title2)
+                        .padding([.horizontal, .top])
                     
-                    
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(viewModel.everyDayWorkouts) { workout in
+                                NavigationLink(value: workout) {
+                                    WorkoutCardView(workout: workout)
+                                }
+                            }
+                        }
+                        .padding(.horizontal)
+                    }
                     
                 }
             }
+            
+            
             .navigationTitle("Training")
             .navigationDestination(for: Workout.self) { workout in
                 WorkoutDetailView(workout: workout, navigationPath: $navigationPath)

@@ -18,12 +18,13 @@ struct WorkoutCardView: View {
                 Image(imageName)
                     .resizable()
                     .scaledToFit()
-                    .frame(height: 150)
+                    .frame(height: 100)
             }
             Text(workout.name)
                 .font(.headline)
+                .foregroundStyle(.black)
         }
-        .frame(width: 200, height: 250)
+        .frame(width: 150, height: 150)
         .background(Color(.secondarySystemBackground))
         .cornerRadius(10)
         .shadow(radius: 5)

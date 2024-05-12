@@ -12,9 +12,11 @@ class TrainingViewModel: ObservableObject {
     @Published var workouts: [Workout] = []
     @Published var recommendedWorkouts: [Workout] = []
     @Published var quickAndEasyWorkouts: [Workout] = []
+    @Published var everyDayWorkouts: [Workout] = []
 
     init() {
-        recommendedWorkouts = [morningPostureWorkoutDay1,basicPostureWorkoutDay1,legStretchingWorkout]
-        quickAndEasyWorkouts = [legStretchingWorkout]
+        recommendedWorkouts = [morningWorkoutDay1,basicPostureWorkoutDay1,legStretchingWorkout]
+        quickAndEasyWorkouts = [officeWorkoutDay1,middayBackRelaxationWorkoutDay1]
+        everyDayWorkouts = [eveningStretchWorkoutDay1,morningWorkoutDay1]
     }
 }
