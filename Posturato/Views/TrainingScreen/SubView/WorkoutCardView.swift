@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 struct WorkoutCardView: View {
     var workout: Workout
     
@@ -25,8 +24,10 @@ struct WorkoutCardView: View {
                 .foregroundStyle(.black)
         }
         .frame(width: 150, height: 150)
-        .background(Color(.secondarySystemBackground))
+        .background(Color("LightBeige"))
         .cornerRadius(10)
-        .shadow(radius: 5)
+        .shadow(radius: 10)
+        .padding(.vertical, 5)
     }
 }
+

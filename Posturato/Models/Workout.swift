@@ -34,7 +34,7 @@ let legStretchingWorkout = Workout(
     name: "Leg Stretching Workout",
     description: "A light workout focused on stretching and relaxing the leg muscles.",
     exercises: [hamstringStretch, quadStretch, calfStretch],
-    image: "leg_stretching_workout",
+    image: "SimpleWorkout",
     durations: [30, 30, 30]
 )
 
@@ -43,7 +43,7 @@ let morningWorkoutDay1 = Workout(
     name: "Morning Workout",
     description: "A light morning workout for improving posture.",
     exercises: [catStretch, hipFlexorStretch, chestOpenerStretch, birdDog, childsPose],
-    image: "morning_posture_workout",
+    image: "MorningWorkout",
     durations: [30, 30, 30, 30, 30]
 )
 
@@ -87,7 +87,7 @@ let eveningStretchWorkoutDay1 = Workout(
         seatedForwardBendYoga,
         childsPose
     ],
-    image: "evening_stretch",
+    image: "EveningWorkout",
     durations: [120, 60, 120, 60, 60]
 )
 

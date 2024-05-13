@@ -20,6 +20,10 @@
 		941893F22B8DED2900D0243A /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F12B8DED2900D0243A /* TabBar.swift */; };
 		941893F42B8DF10200D0243A /* TrainingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941893F32B8DF10200D0243A /* TrainingView.swift */; };
 		94508F652BA8606C0099BD44 /* TheoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94508F642BA8606C0099BD44 /* TheoryView.swift */; };
+		9450B9F42BF1F5FA0091ED9E /* PostureDisorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450B9F32BF1F5FA0091ED9E /* PostureDisorder.swift */; };
+		9450B9F62BF1F67D0091ED9E /* HealthTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450B9F52BF1F67D0091ED9E /* HealthTip.swift */; };
+		9450B9F82BF1F76D0091ED9E /* RiskFactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450B9F72BF1F76D0091ED9E /* RiskFactor.swift */; };
+		9450B9FA2BF1F80A0091ED9E /* PostureBasiс.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9450B9F92BF1F80A0091ED9E /* PostureBasiс.swift */; };
 		946224C72BBAC96300B5BCA4 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946224C62BBAC96300B5BCA4 /* CalendarView.swift */; };
 		946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6062B79D71900EE3869 /* PosturatoApp.swift */; };
 		946BE6092B79D71900EE3869 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946BE6082B79D71900EE3869 /* ContentView.swift */; };
@@ -54,9 +58,6 @@
 		94D137682BADBD7300C0337C /* FinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D137672BADBD7300C0337C /* FinishView.swift */; };
 		94D1376A2BADBDB900C0337C /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D137692BADBDB900C0337C /* WorkoutCell.swift */; };
 		94ED03AD2BEBE118001008C0 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED03AC2BEBE118001008C0 /* WorkoutView.swift */; };
-		94FE64912BC40AA200F12069 /* SubscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE64902BC40AA200F12069 /* SubscriptionView.swift */; };
-		94FE64932BC40AA600F12069 /* SubscriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE64922BC40AA600F12069 /* SubscriptionViewModel.swift */; };
-		94FE64952BC40ACA00F12069 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE64942BC40ACA00F12069 /* ProfileViewModel.swift */; };
 		94FE64972BC40B0100F12069 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE64962BC40B0100F12069 /* NotificationsView.swift */; };
 		94FE64992BC40B0600F12069 /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE64982BC40B0600F12069 /* NotificationsViewModel.swift */; };
 		94FE649B2BC40B3200F12069 /* LanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94FE649A2BC40B3200F12069 /* LanguageViewModel.swift */; };
@@ -78,6 +79,10 @@
 		941893F12B8DED2900D0243A /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		941893F32B8DF10200D0243A /* TrainingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingView.swift; sourceTree = "<group>"; };
 		94508F642BA8606C0099BD44 /* TheoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryView.swift; sourceTree = "<group>"; };
+		9450B9F32BF1F5FA0091ED9E /* PostureDisorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostureDisorder.swift; sourceTree = "<group>"; };
+		9450B9F52BF1F67D0091ED9E /* HealthTip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthTip.swift; sourceTree = "<group>"; };
+		9450B9F72BF1F76D0091ED9E /* RiskFactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiskFactor.swift; sourceTree = "<group>"; };
+		9450B9F92BF1F80A0091ED9E /* PostureBasiс.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostureBasiс.swift"; sourceTree = "<group>"; };
 		946224C62BBAC96300B5BCA4 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		946BE6032B79D71900EE3869 /* Posturato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Posturato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		946BE6062B79D71900EE3869 /* PosturatoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosturatoApp.swift; sourceTree = "<group>"; };
@@ -114,9 +119,6 @@
 		94D137672BADBD7300C0337C /* FinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishView.swift; sourceTree = "<group>"; };
 		94D137692BADBDB900C0337C /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
 		94ED03AC2BEBE118001008C0 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
-		94FE64902BC40AA200F12069 /* SubscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionView.swift; sourceTree = "<group>"; };
-		94FE64922BC40AA600F12069 /* SubscriptionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewModel.swift; sourceTree = "<group>"; };
-		94FE64942BC40ACA00F12069 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		94FE64962BC40B0100F12069 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		94FE64982BC40B0600F12069 /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
 		94FE649A2BC40B3200F12069 /* LanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewModel.swift; sourceTree = "<group>"; };
@@ -309,6 +311,10 @@
 			isa = PBXGroup;
 			children = (
 				94B7CE462BE8ABC90044DEB7 /* TheoryModel.swift */,
+				9450B9F32BF1F5FA0091ED9E /* PostureDisorder.swift */,
+				9450B9F52BF1F67D0091ED9E /* HealthTip.swift */,
+				9450B9F72BF1F76D0091ED9E /* RiskFactor.swift */,
+				9450B9F92BF1F80A0091ED9E /* PostureBasiс.swift */,
 			);
 			path = "Theory View";
 			sourceTree = "<group>";
@@ -348,16 +354,6 @@
 			path = Support;
 			sourceTree = "<group>";
 		};
-		94CAAB8A2BC4091D006D2926 /* Account */ = {
-			isa = PBXGroup;
-			children = (
-				94FE64942BC40ACA00F12069 /* ProfileViewModel.swift */,
-				94FE64902BC40AA200F12069 /* SubscriptionView.swift */,
-				94FE64922BC40AA600F12069 /* SubscriptionViewModel.swift */,
-			);
-			path = Account;
-			sourceTree = "<group>";
-		};
 		94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,7 +367,6 @@
 		94D0CAB42BA2F4F9007CC822 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				94CAAB8A2BC4091D006D2926 /* Account */,
 				94CAAB782BC2C626006D2926 /* Settings */,
 				94CAAB792BC2C62B006D2926 /* Support */,
 				94D0CAB02BA2F0AF007CC822 /* CustomSettingButton.swift */,
@@ -487,13 +482,16 @@
 				94B7CE472BE8ABC90044DEB7 /* TheoryModel.swift in Sources */,
 				94FE649F2BC40BCB00F12069 /* FrequentlyAskedQuestionsViewModel.swift in Sources */,
 				94CAAB6C2BC2C2F4006D2926 /* TermsOfUseViewModel.swift in Sources */,
+				9450B9F82BF1F76D0091ED9E /* RiskFactor.swift in Sources */,
 				94CAAB742BC2C5A6006D2926 /* ContactSupportViewModel.swift in Sources */,
+				9450B9F62BF1F67D0091ED9E /* HealthTip.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
 				9412620E2B8A331700361141 /* SceneDelegate.swift in Sources */,
+				9450B9F42BF1F5FA0091ED9E /* PostureDisorder.swift in Sources */,
 				94B7CE432BE8AA310044DEB7 /* Section.swift in Sources */,
+				9450B9FA2BF1F80A0091ED9E /* PostureBasiс.swift in Sources */,
 				94FE649D2BC40BA200F12069 /* FrequentlyAskedQuestionsView.swift in Sources */,
 				946CED142BF0EC3D009083BE /* SplashScreen.swift in Sources */,
-				94FE64932BC40AA600F12069 /* SubscriptionViewModel.swift in Sources */,
 				941262002B8A324600361141 /* TrainingViewModel.swift in Sources */,
 				94CAAB702BC2C33B006D2926 /* PrivacyPolicyViewModel.swift in Sources */,
 				946BE6092B79D71900EE3869 /* ContentView.swift in Sources */,
@@ -506,7 +504,6 @@
 				94FE64972BC40B0100F12069 /* NotificationsView.swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
 				94D1375E2BADBB0600C0337C /* Exercise.swift in Sources */,
-				94FE64912BC40AA200F12069 /* SubscriptionView.swift in Sources */,
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
 				946CED162BF0F045009083BE /* ContainerView.swift in Sources */,
 				941262082B8A32D900361141 /* AuthService.swift in Sources */,
@@ -514,7 +511,6 @@
 				94508F652BA8606C0099BD44 /* TheoryView.swift in Sources */,
 				941893F22B8DED2900D0243A /* TabBar.swift in Sources */,
 				946224C72BBAC96300B5BCA4 /* CalendarView.swift in Sources */,
-				94FE64952BC40ACA00F12069 /* ProfileViewModel.swift in Sources */,
 				94D0CAB12BA2F0AF007CC822 /* CustomSettingButton.swift in Sources */,
 				941261F22B8A314600361141 /* AppDelegate.swift in Sources */,
 				941261F92B8A31F500361141 /* HomeViewController.swift in Sources */,

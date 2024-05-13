@@ -37,6 +37,8 @@ struct TheoryView: View {
                 }
 
             }
+            .background(Color("LightBeige"))
+            .navigationTitle("Theory")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     NavigationLink(destination: SettingsView()) {

@@ -12,6 +12,7 @@ struct PosturatoApp: App {
     var body: some Scene {
         WindowGroup {
             ContainerView()
+                .background(Color("LightBeige")).ignoresSafeArea(.all)
         }
     }
 }

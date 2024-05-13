@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct TrainingView: View {
     @StateObject var viewModel = TrainingViewModel()
     @State private var navigationPath = NavigationPath()
@@ -29,6 +31,7 @@ struct TrainingView: View {
                             }
                         }
                         .padding(.horizontal)
+                        .padding(.vertical, 10)
                     }
                     
                     Text("Quick & Easy")
@@ -44,6 +47,7 @@ struct TrainingView: View {
                             }
                         }
                         .padding(.horizontal)
+                        .padding(.vertical, 10) 
                     }
                     
                     Text("Daily Workouts for Posture Maintenance")
@@ -59,12 +63,11 @@ struct TrainingView: View {
                             }
                         }
                         .padding(.horizontal)
+                        .padding(.vertical, 10)
                     }
-                    
                 }
             }
-            
-            
+            .background(Color("LightBeige"))
             .navigationTitle("Training")
             .navigationDestination(for: Workout.self) { workout in
                 WorkoutDetailView(workout: workout, navigationPath: $navigationPath)
