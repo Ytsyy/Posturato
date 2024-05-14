@@ -12,8 +12,6 @@ enum SettingScreen {
 }
 
 
-
-
 struct SettingsView: View {
     var body: some View {
         List {
@@ -35,8 +33,9 @@ struct SettingsView: View {
             }
         }
         .navigationTitle("Settings")
+        .background(Color("LightBeige")) 
         .toolbar {
-
+            
         }
     }
 }

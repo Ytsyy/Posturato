@@ -58,7 +58,7 @@ let officeWorkoutDay1 = Workout(
         wristStretch,
         seatedLegExtension
     ],
-    image: "office_posture_workout",
+    image: "OfficeWokout",
     durations: [30, 30, 30, 30, 30]
 )
 
