@@ -18,10 +18,9 @@ struct TrainingView: View {
                     Text("Recommended")
                         .font(.title2)
                         .padding([.horizontal, .top])
-                        .foregroundStyle(.gray)
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: 5) {
                             ForEach(viewModel.recommendedWorkouts) { workout in
                                 NavigationLink(value: workout) {
                                     WorkoutCardView(workout: workout)
@@ -37,7 +36,7 @@ struct TrainingView: View {
                         .padding([.horizontal, .top])
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: 5) {
                             ForEach(viewModel.quickAndEasyWorkouts) { workout in
                                 NavigationLink(value: workout) {
                                     WorkoutCardView(workout: workout)
@@ -53,7 +52,7 @@ struct TrainingView: View {
                         .padding([.horizontal, .top])
                     
                     ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: 5) {
                             ForEach(viewModel.everyDayWorkouts) { workout in
                                 NavigationLink(value: workout) {
                                     WorkoutCardView(workout: workout)

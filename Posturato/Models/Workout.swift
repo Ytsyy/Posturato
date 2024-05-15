@@ -31,7 +31,7 @@ let basicPostureWorkoutDay3 = createWorkoutDay(from: basicPostureWorkoutDay1, ad
 
 let legStretchingWorkout = Workout(
     id: UUID(),
-    name: "Leg Stretching Workout",
+    name: "Leg Stretching",
     description: "A light workout focused on stretching and relaxing the leg muscles.",
     exercises: [hamstringStretch, quadStretch, calfStretch],
     image: "SimpleWorkout",
@@ -49,7 +49,7 @@ let morningWorkoutDay1 = Workout(
 
 let officeWorkoutDay1 = Workout(
     id: UUID(),
-    name: "Office Posture Workout",
+    name: "Office Workout",
     description: "A light workout to improve posture while working in the office.",
     exercises: [
         neckStretchSitting,
@@ -64,7 +64,7 @@ let officeWorkoutDay1 = Workout(
 
 let middayBackRelaxationWorkoutDay1 = Workout(
     id: UUID(),
-    name: "Midday Back Relaxation",
+    name: "Midday Relaxation",
     description: "A light workout to relax the lower back and spine during the workday.",
     exercises: [
         seatedForwardBend,
