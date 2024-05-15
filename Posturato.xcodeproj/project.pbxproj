@@ -56,6 +56,7 @@
 		94E269B22BF351DD00B5F154 /* ContactSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E269B12BF351DD00B5F154 /* ContactSupport.swift */; };
 		94E269B42BF351FD00B5F154 /* TermsOfUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E269B32BF351FD00B5F154 /* TermsOfUse.swift */; };
 		94E269B62BF3521900B5F154 /* PrivacyPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E269B52BF3521900B5F154 /* PrivacyPolicy.swift */; };
+		94E269B82BF35B4200B5F154 /* ProgressWorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94E269B72BF35B4200B5F154 /* ProgressWorkoutCell.swift */; };
 		94ED03AD2BEBE118001008C0 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94ED03AC2BEBE118001008C0 /* WorkoutView.swift */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +112,7 @@
 		94E269B12BF351DD00B5F154 /* ContactSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactSupport.swift; sourceTree = "<group>"; };
 		94E269B32BF351FD00B5F154 /* TermsOfUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsOfUse.swift; sourceTree = "<group>"; };
 		94E269B52BF3521900B5F154 /* PrivacyPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicy.swift; sourceTree = "<group>"; };
+		94E269B72BF35B4200B5F154 /* ProgressWorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressWorkoutCell.swift; sourceTree = "<group>"; };
 		94ED03AC2BEBE118001008C0 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				946224C62BBAC96300B5BCA4 /* CalendarView.swift */,
+				94E269B72BF35B4200B5F154 /* ProgressWorkoutCell.swift */,
 			);
 			path = SubView;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				94B7CE402BE8A6860044DEB7 /* DetailView.swift in Sources */,
 				94D0CAAC2BA2EC3D007CC822 /* SettingsView.swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
+				94E269B82BF35B4200B5F154 /* ProgressWorkoutCell.swift in Sources */,
 				94E269B62BF3521900B5F154 /* PrivacyPolicy.swift in Sources */,
 				946BE6072B79D71900EE3869 /* PosturatoApp.swift in Sources */,
 				94E269B02BF351C700B5F154 /* FAQ.swift in Sources */,

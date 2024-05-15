@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct TrainingView: View {
     @StateObject var viewModel = TrainingViewModel()
     @State private var navigationPath = NavigationPath()

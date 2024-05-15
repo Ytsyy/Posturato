@@ -8,14 +8,26 @@
 import Foundation
 import SwiftUI
 
-import SwiftUI
-
 struct ProgressView: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                CalendarView()
-                    .offset(y: 40)
+                VStack(spacing: 20) {
+                    Text("Your Workout Program") 
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                    
+                   
+                    ProgressWorkoutCell(workout: basicPostureWorkoutDay1)
+                        .frame(height: 200)
+
+                    
+                    Image("Calendar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 280)
+                }
+                .padding()
             }
             .navigationTitle("Progress")
             .toolbar {

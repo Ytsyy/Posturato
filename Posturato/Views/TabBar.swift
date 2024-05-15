@@ -31,6 +31,5 @@ struct TabBar: View {
                 .tag(3)
         }
         .background(Color("LightBeige"))
-        //.accentColor(Color("LightBlueMain"))
     }
 }
