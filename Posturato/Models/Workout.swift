@@ -42,9 +42,9 @@ let morningWorkoutDay1 = Workout(
     id: UUID(),
     name: "Morning Workout",
     description: "A light morning workout for improving posture.",
-    exercises: [catStretch, hipFlexorStretch, chestOpenerStretch, birdDog, childsPose],
+    exercises: [hipFlexorStretch, chestOpenerStretch, birdDog, childsPose],
     image: "MorningWorkout",
-    durations: [30, 30, 30, 30, 30]
+    durations: [30, 30, 30, 30]
 )
 
 let officeWorkoutDay1 = Workout(

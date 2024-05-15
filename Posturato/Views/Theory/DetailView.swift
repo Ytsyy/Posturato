@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 struct DetailView: View {
     var title: String
     var description: String

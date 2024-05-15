@@ -50,5 +50,3 @@ struct TheoryView: View {
         }
     }
 }
-
-

@@ -40,6 +40,7 @@ struct SectionView<Item>: View where Item: Identifiable {
                     }
                 }
                 .padding(.horizontal)
+                .padding(.vertical) 
             }
         }
     }

@@ -16,8 +16,8 @@ struct WorkoutCardView: View {
             if let imageName = workout.image {
                 Image(imageName)
                     .resizable()
-                    .clipShape(RoundedRectangle(cornerRadius: 5)) // Сначала обрезаем
-                    .scaledToFit() // Затем масштабируем
+                    .clipShape(RoundedRectangle(cornerRadius: 5)) 
+                    .scaledToFit()
                     .frame(width: 130, height: 100)
                     .padding(.top, 5)
             }

@@ -13,5 +13,4 @@ class TheoryViewModel: ObservableObject {
     let healthTips: [HealthTip] = HealthTipModel.healthTips
     let postureBasics: [PostureBasic] = PostureBasicModel.postureBasics
     let riskFactors: [RiskFactor] = RiskFactorModel.riskFactors
-
 }

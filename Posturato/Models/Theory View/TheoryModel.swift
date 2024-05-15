@@ -8,5 +8,5 @@
 import Foundation
 
 class ExerciseModel {
-    static let exercises: [Exercise] = [catStretch, hipFlexorStretch, chestOpenerStretch, birdDog, childsPose]
+    static let exercises: [Exercise] = [hipFlexorStretch, chestOpenerStretch, birdDog, childsPose]
 }

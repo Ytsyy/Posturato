@@ -68,23 +68,11 @@ enum MuscleGroup: String, CaseIterable {
 }
 
 
-
-
-// Упражнения для утренней тренировки
-let catStretch = Exercise(
-    id: UUID(),
-    name: "Cat Stretch",
-    details: "Start on your hands and knees with your wrists directly under your shoulders and knees directly under your hips. Push your back up towards the ceiling, tucking your chin to your chest. Hold for a few seconds before returning to the neutral position.",
-    image: "cat_stretch",
-    videoURL: nil,
-    targetMuscleGroups: [.erectorSpinae, .upperBack, .lowerBack]
-)
-
 let hipFlexorStretch = Exercise(
     id: UUID(),
     name: "Hip Flexor Stretch",
     details: "Start in a kneeling position with one knee on the ground and the other leg bent in front of you at a 90-degree angle. Lean forward slightly, stretching your hip flexors. Hold for 20-30 seconds, then switch sides.",
-    image: "hip_flexor_stretch",
+    image: "HipFlexorStretch",
     videoURL: nil,
     targetMuscleGroups: [.iliopsoas, .hipFlexors]
 )
@@ -93,7 +81,7 @@ let chestOpenerStretch = Exercise(
     id: UUID(),
     name: "Chest Opener Stretch",
     details: "Stand tall with your feet hip-width apart. Clasp your hands behind your back and gently lift them up until you feel a stretch in your chest. Hold for 20-30 seconds, then release.",
-    image: "chest_opener",
+    image: "ChestOpenerStretch",
     videoURL: nil,
     targetMuscleGroups: [.pectoralisMajor, .pectoralisMinor]
 )
@@ -102,7 +90,7 @@ let birdDog = Exercise(
     id: UUID(),
     name: "Bird Dog",
     details: "Begin on your hands and knees, aligning your palms under your shoulders и knees under your hips. Activate your core to achieve a neutral spine. Lift your right hand and extend it forward while simultaneously extending your left leg back, keeping both at shoulder и hip height respectively. Hold this pose for a second, then return to the starting position и repeat on the opposite side.",
-    image: "bird_dog",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.erectorSpinae, .abs, .glutes, .shoulders]
 )
@@ -111,12 +99,11 @@ let childsPose = Exercise(
     id: UUID(),
     name: "Child's Pose",
     details: "Start on your hands и knees. Sit back onto your heels while stretching your arms forward on the mat. Let your chest fall towards the mat и hold for 20-30 seconds. This stretch helps to relax the back и shoulders.",
-    image: "child_pose",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.erectorSpinae, .upperBack]
 )
 
-// Упражнения для базовой тренировки для улучшения осанки
 let catCow = Exercise(
     id: UUID(),
     name: "Cat-Cow",
@@ -157,7 +144,7 @@ let hamstringStretch = Exercise(
     id: UUID(),
     name: "Hamstring Stretch",
     details: "Sit on the floor with one leg extended and the other bent with the sole of the foot against the inner thigh of the extended leg. Reach forward towards the toes of the extended leg, feeling a stretch in the hamstring.",
-    image: "HamstringStretch",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.hamstrings, .glutes]
 )
@@ -166,7 +153,7 @@ let quadStretch = Exercise(
     id: UUID(),
     name: "Quad Stretch",
     details: "Stand on one leg while pulling the other foot towards your glutes. Hold the stretch for 20-30 seconds while keeping the supporting knee slightly bent.",
-    image: "QuadStretch",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.thighs]
 )
@@ -184,7 +171,7 @@ let neckStretchSitting = Exercise(
     id: UUID(),
     name: "Neck Stretch Sitting",
     details: "Sit on an office chair with your back straight. Tilt your head towards one shoulder, using the opposite hand to assist. Repeat on the other side.",
-    image: "neck_stretch_sitting",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.neckFlexors, .neckExtensors, .neckRotators]
 )
@@ -193,7 +180,7 @@ let shoulderShrugs = Exercise(
     id: UUID(),
     name: "Shoulder Shrugs",
     details: "Sitting or standing, raise your shoulders towards your ears and then lower them while relaxing your muscles. Repeat several times.",
-    image: "shoulder_shrugs",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.shoulders, .trapeziusUpper]
 )
@@ -202,7 +189,7 @@ let seatedTorsoTwist = Exercise(
     id: UUID(),
     name: "Seated Torso Twist",
     details: "Sit on an office chair with your back straight. Twist to one side, using the opposite hand to assist. Repeat on the other side.",
-    image: "seated_torso_twist",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.obliques, .upperBack, .lowerBack]
 )
@@ -211,7 +198,7 @@ let wristStretch = Exercise(
     id: UUID(),
     name: "Wrist Stretch",
     details: "Extend one arm forward with the palm facing down. Gently bend the wrist down and then up using the opposite hand. Repeat with the other arm.",
-    image: "wrist_stretch",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: []
 )
@@ -220,7 +207,7 @@ let seatedLegExtension = Exercise(
     id: UUID(),
     name: "Seated Leg Extension",
     details: "Sit on an office chair and straighten one leg in front of you, holding for a few seconds. Then switch legs.",
-    image: "seated_leg_extension",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.quadriceps, .hamstrings]
 )
@@ -228,7 +215,7 @@ let seatedForwardBend = Exercise(
     id: UUID(),
     name: "Seated Forward Bend",
     details: "Sit on an office chair with your feet flat on the ground. Lean forward, reaching your hands towards your feet while keeping your back straight. Hold for a few seconds and return to the starting position.",
-    image: "seated_forward_bend",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.lowerBack, .erectorSpinae, .hamstrings]
 )
@@ -237,7 +224,7 @@ let catCowStretchSitting = Exercise(
     id: UUID(),
     name: "Cat-Cow Stretch Sitting",
     details: "Sit on an office chair with your feet flat on the ground. Alternate between arching your back (cow pose) and rounding your spine (cat pose), synchronizing the movement with your breath.",
-    image: "cat_cow_sitting",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.lowerBack, .erectorSpinae, .upperBack]
 )
@@ -282,7 +269,7 @@ let legsUpTheWall = Exercise(
     id: UUID(),
     name: "Legs-Up-the-Wall Pose",
     details: "Sit close to a wall with your knees bent. Lie back and extend your legs up along the wall, keeping your back relaxed on the ground. Hold for a few minutes while breathing deeply.",
-    image: "legs_up_the_wall_pose",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.hamstrings, .lowerBack, .calves]
 )
@@ -291,7 +278,7 @@ let seatedForwardBendYoga = Exercise(
     id: UUID(),
     name: "Seated Forward Bend",
     details: "Sit on the floor with your legs extended in front of you. Reach forward towards your feet, keeping your back straight. Hold for a few seconds while breathing deeply.",
-    image: "seated_forward_bend_yoga",
+    image: "",
     videoURL: nil,
     targetMuscleGroups: [.hamstrings, .erectorSpinae, .calves]
 )
