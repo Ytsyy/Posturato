@@ -13,20 +13,25 @@ struct FinishView: View {
     @Binding var navigationPath: NavigationPath
 
     var body: some View {
-        VStack {
-            Spacer()
-            Text("Congratulations!")
-                .font(.largeTitle)
-                .padding()
-            Spacer()
-            Button(action: {
-                navigationPath.removeLast(navigationPath.count)
-            }) {
-                Text("Back to Training")
+        ZStack {
+            Color("LightBeige")
+                .ignoresSafeArea()
+
+            VStack {
+                Spacer()
+                Text("Congratulations!")
+                    .font(.largeTitle)
                     .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                Spacer()
+                Button(action: {
+                    navigationPath.removeLast(navigationPath.count)
+                }) {
+                    Text("Back to Training")
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
         }
         .toolbar(.hidden, for: .tabBar)

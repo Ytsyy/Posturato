@@ -48,7 +48,7 @@ struct RestView: View {
             .padding(.bottom)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color.white)
+        .background(Color("LightBeige"))
         .edgesIgnoringSafeArea(.all)
         .navigationTitle("Rest View")
         .navigationBarHidden(true)

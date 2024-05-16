@@ -53,7 +53,6 @@ let officeWorkoutDay1 = Workout(
     description: "A light workout to improve posture while working in the office.",
     exercises: [
         neckStretchSitting,
-        shoulderShrugs,
         seatedTorsoTwist,
         wristStretch,
         seatedLegExtension

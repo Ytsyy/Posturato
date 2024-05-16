@@ -14,29 +14,35 @@ struct WorkoutDetailView: View {
     @Binding var navigationPath: NavigationPath
 
     var body: some View {
-        VStack {
-            Text(workout.name)
-                .font(.title)
-                .padding()
-            
-            Text(workout.description)
-                .padding()
-            
-            if let imageName = workout.image {
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 200)
-            }
+        ZStack {
+            // Фон для всей области экрана
+            Color("LightBeige")
+                .ignoresSafeArea() // Заставляет фон игнорировать безопасные зоны и растягиваться на весь экран
 
-            Button(action: {
-                navigationPath.append("workout-\(workout.id)")
-            }) {
-                Text("Начать тренировку")
+            VStack {
+                if let imageName = workout.image {
+                    Image(imageName)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 200)
+                }
+                
+                Text(workout.name)
+                    .font(.title)
                     .padding()
-                    .background(Color.green)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                
+                Text(workout.description)
+                    .padding()
+                
+                Button(action: {
+                    navigationPath.append("workout-\(workout.id)")
+                }) {
+                    Text("Начать тренировку")
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
         }
         .navigationTitle("Workout Details")

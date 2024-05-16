@@ -71,7 +71,7 @@ enum MuscleGroup: String, CaseIterable {
 let hipFlexorStretch = Exercise(
     id: UUID(),
     name: "Hip Flexor Stretch",
-    details: "Start in a kneeling position with one knee on the ground and the other leg bent in front of you at a 90-degree angle. Lean forward slightly, stretching your hip flexors. Hold for 20-30 seconds, then switch sides.",
+    details: "Start in a kneeling position with one knee on the ground and the other leg bent in front of you at a 90-degree angle. Lean forward slightly, stretching your hip flexors",
     image: "HipFlexorStretch",
     videoURL: nil,
     targetMuscleGroups: [.iliopsoas, .hipFlexors]
@@ -80,7 +80,7 @@ let hipFlexorStretch = Exercise(
 let chestOpenerStretch = Exercise(
     id: UUID(),
     name: "Chest Opener Stretch",
-    details: "Stand tall with your feet hip-width apart. Clasp your hands behind your back and gently lift them up until you feel a stretch in your chest. Hold for 20-30 seconds, then release.",
+    details: "Stand tall with your feet hip-width apart. Clasp your hands behind your back and gently lift them up until you feel a stretch in your chest. ",
     image: "ChestOpenerStretch",
     videoURL: nil,
     targetMuscleGroups: [.pectoralisMajor, .pectoralisMinor]
@@ -98,8 +98,8 @@ let birdDog = Exercise(
 let childsPose = Exercise(
     id: UUID(),
     name: "Child's Pose",
-    details: "Start on your hands и knees. Sit back onto your heels while stretching your arms forward on the mat. Let your chest fall towards the mat и hold for 20-30 seconds. This stretch helps to relax the back и shoulders.",
-    image: "",
+    details: "Start on your hands и knees. Sit back onto your heels while stretching your arms forward on the mat.  This stretch helps to relax the back и shoulders.",
+    image: "ChildPose",
     videoURL: nil,
     targetMuscleGroups: [.erectorSpinae, .upperBack]
 )
@@ -144,7 +144,7 @@ let hamstringStretch = Exercise(
     id: UUID(),
     name: "Hamstring Stretch",
     details: "Sit on the floor with one leg extended and the other bent with the sole of the foot against the inner thigh of the extended leg. Reach forward towards the toes of the extended leg, feeling a stretch in the hamstring.",
-    image: "",
+    image: "HamstringStretch",
     videoURL: nil,
     targetMuscleGroups: [.hamstrings, .glutes]
 )
@@ -152,7 +152,7 @@ let hamstringStretch = Exercise(
 let quadStretch = Exercise(
     id: UUID(),
     name: "Quad Stretch",
-    details: "Stand on one leg while pulling the other foot towards your glutes. Hold the stretch for 20-30 seconds while keeping the supporting knee slightly bent.",
+    details: "Stand on one leg while pulling the other foot towards your glutes.",
     image: "",
     videoURL: nil,
     targetMuscleGroups: [.thighs]
@@ -171,19 +171,11 @@ let neckStretchSitting = Exercise(
     id: UUID(),
     name: "Neck Stretch Sitting",
     details: "Sit on an office chair with your back straight. Tilt your head towards one shoulder, using the opposite hand to assist. Repeat on the other side.",
-    image: "",
+    image: "NeckStretchSitting",
     videoURL: nil,
     targetMuscleGroups: [.neckFlexors, .neckExtensors, .neckRotators]
 )
 
-let shoulderShrugs = Exercise(
-    id: UUID(),
-    name: "Shoulder Shrugs",
-    details: "Sitting or standing, raise your shoulders towards your ears and then lower them while relaxing your muscles. Repeat several times.",
-    image: "",
-    videoURL: nil,
-    targetMuscleGroups: [.shoulders, .trapeziusUpper]
-)
 
 let seatedTorsoTwist = Exercise(
     id: UUID(),
