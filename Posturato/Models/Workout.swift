@@ -71,7 +71,7 @@ let middayBackRelaxationWorkoutDay1 = Workout(
         standingBackExtension,
         seatedSpinalTwist
     ],
-    image: "midday_back_relaxation_workout",
+    image: "MidDayRelaxation",
     durations: [30, 30, 30, 30, 30]
 )
 

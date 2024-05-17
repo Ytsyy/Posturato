@@ -12,7 +12,7 @@ import Combine
 struct ExerciseView: View {
     var exercise: Exercise
     @ObservedObject var viewModel: WorkoutViewModel
-    @State private var detailText: String? = nil // Optional состояние для деталей
+    @State private var detailText: String? = nil
 
     var body: some View {
         VStack {
@@ -31,7 +31,7 @@ struct ExerciseView: View {
             }
             
             Button(action: {
-                withAnimation(.easeInOut(duration: 0.2)) { // Ускоренная анимация
+                withAnimation(.easeInOut(duration: 0.2)) {
                     if detailText == nil {
                         detailText = exercise.details
                     } else {
@@ -43,19 +43,19 @@ struct ExerciseView: View {
                     .font(.body)
                     .foregroundColor(.blue)
                     .underline()
-                    .padding(.top)
+
             }
 
             if let details = detailText {
-                ScrollView { // Добавление ScrollView для прокрутки текста
+                ScrollView {
                     Text(details)
                         .padding()
                         .transition(.opacity)
                 }
-                .frame(maxHeight: 200) // Ограничение высоты ScrollView
+                .frame(maxHeight: 200) 
             }
             
-            Spacer()
+
             
             Text("\(viewModel.remainingTime) сек")
                 .font(.largeTitle)
@@ -84,7 +84,7 @@ struct ExerciseView: View {
                         .cornerRadius(10)
                 }
             }
-            .padding(.bottom, 80) // Увеличенный отступ снизу
+            .padding(.bottom, 80)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("LightBeige"))

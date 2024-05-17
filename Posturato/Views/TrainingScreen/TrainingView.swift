@@ -44,7 +44,7 @@ struct TrainingView: View {
                             }
                         }
                         .padding(.horizontal)
-                        .padding(.vertical, 10) 
+                        .padding(.vertical, 10)
                     }
                     
                     Text("Daily Workouts for Posture Maintenance")

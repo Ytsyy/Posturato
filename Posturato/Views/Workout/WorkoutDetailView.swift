@@ -15,9 +15,8 @@ struct WorkoutDetailView: View {
 
     var body: some View {
         ZStack {
-            // Фон для всей области экрана
             Color("LightBeige")
-                .ignoresSafeArea() // Заставляет фон игнорировать безопасные зоны и растягиваться на весь экран
+                .ignoresSafeArea()
 
             VStack {
                 if let imageName = workout.image {
@@ -51,5 +50,6 @@ struct WorkoutDetailView: View {
                 WorkoutView(viewModel: WorkoutViewModel(workout: workout), navigationPath: $navigationPath)
             }
         }
+        .toolbar(.hidden, for: .tabBar)
     }
 }

@@ -32,7 +32,7 @@ let standingPosture = PostureBasic(
 
     To achieve a neutral spine, stand with your feet shoulder-width apart, distribute your weight evenly on both feet, and keep your shoulders back and relaxed. Engage your core muscles to support your lower back and avoid locking your knees. Regularly adjusting your posture and taking breaks from prolonged standing can help maintain spinal health.
     """,
-    image: "standing_posture",
+    image: "StandingPosture",
     videoURL: nil
 )
 
@@ -54,7 +54,7 @@ let sleepingPosture = PostureBasic(
 
     When sleeping on your side, place a pillow between your knees to keep your hips aligned and reduce strain on your lower back. If you prefer sleeping on your back, use a pillow under your knees to support the natural curve of your lower back. Avoid sleeping on your stomach, as it can cause neck and back strain.
     """,
-    image: "sleeping_posture",
+    image: "Sleep",
     videoURL: nil
 )
 

@@ -15,10 +15,6 @@ struct TheoryView: View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
-                    SectionView(title: "Exercises", items: viewModel.exercises) { exercise in
-                        (title: exercise.name, description: exercise.details, image: exercise.image, videoURL: exercise.videoURL)
-                    }
-
                     SectionView(title: "Posture disorder", items: viewModel.postureDisorders) { disorder in
                         (title: disorder.name, description: disorder.description, image: disorder.image, videoURL: disorder.videoURL)
                     }
@@ -34,8 +30,11 @@ struct TheoryView: View {
                     SectionView(title: "Risk Factors and Causes", items: viewModel.riskFactors) { factor in
                         (title: factor.name, description: factor.description, image: factor.image, videoURL: factor.videoURL)
                     }
+                    SectionView(title: "Exercises", items: viewModel.exercises) { exercise in
+                        (title: exercise.name, description: exercise.details, image: exercise.image, videoURL: exercise.videoURL)
+                    }
+                    
                 }
-
             }
             .background(Color("LightBeige"))
             .navigationTitle("Theory")

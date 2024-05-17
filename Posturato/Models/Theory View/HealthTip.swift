@@ -55,7 +55,7 @@ let balancedDiet = HealthTip(
 
     To maintain a balanced diet, aim to include a range of colorful fruits and vegetables in your meals, choose whole grains over refined grains, and incorporate sources of healthy fats such as nuts, seeds, and olive oil. Additionally, limiting the intake of processed foods, sugary drinks, and high-fat foods can contribute to better health outcomes.
     """,
-    image: "balanced_diet",
+    image: "BalanceDiet",
     videoURL: nil
 )
 

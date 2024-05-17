@@ -207,7 +207,7 @@ let seatedForwardBend = Exercise(
     id: UUID(),
     name: "Seated Forward Bend",
     details: "Sit on an office chair with your feet flat on the ground. Lean forward, reaching your hands towards your feet while keeping your back straight. Hold for a few seconds and return to the starting position.",
-    image: "",
+    image: "SeatedForwardBend",
     videoURL: nil,
     targetMuscleGroups: [.lowerBack, .erectorSpinae, .hamstrings]
 )
