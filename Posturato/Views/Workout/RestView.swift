@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct RestView: View {
     @ObservedObject var viewModel: WorkoutViewModel
 
@@ -18,17 +20,19 @@ struct RestView: View {
                 .font(.largeTitle)
                 .padding()
             
-            Text("\(viewModel.remainingTime) сек")
+            Text("\(viewModel.remainingTime) sec")
                 .font(.largeTitle)
                 .padding(.bottom)
-            
+
+            RestCell(nextExercise: viewModel.nextExercise)
+
             Spacer()
             
             HStack(spacing: 30) {
                 Button(action: {
                     viewModel.addTime()
                 }) {
-                    Text("+10 сек")
+                    Text("+10 sec")
                         .padding()
                         .foregroundColor(.white)
                         .background(Color.blue)
@@ -38,14 +42,14 @@ struct RestView: View {
                 Button(action: {
                     viewModel.skip()
                 }) {
-                    Text("Пропустить")
+                    Text("Skip")
                         .padding()
                         .foregroundColor(.white)
                         .background(Color.red)
                         .cornerRadius(10)
                 }
             }
-            .padding(.bottom)
+            .padding(.bottom, 120)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("LightBeige"))

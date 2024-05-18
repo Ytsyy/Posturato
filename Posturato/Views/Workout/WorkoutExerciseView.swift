@@ -43,7 +43,6 @@ struct ExerciseView: View {
                     .font(.body)
                     .foregroundColor(.blue)
                     .underline()
-
             }
 
             if let details = detailText {
@@ -55,8 +54,6 @@ struct ExerciseView: View {
                 .frame(maxHeight: 200) 
             }
             
-
-            
             Text("\(viewModel.remainingTime) сек")
                 .font(.largeTitle)
                 .padding(.bottom)
@@ -67,7 +64,7 @@ struct ExerciseView: View {
                 Button(action: {
                     viewModel.addTime()
                 }) {
-                    Text("+10 сек")
+                    Text("+10 sec")
                         .padding()
                         .foregroundColor(.white)
                         .background(Color.blue)
@@ -77,14 +74,14 @@ struct ExerciseView: View {
                 Button(action: {
                     viewModel.skip()
                 }) {
-                    Text("Пропустить")
+                    Text("Skip")
                         .padding()
                         .foregroundColor(.white)
                         .background(Color.red)
                         .cornerRadius(10)
                 }
             }
-            .padding(.bottom, 80)
+            .padding(.bottom, 120)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color("LightBeige"))

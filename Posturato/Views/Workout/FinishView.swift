@@ -26,14 +26,15 @@ struct FinishView: View {
                 Button(action: {
                     navigationPath.removeLast(navigationPath.count)
                 }) {
-                    Text("Back to Training")
+                    Text("Finish")
                         .padding()
                         .background(Color.green)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+                Spacer()
             }
         }
-        .toolbar(.hidden, for: .tabBar)
+        .toolbar(.hidden, for: .tabBar,.navigationBar)
     }
 }

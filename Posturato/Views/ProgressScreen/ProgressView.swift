@@ -29,6 +29,7 @@ struct ProgressView: View {
                 }
                 .padding()
             }
+            .background(Color("LightBeige"))
             .navigationTitle("Progress")
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
