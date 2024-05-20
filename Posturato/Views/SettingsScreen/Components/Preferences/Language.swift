@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class LanguageViewModel: ObservableObject {}
+final class LanguageViewModel: ObservableObject {}
 
 struct LanguageView: View {
     @ObservedObject var viewModel: LanguageViewModel

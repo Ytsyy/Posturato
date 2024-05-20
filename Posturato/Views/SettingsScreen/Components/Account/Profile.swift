@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class ProfileViewModel: ObservableObject {}
+final class ProfileViewModel: ObservableObject {}
 struct ProfileView: View {
     @ObservedObject var viewModel: ProfileViewModel
     var body: some View {

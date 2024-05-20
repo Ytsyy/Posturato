@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class NotificationsViewModel: ObservableObject {}
+final class NotificationsViewModel: ObservableObject {}
 struct NotificationsView: View {
     @ObservedObject var viewModel: NotificationsViewModel
     var body: some View {

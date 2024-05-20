@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class TermsOfUseViewModel: ObservableObject {}
+final class TermsOfUseViewModel: ObservableObject {}
 
 struct TermsOfUseView: View {
     @ObservedObject var viewModel: TermsOfUseViewModel

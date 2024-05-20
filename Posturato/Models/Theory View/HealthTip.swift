@@ -15,7 +15,7 @@ struct HealthTip: Identifiable {
     let videoURL: URL?
 }
 
-class HealthTipModel {
+final class HealthTipModel {
     static let healthTips: [HealthTip] = [
         stretchRegularly,
         walkDaily,

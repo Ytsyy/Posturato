@@ -7,7 +7,7 @@
 
 import Foundation
 
-class TheoryViewModel: ObservableObject {
+final class TheoryViewModel: ObservableObject {
     let exercises: [Exercise] = ExerciseModel.exercises
     let postureDisorders: [PostureDisorder] = PostureDisorderModel.postureDisorders
     let healthTips: [HealthTip] = HealthTipModel.healthTips

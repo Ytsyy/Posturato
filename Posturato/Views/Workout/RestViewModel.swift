@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-class RestViewModel: ObservableObject {
+final class RestViewModel: ObservableObject {
     @Published var restTimeRemaining: Int
     var timer: AnyCancellable?
     

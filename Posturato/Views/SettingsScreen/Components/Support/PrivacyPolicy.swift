@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class PrivacyPolicyViewModel: ObservableObject {}
+final class PrivacyPolicyViewModel: ObservableObject {}
 
 struct PrivacyPolicyView: View {
     @ObservedObject var viewModel: PrivacyPolicyViewModel

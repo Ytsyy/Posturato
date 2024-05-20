@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class SubscriptionViewModel: ObservableObject {}
+final class SubscriptionViewModel: ObservableObject {}
 struct SubscriptionView: View {
     @ObservedObject var viewModel: SubscriptionViewModel
     var body: some View {

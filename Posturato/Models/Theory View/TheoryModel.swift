@@ -7,6 +7,6 @@
 
 import Foundation
 
-class ExerciseModel {
+final class ExerciseModel {
     static let exercises: [Exercise] = listOfAllExercise
 }

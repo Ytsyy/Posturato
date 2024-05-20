@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class ContactSupportViewModel: ObservableObject {}
+final class ContactSupportViewModel: ObservableObject {}
 
 struct ContactSupportView: View {
     @ObservedObject var viewModel: ContactSupportViewModel

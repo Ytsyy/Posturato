@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class SettingDetailViewModel: ObservableObject {
+final class SettingDetailViewModel: ObservableObject {
     @Published var title: String = ""
     
     init(title: String) {

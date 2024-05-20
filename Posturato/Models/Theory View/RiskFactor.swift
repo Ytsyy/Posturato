@@ -15,7 +15,7 @@ struct RiskFactor: Identifiable {
     let videoURL: URL?
 }
 
-class RiskFactorModel {
+final class RiskFactorModel {
     static let riskFactors: [RiskFactor] = [
         SedentaryLifestyleFactor,
         PoorErgonomicsFactor,

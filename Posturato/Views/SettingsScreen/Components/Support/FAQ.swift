@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class FrequentlyAskedQuestionsViewModel: ObservableObject {}
+final class FrequentlyAskedQuestionsViewModel: ObservableObject {}
 struct FrequentlyAskedQuestionsView: View {
     @ObservedObject var viewModel: FrequentlyAskedQuestionsViewModel
     var body: some View {

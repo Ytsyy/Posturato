@@ -15,7 +15,7 @@ struct PostureDisorder: Identifiable {
     let videoURL: URL?
 }
 
-class PostureDisorderModel {
+final class PostureDisorderModel {
     static let postureDisorders: [PostureDisorder] = [
         kyphosis,
         scoliosis,

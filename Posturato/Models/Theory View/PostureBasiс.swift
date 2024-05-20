@@ -15,7 +15,7 @@ struct PostureBasic: Identifiable {
     let videoURL: URL?
 }
 
-class PostureBasicModel {
+final class PostureBasicModel {
     static let postureBasics: [PostureBasic] = [
         standingPosture,
         sittingPosture,
