@@ -11,7 +11,6 @@ enum SettingScreen {
     case contact, termsOfUse, privacyPolicy, profile, subscription, notifications, language
 }
 
-
 struct SettingsView: View {
     var body: some View {
         List {

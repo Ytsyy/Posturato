@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Exercise: Identifiable, Equatable, Hashable {
     let id: UUID
     let name: String

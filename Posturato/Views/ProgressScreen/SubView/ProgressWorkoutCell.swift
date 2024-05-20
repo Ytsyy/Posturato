@@ -17,11 +17,11 @@ struct ProgressWorkoutCell: View {
                 Image(imageName)
                     .resizable()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 100, height: 100) // Устанавливаем квадратную форму
+                    .frame(width: 100, height: 100)
                     .cornerRadius(10)
             } else {
                 Color.gray
-                    .frame(width: 100, height: 100) // Устанавливаем квадратную форму
+                    .frame(width: 100, height: 100)
                     .cornerRadius(10)
             }
             
@@ -33,7 +33,7 @@ struct ProgressWorkoutCell: View {
                 Text(workout.description)
                     .font(.subheadline)
                     .foregroundColor(.gray)
-                    .lineLimit(2) // Ограничение на две строки
+                    .lineLimit(2) 
                 
                 Text("Duration: \(totalDuration(seconds: workout.durations)) seconds")
                     .font(.subheadline)

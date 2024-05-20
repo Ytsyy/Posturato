@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-import SwiftUI
-
 struct RestView: View {
     @ObservedObject var viewModel: WorkoutViewModel
 
@@ -24,7 +22,7 @@ struct RestView: View {
                 .font(.largeTitle)
                 .padding(.bottom)
 
-            RestCell(nextExercise: viewModel.nextExercise)
+            RestCell(nextExercise: viewModel.currentExercise)
 
             Spacer()
             

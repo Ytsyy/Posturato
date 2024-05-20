@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct HealthTip: Identifiable {
     let id = UUID()
     let title: String

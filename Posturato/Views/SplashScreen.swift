@@ -45,7 +45,6 @@ struct SplashScreen: View {
                     withAnimation(.easeIn(duration:0.2)){
                         isPresented.toggle()
                     }
-                
             })
             
         }

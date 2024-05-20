@@ -1,5 +1,5 @@
 //
-//  WorkoutExerciseView.swift
+//  ExerciseView.swift
 //  Posturato
 //
 //  Created by Maxim on 30.04.2024.

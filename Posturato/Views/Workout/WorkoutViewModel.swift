@@ -29,6 +29,13 @@ class WorkoutViewModel: ObservableObject {
         self.remainingTime = workout.durations.first ?? 0
     }
 
+    var currentExercise: Exercise? {
+        if exerciseIndex < workout.exercises.count {
+            return workout.exercises[exerciseIndex]
+        }
+        return nil
+    }
+
     var nextExercise: Exercise? {
         if exerciseIndex + 1 < workout.exercises.count {
             return workout.exercises[exerciseIndex + 1]
@@ -70,10 +77,10 @@ class WorkoutViewModel: ObservableObject {
     private func nextStep() {
         switch currentStep {
         case .exercise:
-            exerciseIndex += 1
-            if exerciseIndex < workout.exercises.count {
+            if exerciseIndex + 1 < workout.exercises.count {
+                exerciseIndex += 1
                 currentStep = .rest
-                remainingTime = 10 // Rest duration
+                remainingTime = 10 
             } else {
                 currentStep = .finish
                 timer?.invalidate()

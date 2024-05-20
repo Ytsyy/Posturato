@@ -17,10 +17,10 @@ struct ProgressView: View {
                         .fontWeight(.bold)
                         .foregroundColor(.black)
                     
-                   
+                    
                     ProgressWorkoutCell(workout: basicPostureWorkoutDay1)
                         .frame(height: 200)
-
+                    
                     
                     Image("Calendar")
                         .resizable()

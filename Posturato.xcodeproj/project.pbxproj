@@ -174,13 +174,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		941261FD2B8A321E00361141 /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
 		941262052B8A32AB00361141 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -387,7 +380,6 @@
 				944F81E82BBEDC880019627E /* Workout */,
 				94D0CAAD2BA2EDF6007CC822 /* SettingsScreen */,
 				94508F632BA860370099BD44 /* Theory */,
-				941261FD2B8A321E00361141 /* CustomViews */,
 				941893F12B8DED2900D0243A /* TabBar.swift */,
 				946CED152BF0F045009083BE /* ContainerView.swift */,
 				946CED132BF0EC3D009083BE /* SplashScreen.swift */,

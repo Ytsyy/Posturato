@@ -47,4 +47,3 @@ let PoorErgonomicsFactor: RiskFactor = RiskFactor(name: "Poor Ergonomics", descr
     Repetitive Strain: Repetitive tasks, like typing or using a mouse, can lead to strain in certain muscles, causing imbalances that affect posture.
     Lack of Movement: Staying in one position for extended periods can cause muscles to become stiff and fatigued, which can lead to poor posture.
 """, image: "PoorErgonomics", videoURL: nil)
-
