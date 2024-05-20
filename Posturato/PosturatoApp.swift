@@ -11,7 +11,8 @@ import SwiftUI
 struct PosturatoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContainerView()
+                .background(Color("LightBeige")).ignoresSafeArea(.all)
         }
     }
 }

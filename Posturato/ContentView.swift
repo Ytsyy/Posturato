@@ -8,17 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var tabSelection = 2
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        TabBar(tabSelection: $tabSelection)
     }
-}
-
-#Preview {
-    ContentView()
 }
