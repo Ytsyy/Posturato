@@ -40,11 +40,11 @@ let SedentaryLifestyleFactor: RiskFactor = RiskFactor(name: "Sedentary Lifestyle
     Inactivity: A sedentary lifestyle can lead to weak postural muscles, which are necessary for maintaining correct posture. This can result in a slouched or hunched posture.
     Muscle Imbalances: Sitting for long periods can cause muscle imbalances. For example, the hip flexors can become tight, pulling the lower spine forward. This can lead to a condition known as lordosis, or swayback.
     Increased Risk: A sedentary lifestyle increases the risk of developing serious health conditions like heart disease, diabetes, and osteoporosis, which can affect your posture and overall health.
-""", image: "sedentary", videoURL: nil)
+""", image: "SedentaryLifestyle", videoURL: nil)
 
 let PoorErgonomicsFactor: RiskFactor = RiskFactor(name: "Poor Ergonomics", description: """
     Incorrect Setup: An improper workstation setup can cause one to hunch or slouch to see the computer screen or reach the keyboard, leading to poor posture over time.
     Repetitive Strain: Repetitive tasks, like typing or using a mouse, can lead to strain in certain muscles, causing imbalances that affect posture.
     Lack of Movement: Staying in one position for extended periods can cause muscles to become stiff and fatigued, which can lead to poor posture.
-""", image: "ergonomics", videoURL: nil)
+""", image: "PoorErgonomics", videoURL: nil)
 

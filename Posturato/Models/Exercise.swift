@@ -90,7 +90,7 @@ let birdDog = Exercise(
     id: UUID(),
     name: "Bird Dog",
     details: "Begin on your hands and knees, aligning your palms under your shoulders и knees under your hips. Activate your core to achieve a neutral spine. Lift your right hand and extend it forward while simultaneously extending your left leg back, keeping both at shoulder и hip height respectively. Hold this pose for a second, then return to the starting position и repeat on the opposite side.",
-    image: "",
+    image: "BirdDog",
     videoURL: nil,
     targetMuscleGroups: [.erectorSpinae, .abs, .glutes, .shoulders]
 )
@@ -153,7 +153,7 @@ let quadStretch = Exercise(
     id: UUID(),
     name: "Quad Stretch",
     details: "Stand on one leg while pulling the other foot towards your glutes.",
-    image: "",
+    image: "QuadStretch",
     videoURL: nil,
     targetMuscleGroups: [.thighs]
 )
@@ -181,7 +181,7 @@ let seatedTorsoTwist = Exercise(
     id: UUID(),
     name: "Seated Torso Twist",
     details: "Sit on an office chair with your back straight. Twist to one side, using the opposite hand to assist. Repeat on the other side.",
-    image: "",
+    image: "SeatedTorsoTwist",
     videoURL: nil,
     targetMuscleGroups: [.obliques, .upperBack, .lowerBack]
 )
@@ -190,7 +190,7 @@ let wristStretch = Exercise(
     id: UUID(),
     name: "Wrist Stretch",
     details: "Extend one arm forward with the palm facing down. Gently bend the wrist down and then up using the opposite hand. Repeat with the other arm.",
-    image: "",
+    image: "WristStretch",
     videoURL: nil,
     targetMuscleGroups: []
 )
@@ -199,7 +199,7 @@ let seatedLegExtension = Exercise(
     id: UUID(),
     name: "Seated Leg Extension",
     details: "Sit on an office chair and straighten one leg in front of you, holding for a few seconds. Then switch legs.",
-    image: "",
+    image: "SeatedLegExtension",
     videoURL: nil,
     targetMuscleGroups: [.quadriceps, .hamstrings]
 )
@@ -216,25 +216,16 @@ let catCowStretchSitting = Exercise(
     id: UUID(),
     name: "Cat-Cow Stretch Sitting",
     details: "Sit on an office chair with your feet flat on the ground. Alternate between arching your back (cow pose) and rounding your spine (cat pose), synchronizing the movement with your breath.",
-    image: "",
+    image: "CatCowStretchSitting",
     videoURL: nil,
     targetMuscleGroups: [.lowerBack, .erectorSpinae, .upperBack]
-)
-
-let standingBackExtension = Exercise(
-    id: UUID(),
-    name: "Standing Back Extension",
-    details: "Stand with your feet shoulder-width apart. Place your hands on your lower back for support and gently arch backwards. Hold for a few seconds and return to the starting position.",
-    image: "standing_back_extension",
-    videoURL: nil,
-    targetMuscleGroups: [.lowerBack, .erectorSpinae]
 )
 
 let seatedSpinalTwist = Exercise(
     id: UUID(),
     name: "Seated Spinal Twist",
     details: "Sit on an office chair with your back straight. Twist your torso to one side, using the opposite hand to assist. Hold for a few seconds and repeat on the other side.",
-    image: "seated_spinal_twist",
+    image: "SeatedSpinalTwist",
     videoURL: nil,
     targetMuscleGroups: [.obliques, .upperBack, .lowerBack]
 )
@@ -243,7 +234,7 @@ let recliningBoundAngle = Exercise(
     id: UUID(),
     name: "Reclining Bound Angle Pose",
     details: "Lie on your back with the soles of your feet together and knees bent out to the sides. Place your arms at your sides with palms facing up. Hold for a few minutes while breathing deeply.",
-    image: "reclining_bound_angle_pose",
+    image: "RecliningBoundAnglePose",
     videoURL: nil,
     targetMuscleGroups: [.hipAdductors, .hipFlexors, .lowerBack]
 )
@@ -252,7 +243,7 @@ let supineSpinalTwist = Exercise(
     id: UUID(),
     name: "Supine Spinal Twist",
     details: "Lie on your back with your arms extended out to the sides. Bend one knee and cross it over your body towards the opposite side. Hold for a few seconds and repeat on the other side.",
-    image: "supine_spinal_twist",
+    image: "SupineSpinalTwist",
     videoURL: nil,
     targetMuscleGroups: [.obliques, .lowerBack, .glutes]
 )
@@ -261,7 +252,7 @@ let legsUpTheWall = Exercise(
     id: UUID(),
     name: "Legs-Up-the-Wall Pose",
     details: "Sit close to a wall with your knees bent. Lie back and extend your legs up along the wall, keeping your back relaxed on the ground. Hold for a few minutes while breathing deeply.",
-    image: "",
+    image: "LegsUptheWallPose",
     videoURL: nil,
     targetMuscleGroups: [.hamstrings, .lowerBack, .calves]
 )
@@ -270,8 +261,32 @@ let seatedForwardBendYoga = Exercise(
     id: UUID(),
     name: "Seated Forward Bend",
     details: "Sit on the floor with your legs extended in front of you. Reach forward towards your feet, keeping your back straight. Hold for a few seconds while breathing deeply.",
-    image: "",
+    image: "SeatedForwardBend",
     videoURL: nil,
     targetMuscleGroups: [.hamstrings, .erectorSpinae, .calves]
 )
 
+let listOfAllExercise = [
+    hipFlexorStretch,
+    chestOpenerStretch,
+    birdDog,
+    childsPose,
+    catCow,
+    plank,
+    chestStretch,
+    wallAngel,
+    hamstringStretch,
+    quadStretch,
+    calfStretch,
+    neckStretchSitting,
+    seatedTorsoTwist,
+    wristStretch,
+    seatedLegExtension,
+    seatedForwardBend,
+    catCowStretchSitting,
+    seatedSpinalTwist,
+    recliningBoundAngle,
+    supineSpinalTwist,
+    legsUpTheWall,
+    seatedForwardBendYoga
+]

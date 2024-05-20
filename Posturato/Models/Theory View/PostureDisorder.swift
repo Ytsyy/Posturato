@@ -48,6 +48,6 @@ let lordosis = PostureDisorder(
 let forwardHeadPosture = PostureDisorder(
     name: "Forward Head Posture",
     description: "Forward Head Posture (FHP) is a postural condition where the head is positioned forward relative to the body's center of gravity. This posture often results in the neck jutting out and the shoulders rounding forward. FHP can lead to neck pain, headaches, and upper back discomfort due to the increased strain on the cervical spine and surrounding muscles. It is often linked to prolonged use of electronic devices and poor ergonomic practices.",
-    image: "forward_head",
+    image: "ForwardHeadPosture",
     videoURL: nil
 )

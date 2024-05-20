@@ -139,12 +139,12 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
-		941261EF2B8A311200361141 /* Resourses */ = {
+		941261EF2B8A311200361141 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				946BE60A2B79D71900EE3869 /* Assets.xcassets */,
 			);
-			path = Resourses;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		941261F02B8A312600361141 /* Supporting Files */ = {
@@ -286,7 +286,7 @@
 				946BE6062B79D71900EE3869 /* PosturatoApp.swift */,
 				946BE6082B79D71900EE3869 /* ContentView.swift */,
 				946BE60C2B79D71900EE3869 /* Posturato.entitlements */,
-				941261EF2B8A311200361141 /* Resourses */,
+				941261EF2B8A311200361141 /* Resources */,
 				946BE60D2B79D71900EE3869 /* Preview Content */,
 			);
 			path = Posturato;

@@ -68,7 +68,6 @@ let middayBackRelaxationWorkoutDay1 = Workout(
     exercises: [
         seatedForwardBend,
         catCowStretchSitting,
-        standingBackExtension,
         seatedSpinalTwist
     ],
     image: "MidDayRelaxation",
