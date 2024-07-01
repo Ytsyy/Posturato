@@ -7,18 +7,19 @@
 
 import Foundation
 
-class UserManager {
+class UserManager: ObservableObject {
     static let shared = UserManager()
 
     private let userDefaults = UserDefaults.standard
     private let userKey = "isLoggedIn"
 
-    var isLoggedIn: Bool {
-        get {
-            return userDefaults.bool(forKey: userKey)
+    @Published var isLoggedIn: Bool {
+        didSet {
+            userDefaults.set(isLoggedIn, forKey: userKey)
         }
-        set {
-            userDefaults.set(newValue, forKey: userKey)
-        }
+    }
+
+    private init() {
+        self.isLoggedIn = userDefaults.bool(forKey: userKey)
     }
 }

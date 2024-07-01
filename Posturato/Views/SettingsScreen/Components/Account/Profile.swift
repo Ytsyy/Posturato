@@ -7,18 +7,43 @@
 
 import Foundation
 import SwiftUI
+import FirebaseAuth
 
 final class ProfileViewModel: ObservableObject {}
+
 struct ProfileView: View {
     @ObservedObject var viewModel: ProfileViewModel
+    @ObservedObject var userManager = UserManager.shared
+
     var body: some View {
-        Image("WorkingOn")
-            .resizable()
-            .frame(width: 100, height: 100)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-            .padding()
-        Text("Section under development")
-            .font(.system(size: 20))
-            .bold()
+        VStack {
+            Text("Section under development")
+                .font(.system(size: 20))
+                .bold()
+
+            Spacer()
+            
+            Button(action: {
+                logout()
+            }) {
+                Text("Logout")
+                    .frame(width: 200, height: 50)
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .padding(.bottom, 20)
+        }
+    }
+    
+    func logout() {
+        do {
+            try Auth.auth().signOut()
+            userManager.isLoggedIn = false
+        } catch let signOutError as NSError {
+            print("Error signing out: %@", signOutError)
+        }
     }
 }
+
+

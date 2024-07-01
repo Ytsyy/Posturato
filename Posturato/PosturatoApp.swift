@@ -11,16 +11,15 @@ import Firebase
 @main
 struct PosturatoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-
-    @State private var isLoggedIn = UserManager.shared.isLoggedIn
+    @ObservedObject var userManager = UserManager.shared 
 
     var body: some Scene {
         WindowGroup {
-            if isLoggedIn {
+            if userManager.isLoggedIn {
                 ContentView()
                     .background(Color("LightBeige")).ignoresSafeArea(.all)
             } else {
-                LoginView(isLoggedIn: $isLoggedIn)
+                LoginView(isLoggedIn: $userManager.isLoggedIn)
                     .background(Color("LightBeige")).ignoresSafeArea(.all)
             }
         }
@@ -29,18 +28,18 @@ struct PosturatoApp: App {
 
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        
 
         Auth.auth().addStateDidChangeListener { auth, user in
             if let user = user {
                 print("User is signed in with uid: \(user.uid)")
+                UserManager.shared.isLoggedIn = true
             } else {
                 print("User is signed out.")
+                UserManager.shared.isLoggedIn = false
             }
         }
         
