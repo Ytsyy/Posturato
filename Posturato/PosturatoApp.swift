@@ -11,7 +11,7 @@ import Firebase
 @main
 struct PosturatoApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @ObservedObject var userManager = UserManager.shared 
+    @ObservedObject var userManager = UserManager.shared
 
     var body: some Scene {
         WindowGroup {
@@ -25,7 +25,6 @@ struct PosturatoApp: App {
         }
     }
 }
-
 
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
@@ -46,4 +45,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

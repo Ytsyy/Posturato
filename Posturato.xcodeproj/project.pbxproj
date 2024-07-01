@@ -34,6 +34,8 @@
 		946CED142BF0EC3D009083BE /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946CED132BF0EC3D009083BE /* SplashScreen.swift */; };
 		946CED162BF0F045009083BE /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946CED152BF0F045009083BE /* ContainerView.swift */; };
 		946DE4BB2BD423A200E4D66E /* TheoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946DE4BA2BD423A200E4D66E /* TheoryViewModel.swift */; };
+		947DA46A2C32941200B60A95 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DA4692C32941200B60A95 /* ProfileViewModel.swift */; };
+		947DA46C2C32944500B60A95 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947DA46B2C32944500B60A95 /* User.swift */; };
 		94930F112C2AA063005B7DD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 94930F102C2AA063005B7DD4 /* GoogleService-Info.plist */; };
 		94930F142C2AA19F005B7DD4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 94930F132C2AA19F005B7DD4 /* FirebaseAnalytics */; };
 		94930F162C2AA19F005B7DD4 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 94930F152C2AA19F005B7DD4 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -120,6 +122,8 @@
 		946CED132BF0EC3D009083BE /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		946CED152BF0F045009083BE /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		946DE4BA2BD423A200E4D66E /* TheoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheoryViewModel.swift; sourceTree = "<group>"; };
+		947DA4692C32941200B60A95 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		947DA46B2C32944500B60A95 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		94930F102C2AA063005B7DD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		94A7553F2BBAB3FF00322C09 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		94B7CE302BE1018D0044DEB7 /* WorkoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutViewModel.swift; sourceTree = "<group>"; };
@@ -406,6 +410,7 @@
 			isa = PBXGroup;
 			children = (
 				94E269A52BF34A5700B5F154 /* Profile.swift */,
+				947DA4692C32941200B60A95 /* ProfileViewModel.swift */,
 				94E269A72BF34AC500B5F154 /* Subscription.swift */,
 			);
 			path = Account;
@@ -452,6 +457,7 @@
 				94B7CE3E2BE8A4F50044DEB7 /* Theory View */,
 				94D1375D2BADBB0500C0337C /* Exercise.swift */,
 				94D1375F2BADBC0500C0337C /* Workout.swift */,
+				947DA46B2C32944500B60A95 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -590,6 +596,7 @@
 				94E269B02BF351C700B5F154 /* FAQ.swift in Sources */,
 				94D1375E2BADBB0600C0337C /* Exercise.swift in Sources */,
 				941261F72B8A31E500361141 /* TabBarController.swift in Sources */,
+				947DA46A2C32941200B60A95 /* ProfileViewModel.swift in Sources */,
 				946CED162BF0F045009083BE /* ContainerView.swift in Sources */,
 				941262082B8A32D900361141 /* AuthService.swift in Sources */,
 				941262022B8A325600361141 /* SettingsViewModel.swift in Sources */,
@@ -602,6 +609,7 @@
 				94B7CE312BE1018D0044DEB7 /* WorkoutViewModel.swift in Sources */,
 				94B7CE3D2BE7DDA90044DEB7 /* WorkoutCardView.swift in Sources */,
 				94D137602BADBC0500C0337C /* Workout.swift in Sources */,
+				947DA46C2C32944500B60A95 /* User.swift in Sources */,
 				941893F42B8DF10200D0243A /* TrainingView.swift in Sources */,
 				946DE4BB2BD423A200E4D66E /* TheoryViewModel.swift in Sources */,
 				94D137642BADBD4900C0337C /* WorkoutDetailView.swift in Sources */,
