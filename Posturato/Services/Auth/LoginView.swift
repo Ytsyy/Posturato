@@ -13,20 +13,24 @@ struct LoginView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var errorMessage = ""
-    @State private var isPasswordVisible = false 
+    @State private var isPasswordVisible = false
 
     var body: some View {
         NavigationView {
             VStack {
-                Image(systemName: "person.circle")
+                Spacer()
+                    .frame(height: 40) // Уменьшенный отступ для логотипа
+                
+                Image("AppLogo")
                     .resizable()
-                    .frame(width: 100, height: 100)
-                    .padding(.bottom, 50)
+                    .frame(width: 200, height: 200) // Увеличенный логотип
+                    .padding(.bottom, 30) // Уменьшенное расстояние
                 
                 TextField("Email", text: $email)
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(10)
+                    .padding(.horizontal, 20)
                     .padding(.bottom, 20)
                 
                 ZStack(alignment: .trailing) {
@@ -51,39 +55,66 @@ struct LoginView: View {
                             .padding(.trailing, 10)
                     }
                 }
-                .padding(.bottom, 20)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 5)
                 
+                Button(action: {
+                    // Future action for password recovery
+                }) {
+                    Text("Forgot password?")
+                        .font(.footnote)
+                        .foregroundColor(.blue)
+                }
+                .padding(.bottom, 20)
+
                 Button(action: {
                     login()
                 }) {
-                    Text("Login")
-                        .frame(width: 200, height: 50)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                    HStack {
+                        Spacer()
+                        Text("Log in")
+                        Spacer()
+                    }
+                    .frame(height: 50)
+                    .background(Color("DarkBlueMain"))
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
                 }
-                .padding(.bottom, 20)
-                
-                Button(action: {
-                    // Google sign in action
-                }) {
-                    Text("Sign in with Google")
-                        .frame(width: 200, height: 50)
-                        .background(Color.red)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
-                }
-                .padding(.bottom, 10)
+                .padding(.horizontal, 20)
+                .padding(.bottom, 30) // Увеличенное расстояние
                 
                 Button(action: {
                     // Apple sign in action
                 }) {
-                    Text("Sign in with Apple")
-                        .frame(width: 200, height: 50)
-                        .background(Color.black)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                    HStack {
+                        Spacer()
+                        Image(systemName: "applelogo")
+                        Text("Continue with Apple")
+                        Spacer()
+                    }
+                    .frame(height: 50)
+                    .background(Color.black)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
                 }
+                .padding(.horizontal, 20)
+                .padding(.bottom, 10)
+                
+                Button(action: {
+                    // Google sign in action
+                }) {
+                    HStack {
+                        Spacer()
+                        Image("google-icon") // Ensure you have a Google icon in your assets
+                        Text("Continue with Google")
+                        Spacer()
+                    }
+                    .frame(height: 50)
+                    .background(Color.red)
+                    .foregroundColor(.white)
+                    .cornerRadius(15)
+                }
+                .padding(.horizontal, 20)
                 
                 HStack {
                     Text("Don't have an account yet?")
@@ -97,6 +128,7 @@ struct LoginView: View {
                 Spacer()
             }
             .padding()
+            .background(Color("BeigeMain")).ignoresSafeArea()
         }
     }
     

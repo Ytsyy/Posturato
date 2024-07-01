@@ -14,15 +14,21 @@ struct SignUpView: View {
     @State private var confirmPassword = ""
     @Binding var isLoggedIn: Bool
     @State private var errorMessage = ""
-    @State private var isPasswordVisible = false // Добавляем состояние для видимости пароля
-    @State private var isConfirmPasswordVisible = false // Добавляем состояние для видимости подтверждения пароля
+    @State private var isPasswordVisible = false
+    @State private var isConfirmPasswordVisible = false
 
     var body: some View {
         VStack {
+            Text("Sign up")
+                .font(.largeTitle)
+                .bold()
+                .padding(.bottom, 20)
+
             TextField("Email", text: $email)
                 .padding()
                 .background(Color(.secondarySystemBackground))
                 .cornerRadius(10)
+                .padding(.horizontal, 20)
                 .padding(.bottom, 20)
 
             ZStack(alignment: .trailing) {
@@ -47,6 +53,7 @@ struct SignUpView: View {
                         .padding(.trailing, 10)
                 }
             }
+            .padding(.horizontal, 20)
             .padding(.bottom, 20)
 
             ZStack(alignment: .trailing) {
@@ -71,17 +78,57 @@ struct SignUpView: View {
                         .padding(.trailing, 10)
                 }
             }
+            .padding(.horizontal, 20)
             .padding(.bottom, 20)
 
             Button(action: {
                 signUp()
             }) {
-                Text("Sign up")
-                    .frame(width: 200, height: 50)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(10)
+                HStack {
+                    Spacer()
+                    Text("Sign up")
+                    Spacer()
+                }
+                .frame(height: 50)
+                .background(Color("DarkBlueMain"))
+                .foregroundColor(.white)
+                .cornerRadius(15)
             }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
+
+            Button(action: {
+                // Apple sign up action
+            }) {
+                HStack {
+                    Spacer()
+                    Image(systemName: "applelogo")
+                    Text("Sign up with Apple")
+                    Spacer()
+                }
+                .frame(height: 50)
+                .background(Color.black)
+                .foregroundColor(.white)
+                .cornerRadius(15)
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 10)
+            
+            Button(action: {
+                // Google sign up action
+            }) {
+                HStack {
+                    Spacer()
+                    Image("google-icon") 
+                    Text("Sign up with Google")
+                    Spacer()
+                }
+                .frame(height: 50)
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(15)
+            }
+            .padding(.horizontal, 20)
             
             if !errorMessage.isEmpty {
                 Text(errorMessage)
@@ -92,6 +139,9 @@ struct SignUpView: View {
             Spacer()
         }
         .padding()
+        .background(Color("BeigeMain"))
+        .ignoresSafeArea(edges: .all)
+        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top) // Добавлен отступ
     }
     
     func signUp() {
