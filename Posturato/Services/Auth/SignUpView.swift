@@ -8,18 +8,14 @@
 import SwiftUI
 import FirebaseAuth
 
-import SwiftUI
-import FirebaseAuth
-
-import SwiftUI
-import FirebaseAuth
-
 struct SignUpView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
     @Binding var isLoggedIn: Bool
     @State private var errorMessage = ""
+    @State private var isPasswordVisible = false // Добавляем состояние для видимости пароля
+    @State private var isConfirmPasswordVisible = false // Добавляем состояние для видимости подтверждения пароля
 
     var body: some View {
         VStack {
@@ -29,19 +25,53 @@ struct SignUpView: View {
                 .cornerRadius(10)
                 .padding(.bottom, 20)
 
-            SecureField("Password", text: $password)
-                .padding()
-                .background(Color(.secondarySystemBackground))
-                .cornerRadius(10)
-                .padding(.bottom, 20)
-                .textContentType(.oneTimeCode) // Добавление этого модификатора
+            ZStack(alignment: .trailing) {
+                if isPasswordVisible {
+                    TextField("Password", text: $password)
+                        .padding()
+                        .background(Color(.secondarySystemBackground))
+                        .cornerRadius(10)
+                        .textContentType(.oneTimeCode)
+                } else {
+                    SecureField("Password", text: $password)
+                        .padding()
+                        .background(Color(.secondarySystemBackground))
+                        .cornerRadius(10)
+                        .textContentType(.oneTimeCode)
+                }
+                Button(action: {
+                    isPasswordVisible.toggle()
+                }) {
+                    Image(systemName: isPasswordVisible ? "eye" : "eye.slash")
+                        .foregroundColor(.gray)
+                        .padding(.trailing, 10)
+                }
+            }
+            .padding(.bottom, 20)
 
-            SecureField("Confirm Password", text: $confirmPassword)
-                .padding()
-                .background(Color(.secondarySystemBackground))
-                .cornerRadius(10)
-                .padding(.bottom, 20)
-                .textContentType(.oneTimeCode) // Добавление этого модификатора
+            ZStack(alignment: .trailing) {
+                if isConfirmPasswordVisible {
+                    TextField("Confirm Password", text: $confirmPassword)
+                        .padding()
+                        .background(Color(.secondarySystemBackground))
+                        .cornerRadius(10)
+                        .textContentType(.oneTimeCode)
+                } else {
+                    SecureField("Confirm Password", text: $confirmPassword)
+                        .padding()
+                        .background(Color(.secondarySystemBackground))
+                        .cornerRadius(10)
+                        .textContentType(.oneTimeCode)
+                }
+                Button(action: {
+                    isConfirmPasswordVisible.toggle()
+                }) {
+                    Image(systemName: isConfirmPasswordVisible ? "eye" : "eye.slash")
+                        .foregroundColor(.gray)
+                        .padding(.trailing, 10)
+                }
+            }
+            .padding(.bottom, 20)
 
             Button(action: {
                 signUp()

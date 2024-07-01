@@ -8,15 +8,13 @@
 import SwiftUI
 import FirebaseAuth
 
-import SwiftUI
-import FirebaseAuth
-
 struct LoginView: View {
     @Binding var isLoggedIn: Bool
     @State private var email = ""
     @State private var password = ""
     @State private var errorMessage = ""
-    
+    @State private var isPasswordVisible = false 
+
     var body: some View {
         NavigationView {
             VStack {
@@ -31,11 +29,29 @@ struct LoginView: View {
                     .cornerRadius(10)
                     .padding(.bottom, 20)
                 
-                SecureField("Password", text: $password)
-                    .padding()
-                    .background(Color(.secondarySystemBackground))
-                    .cornerRadius(10)
-                    .padding(.bottom, 20)
+                ZStack(alignment: .trailing) {
+                    if isPasswordVisible {
+                        TextField("Password", text: $password)
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                            .cornerRadius(10)
+                            .textContentType(.oneTimeCode)
+                    } else {
+                        SecureField("Password", text: $password)
+                            .padding()
+                            .background(Color(.secondarySystemBackground))
+                            .cornerRadius(10)
+                            .textContentType(.oneTimeCode)
+                    }
+                    Button(action: {
+                        isPasswordVisible.toggle()
+                    }) {
+                        Image(systemName: isPasswordVisible ? "eye" : "eye.slash")
+                            .foregroundColor(.gray)
+                            .padding(.trailing, 10)
+                    }
+                }
+                .padding(.bottom, 20)
                 
                 Button(action: {
                     login()
