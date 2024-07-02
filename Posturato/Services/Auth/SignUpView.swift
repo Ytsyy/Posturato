@@ -29,6 +29,18 @@ class SignUpViewModel: ObservableObject {
             return
         }
 
+        guard password.count >= 6 else {
+            errorMessage = "Password must be at least 6 characters long"
+            return
+        }
+
+        let passwordRegex = ".*[0-9!@#$%^&*()].*"
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", passwordRegex)
+        guard passwordTest.evaluate(with: password) else {
+            errorMessage = "Password must contain at least one digit or special character"
+            return
+        }
+
         Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
             if let error = error {
                 self.errorMessage = error.localizedDescription
@@ -37,6 +49,7 @@ class SignUpViewModel: ObservableObject {
             }
         }
     }
+
 }
 
 import SwiftUI
@@ -54,13 +67,15 @@ struct CustomTextField: View {
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(10)
-                    .textContentType(.password)
+                    .autocorrectionDisabled(true)  // Отключить автоматическую коррекцию
+                    .disableAutocorrection(true)
             } else {
                 TextField(placeholder, text: $text)
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(10)
-                    .textContentType(isSecure ? .password : .none)
+                    .autocorrectionDisabled(true)  // Отключить автоматическую коррекцию
+                    .disableAutocorrection(true)
             }
             if isSecure {
                 Button(action: {
@@ -74,6 +89,7 @@ struct CustomTextField: View {
         }
     }
 }
+
 import SwiftUI
 
 struct CustomButton: View {
