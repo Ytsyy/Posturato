@@ -54,13 +54,13 @@ struct CustomTextField: View {
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(10)
-                    .textContentType(.password)  // Отключает автоуказание пароля
+                    .textContentType(.password)
             } else {
                 TextField(placeholder, text: $text)
                     .padding()
                     .background(Color(.secondarySystemBackground))
                     .cornerRadius(10)
-                    .textContentType(isSecure ? .password : .none)  // Отключает автоуказание пароля для обычного текстового поля
+                    .textContentType(isSecure ? .password : .none)
             }
             if isSecure {
                 Button(action: {
@@ -99,6 +99,33 @@ struct CustomButton: View {
 
 import SwiftUI
 
+struct SocialLoginButton: View {
+    var title: String
+    var action: () -> Void
+    var backgroundColor: Color
+    var textColor: Color
+    var icon: Image? = nil  // Добавляем опциональный параметр для иконки
+    
+    var body: some View {
+        Button(action: action) {
+                        HStack {
+                            Spacer()
+                            if let icon = icon {
+                                icon
+                            }
+                            Text(title)
+                            Spacer()
+                        }
+                        .frame(height: 50)
+                        .background(backgroundColor)
+                        .foregroundColor(.white)
+                        .cornerRadius(15)
+                    }
+        .frame(maxWidth: .infinity)
+    }
+}
+import SwiftUI
+
 struct SignUpView: View {
     @StateObject private var viewModel = SignUpViewModel()
     @Binding var isLoggedIn: Bool
@@ -122,21 +149,38 @@ struct SignUpView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
 
-            CustomButton(title: "Sign up", action: {
-                viewModel.signUp()
-            }, backgroundColor: Color("DarkBlueMain"), textColor: .white)
+            SocialLoginButton(
+                title: "Sign up",
+                action: {
+                    viewModel.signUp()
+                },
+                backgroundColor: Color("DarkBlueMain"),
+                textColor: .white
+            )
             .padding(.horizontal, 20)
             .padding(.bottom, 20)
 
-            CustomButton(title: "Sign up with Apple", action: {
-                // Apple sign up action
-            }, backgroundColor: .black, textColor: .white)
+            SocialLoginButton(
+                title: "Sign up with Apple",
+                action: {
+                    // Apple sign up action
+                },
+                backgroundColor: .black,
+                textColor: .white,
+                icon: Image(systemName:"applelogo")
+            )
             .padding(.horizontal, 20)
             .padding(.bottom, 10)
 
-            CustomButton(title: "Sign up with Google", action: {
-                // Google sign up action
-            }, backgroundColor: .red, textColor: .white)
+            SocialLoginButton(
+                title: "Sign up with Google",
+                action: {
+                    // Google sign up action
+                },
+                backgroundColor: .red,
+                textColor: .white,
+                icon: Image("google-icon")  // Замените "google-icon" на имя вашей иконки Google
+            )
             .padding(.horizontal, 20)
 
             if !viewModel.errorMessage.isEmpty {
@@ -152,9 +196,7 @@ struct SignUpView: View {
         .ignoresSafeArea(edges: .all)
         .padding(.top, getTopPadding())
         .onChange(of: viewModel.isLoggedIn) { _, newValue in
-            if newValue {
-                isLoggedIn = newValue
-            }
+            isLoggedIn = newValue
         }
     }
 

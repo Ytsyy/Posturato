@@ -32,10 +32,6 @@ class LoginViewModel: ObservableObject {
 }
 
 
-
-
-import SwiftUI
-
 import SwiftUI
 
 struct LoginView: View {
@@ -70,21 +66,38 @@ struct LoginView: View {
                 }
                 .padding(.bottom, 20)
 
-                CustomButton(title: "Log in", action: {
-                    viewModel.login()
-                }, backgroundColor: Color("DarkBlueMain"), textColor: .white)
+                SocialLoginButton(
+                    title: "Log in",
+                    action: {
+                        viewModel.login()
+                    },
+                    backgroundColor: Color("DarkBlueMain"),
+                    textColor: .white
+                )
                 .padding(.horizontal, 20)
                 .padding(.bottom, 30) // Увеличенное расстояние
                 
-                CustomButton(title: "Continue with Apple", action: {
-                    // Apple sign in action
-                }, backgroundColor: .black, textColor: .white)
+                SocialLoginButton(
+                    title: "Continue with Apple",
+                    action: {
+                        // Apple sign in action
+                    },
+                    backgroundColor: .black,
+                    textColor: .white,
+                    icon: Image(systemName:"applelogo")  // Замените "apple-logo" на имя вашей иконки Apple
+                )
                 .padding(.horizontal, 20)
                 .padding(.bottom, 10)
                 
-                CustomButton(title: "Continue with Google", action: {
-                    // Google sign in action
-                }, backgroundColor: .red, textColor: .white)
+                SocialLoginButton(
+                    title: "Continue with Google",
+                    action: {
+                        // Google sign in action
+                    },
+                    backgroundColor: .red,
+                    textColor: .white,
+                    icon: Image("google-icon")  // Замените "google-icon" на имя вашей иконки Google
+                )
                 .padding(.horizontal, 20)
                 
                 HStack {
@@ -102,7 +115,10 @@ struct LoginView: View {
             .background(Color("BeigeMain")).ignoresSafeArea()
         }
         .onChange(of: viewModel.isLoggedIn) { _, newValue in
-            isLoggedIn = newValue
+            if newValue {
+                isLoggedIn = newValue
+            }
         }
     }
 }
+
