@@ -8,6 +8,9 @@
 import SwiftUI
 import FirebaseAuth
 
+import SwiftUI
+import FirebaseAuth
+
 struct SignUpView: View {
     @State private var email = ""
     @State private var password = ""
@@ -16,7 +19,7 @@ struct SignUpView: View {
     @State private var errorMessage = ""
     @State private var isPasswordVisible = false
     @State private var isConfirmPasswordVisible = false
-
+    
     var body: some View {
         VStack {
             Text("Sign up")
@@ -119,7 +122,7 @@ struct SignUpView: View {
             }) {
                 HStack {
                     Spacer()
-                    Image("google-icon") 
+                    Image("google-icon")
                     Text("Sign up with Google")
                     Spacer()
                 }
@@ -141,7 +144,14 @@ struct SignUpView: View {
         .padding()
         .background(Color("BeigeMain"))
         .ignoresSafeArea(edges: .all)
-        .padding(.top, UIApplication.shared.windows.first?.safeAreaInsets.top) // Добавлен отступ
+        .padding(.top, getTopPadding()) // Изменен отступ
+    }
+    
+    func getTopPadding() -> CGFloat {
+        guard let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene else {
+            return 0
+        }
+        return windowScene.windows.first?.safeAreaInsets.top ?? 0
     }
     
     func signUp() {
